@@ -2,8 +2,8 @@
 date: '2022-10-20T20:09:28+09:00'
 title: '名词解释：Web3 账户相关概念大梳理'
 draft: true
-category: 'web3'
-tag: ['account abstraction', 'wallet', '4337']
+categories: ['web3']
+tags: ['account abstraction', 'wallet', '4337']
 ---
 刚刚结束的 Devcon 上，账户抽象算是是最热的几个话题之一，最近可以经常看到 AA / EOA / SCW / 4337 等缩写和代号在各种 talk、panel 和信息流里出现。再加上叙事开始往「Onboarding next billion users」的方向发展，一些新的形容词也开始出现在产品之前，比如 seedless / gasless / social recovery / non-custodial。相信看完这两句的你已经开始脑壳疼了，那么接下来就让我尽自己所能来帮大家梳理一下这些名词概念到底代表什么。
 
