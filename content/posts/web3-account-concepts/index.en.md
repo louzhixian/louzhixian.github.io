@@ -2,7 +2,6 @@
 date: '2022-10-20T20:09:28+09:00'
 title: 'Glossary of Web3 Account'
 slug: 'web3-account-concepts'
-draft: true
 categories: ['Web3', 'Crypto']
 tags: ['account abstraction', 'wallet', '4337']
 ---
