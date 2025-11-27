@@ -110,16 +110,47 @@ params:
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
-menu:
-  main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
+
+defaultContentLanguage: zh
+
+languages:
+  zh:
+    languageName: "中文"
+    lang: zh
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+    menu:
+      main:
+        - identifier: categories
+          name: 分类
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: 标签
+          url: /tags/
+          weight: 20
+  en:
+    languageName: "English"
+    lang: en
+    weight: 2
+    taxonomies:
+      category: categories
+      tag: tags
+    menu:
+      main:
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+
+showLanguageSelector: true
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
