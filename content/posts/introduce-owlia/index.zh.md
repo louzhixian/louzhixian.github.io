@@ -4,6 +4,7 @@ title: '在 DeFi 里重新寻找安心感：Owlia 的设计理念'
 slug: 'introduce-owlia'
 categories: ['Crypto', 'AI']
 tags: ['owlia', 'web3', 'crypto', 'agent', 'ai']
+isCJKLanguage: true
 --- 
 > DeFi 这几年变得更强大，也变得更复杂。  
 用户并不缺工具，他们缺的是一个能帮他们承担压力的伙伴。
