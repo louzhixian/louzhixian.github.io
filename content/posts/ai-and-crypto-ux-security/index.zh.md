@@ -59,7 +59,7 @@ tags:
 
 
 
-![Initial Thoughts about MCP Node](../img1.png)
+![Initial Thoughts about MCP Node](./img1.png)
 
 说句题外话，从这段对话里可以看出目前 AI 的一个问题，就是默认会倾向于赞同用户的想法（各种🌈 P），但是会忽略一些风险和障碍。从这个层面上说，掌控 AI 需要锻炼的技能还真就是当老板的一些能力，比如派活和验收，还有甄别对方是不是真心赞同一件事情。
 
