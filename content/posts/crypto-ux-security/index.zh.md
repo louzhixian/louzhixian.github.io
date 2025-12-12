@@ -4,6 +4,7 @@ title: '加密世界的 UX 安全难题：基础设施的错配'
 slug: 'crypto-ux-security'
 categories: ['AI', 'Crypto']
 tags: ['ux', 'security', 'crypto', 'ai']
+isCJKLanguage: true
 ---
 你一般不会在 Google 的搜索结果里点个链接，就在这个陌生的页面里操作 5 万美金的转账对吧？
 但我们每天在 Crypto 世界里做的事，本质上就是这个流程：打开网页 → 连接钱包 → 点授权/签名 → 资产不可逆地转出去。出了事，没有“撤回”、没有“冻结”、也没有“客服介入”。
