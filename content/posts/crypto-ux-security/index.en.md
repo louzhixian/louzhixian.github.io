@@ -1,3 +1,15 @@
+---
+title: 'Crypto UX Security Is Broken By Design'
+date: '2025-12-12T18:26:40+08:00'
+categories:
+  - AI
+  - Crypto
+tags:
+  - ai
+  - crypto
+  - ux
+  - security
+---
 # Crypto UX Security Is Broken By Design
 
 You wouldn't wire $50,000 through a random website you found via Google ad. Yet that's exactly what crypto wallets ask you to do every day—except when it goes wrong, there's no bank to reverse the transaction, no fraud department to call, no chargeback to file.
