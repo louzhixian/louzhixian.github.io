@@ -137,8 +137,7 @@ You never visited a website. There was no UI to spoof, no approval popup to mani
 
 **Today**: Someone sends you a link to "claim your airdrop." You click, connect wallet, sign a message, and your wallet is drained three days later via the Permit signature you unknowingly authorized.
 
-**With AI Agent + Smart Contract Account**: You tell your agent "Check if I have any claimable airdrops." Agent queries known airdrop contracts directly. Either finds legitimate claims or reports nothing. Random links become useless—you don't click them because your agent handles the entire interaction without a browser.
-
+**With AI Agent + Smart Contract Account**: You tell your agent "Check if I have any claimable airdrops." Agent queries known airdrop contracts directly. Either finds legitimate claims or reports nothing.
 The phishing site still exists, but you never visit it. The attack vector is closed.
 
 ## The Objections (And Why They're Wrong)
