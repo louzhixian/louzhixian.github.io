@@ -20,13 +20,13 @@ Traditional finance figured this out decades ago. When you log into Chase, there
 
 PayPal can reverse transactions. Stripe has Radar watching for fraud patterns. Credit cards have chargebacks—a mechanism so effective that the UK's Payment Systems Regulator now requires banks to share 50/50 liability for authorized push payment fraud.
 
-Crypto eliminated all of this.
+Crypto eliminated all of this, deliberately. 
 
-Not accidentally—deliberately. The whole point was removing intermediaries with admin privileges. No central authority that can freeze your account, but also no safety net when you inevitably make a mistake.
+The whole point was removing intermediaries with admin privileges. No central authority that can freeze your account, but also no safety net when you inevitably make a mistake.
 
-The problem isn't the blockchain itself. Yes, smart contracts can have bugs—that's a real issue, but it's a code quality problem with known solutions (audits, formal verification, bug bounties). The vulnerability I'm talking about is different: it's everything *before* the transaction hits the chain. The website you connected to, the domain you trusted, the browser extension that handled your keys, the signature request you approved. This is where the $494 million went—not to smart contract exploits, but to UI-layer attacks.
+The problem isn't the blockchain itself. Yes, smart contracts can have bugs, which is also a real issue, but it's a code quality problem with known solutions (audits, formal verification, bug bounties). The vulnerability I'm talking about is different: it's everything *before* the transaction hits the chain. The website you connected to, the domain you trusted, the browser extension that handled your keys, the signature request you approved. This is where the $494 million went: not to smart contract exploits, but to UI-layer attacks.
 
-We stripped away every safety mechanism that traditional finance developed over decades, then kept the exact same vulnerable interface layer. Users interact with $100,000+ in assets through the same domains and webpages they use for cat videos and shopping. And we're surprised when $494 million gets drained by phishing attacks in a single year?
+We stripped away every safety mechanism that traditional finance developed over decades, then kept the exact same vulnerable interface layer. Users interact with $100,000+ in assets through the same domains and webpages they use for cat videos and shopping.
 
 ## The 2024 Reality Check
 
@@ -36,7 +36,7 @@ In 2024, wallet drainer attacks cost users $494 million—a 67% increase from th
 
 Not exploits. Not smart contract bugs. Signatures.
 
-Users clicked on phishing sites, connected their wallets, and signed messages they thought were harmless. Those signatures—authorized off-chain—gave attackers permission to drain wallets at their leisure.
+Users clicked on phishing sites, connected their wallets, and signed messages they thought were harmless. Those signatures gave attackers permission to drain wallets at their leisure.
 
 This isn't users being stupid. This is a system designed to fail.
 
@@ -44,21 +44,26 @@ This isn't users being stupid. This is a system designed to fail.
 
 ### Hardware Wallets: Protecting the Wrong Layer
 
-Hardware wallets are great at one thing: keeping your private keys offline. Your seed phrase never touches the internet. The cryptographic signing happens on secure hardware.
+Hardware wallets(HWs) are great at one thing: keeping your private keys offline. Your seed phrase never touches the internet. The cryptographic signing happens on secure hardware.
 
-But here's what they don't protect against: **you clicking "approve" on a malicious website**.
+But here's what they don't protect against: **authorizing the wrong thing**.
 
-The Ledger still shows you the transaction. You still confirm it. The security happens at the signing layer, but the *decision* happens on a compromised frontend. You can't Ledger your way out of a phishing attack if you willingly sign the malicious request.
+HWs still shows you the transaction. You still confirm it. The security happens at the signing layer, but the *decision* happens on a compromised frontend. HWs can't make your way out of a phishing attack if you willingly sign the malicious request.
 
 ### Transaction Simulation: The Signature Blindspot
 
-Wallet plugins like MetaMask and Rabby now simulate transactions. They show you "You're sending 1 ETH to 0x..." before you confirm. This is genuinely useful—for transactions.
+Wallet plugins like MetaMask and Rabby now simulate transactions. They show you "You're sending 1 ETH to 0x..." before you confirm. This is genuinely useful for transactions, because they immediately change on-chain state.
 
-But simulations can't help with signatures.
+Signatures are fundamentally different: they do not execute anything at the moment of signing, so there is nothing deterministic to simulate.
 
 When you sign an EIP-712 Permit message, there's nothing to simulate. The signature doesn't execute anything on-chain immediately. It creates an authorization that an attacker can use later. Your wallet can show you the structured data in the signature request, but it can't predict what will happen when someone uses that signed message tomorrow.
-
 A recent $35 million heist exploited exactly this. Users signed "harmless" off-chain authorizations that let attackers drain wallets days later.
+
+Worse still, EIP-712 structured signing is optional.
+Many applications still ask users to sign a raw hash, so-called **blind signing**, where users have no visibility at all into what they are authorizing.
+
+Even when EIP-712 is used, the data is often presented as raw JSON structures.
+Seeing the data does not mean understanding the consequences.
 
 And even when simulation works perfectly, there's the human factor. After approving 100 safe transactions, who actually reads simulation output #101 carefully? Users are not trained to scrutinize every signing request with the attention of a security auditor. They're tired, distracted, in a hurry. They click through.
 
@@ -80,7 +85,7 @@ Traditional finance solved this decades ago by not requiring users to understand
 
 Here's my thesis: The solution isn't better phishing warnings or more simulation features. It's removing the attack surface altogether.
 
-The most vulnerable part of crypto's stack is the interface layer—websites, domains, browser extensions. Every phishing attack, every wallet drainer, every approval scam flows through this layer. It's where users make decisions based on deceptive UI. It's where trust gets manufactured and exploited.
+The most vulnerable part of crypto's stack is the interface layer, such as websites, domains, browser extensions. Every phishing attack, every wallet drainer, every approval scam flows through this layer. It's where users make decisions based on deceptive UI. It's where trust gets manufactured and exploited.
 
 What if we just... skipped it?
 
@@ -88,7 +93,7 @@ What if we just... skipped it?
 
 The architecture I'm proposing combines two technologies that already exist:
 
-**Smart Contract Accounts**: Instead of your wallet being a simple keypair, it's a smart contract with programmable rules. You define constraints: spending limits, whitelisted contracts, required confirmations for large transfers, time-locked recovery mechanisms. This isn't theoretical—wallets like Safe and Argent have used this model for years.
+**Smart Contract Accounts**: Instead of your wallet being a simple keypair, it's a smart contract with programmable rules. You define constraints: spending limits, whitelisted contracts, required confirmations for large transfers, time-locked recovery mechanisms. This isn't theoretical, as wallets like Safe and Argent have used this model for years.
 
 **AI Agents for Execution**: An AI agent interprets your intent ("swap 1 ETH for USDC at the best price") and interacts directly with on-chain contracts. No website. No domain to phish. No frontend that can lie about what you're approving.
 
@@ -106,7 +111,7 @@ User → AI Agent → Smart Contract Account → Blockchain
         Spending limits, whitelists, access control
 ```
 
-If you tell the agent to swap tokens, and your smart contract account only allows interactions with a whitelist of audited DEX contracts, the agent literally cannot drain your wallet to a random address—the contract will reject the transaction.
+If you tell the agent to swap tokens, and your smart contract account only allows interactions with a whitelist of audited DEX contracts, the agent literally cannot drain your wallet to a random address, because the contract will reject the transaction.
 
 ## What This Actually Looks Like
 
@@ -116,7 +121,7 @@ Let's walk through real scenarios:
 
 **Today**: You Google "Uniswap," click a sponsored ad (maybe phishing), connect wallet, approve token spending (maybe unlimited), confirm swap, hope nothing malicious happened.
 
-**With AI Agent + Smart Contract Account**: You tell your agent "Swap 1 ETH for USDC, best price across major DEXs." Agent queries Uniswap, Sushiswap, Curve contracts directly—no websites involved. Agent constructs transaction, submits to your smart contract account. Contract verifies: Uniswap router is on whitelist? ✓ Amount within daily limit? ✓ Execute.
+**With AI Agent + Smart Contract Account**: You tell your agent "Swap 1 ETH for USDC, best price across major DEXs." Agent queries Uniswap, Sushiswap, Curve contracts directly. Agent constructs transaction, submits to your smart contract account. Contract verifies: Uniswap router is on whitelist? ✓ Amount within daily limit? ✓ Execute.
 
 No domain to spoof. No frontend to manipulate. No sponsored ad to click.
 
@@ -158,7 +163,7 @@ This is not how humans work. This is not how any successful technology works.
 
 When HTTPS became standard, we didn't expect users to verify certificate chains manually. When email added spam filters, we didn't tell users to just be more careful about phishing. We built security into the infrastructure.
 
-Crypto's security model—"everyone is their own bank, so everyone must be their own security team"—was noble in theory and catastrophic in practice. $494 million in drainer attacks in one year. Growing, not shrinking.
+Crypto's security model was noble in theory and catastrophic in practice. $494 million in drainer attacks in one year. Growing, not shrinking.
 
 The blockchain isn't the problem. The cryptography isn't the problem. The problem is we're running irreversible finance on top of consumer-grade web infrastructure with zero safety nets, then blaming users when they fall for attacks that traditional finance solved decades ago.
 
