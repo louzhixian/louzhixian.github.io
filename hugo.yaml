@@ -81,7 +81,7 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: "G-R2MWV81SNQ"
     bing:
       SiteVerificationTag: "XYZabc"
     yandex:
@@ -93,7 +93,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   # editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/louzhixian.github.io/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
