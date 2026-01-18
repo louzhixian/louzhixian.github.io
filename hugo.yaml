@@ -74,8 +74,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "知县的衙门"
+    Content: V~~~5~~~
 
   socialIcons:
     - name: x
