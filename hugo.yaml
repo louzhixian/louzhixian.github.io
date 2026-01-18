@@ -24,7 +24,7 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  defaultTheme: light #auto  dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
@@ -79,7 +79,7 @@ params:
 
   socialIcons:
     - name: x
-      url: "https://x.com/frank_lay2"
+      url: "https://x.com/zhixianio"
     - name: github
       url: "https://github.com/louzhixian"
 
@@ -92,9 +92,9 @@ params:
       SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    hidden: false# hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
 
   # editPost:
     URL: "https://github.com/louzhixian.github.io/content"
