@@ -4,6 +4,11 @@ title: 'Free Ride on Apple Intelligence: Turn macOS Built-in Model into an OpenA
 slug: 'apple-foundation-model-local-api'
 categories: ['AI']
 tags: ['Apple Intelligence', 'macOS', 'LLM', 'Local AI', 'OpenAI API']
+cover:
+  image: 'cover.png'
+  alt: 'cover'
+  relative: true
+
 ---
 
 macOS 26 Tahoe ships with a 3B parameter language model that Apple calls the Foundation Model. It normally hides in the system powering Writing Tools, Siri, and other features, but you can actually pull it out, wrap it as an OpenAI-compatible API, and plug it into any tool that supports the OpenAI format.

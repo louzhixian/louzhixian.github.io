@@ -5,6 +5,11 @@ slug: 'apple-foundation-model-local-api'
 categories: ['AI']
 tags: ['Apple Intelligence', 'macOS', 'LLM', 'Local AI', 'OpenAI API']
 isCJKLanguage: true
+cover:
+  image: 'cover.png'
+  alt: 'cover'
+  relative: true
+
 ---
 
 macOS 26 Tahoe 内置了一个 3B 参数的语言模型，Apple 叫它 Foundation Model。这玩意儿平时藏在系统里给 Writing Tools、Siri 这些功能用，但其实你可以把它拉出来，包装成一个 OpenAI 兼容的 API，然后接到任何支持 OpenAI 格式的工具里去。
