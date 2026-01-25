@@ -29,6 +29,8 @@ OK，写这篇是想做个简单的安利，以及分享一些我日常的用例
 
 有一天，我让 Clawdbot 找个框架把 Apple 自带的 Apple Intelligence 3B 小模型封装成 OpenAI 格式的 API，完事儿我让 Clawdbot 跑了一些测试，看看这个小模型的边界，比如推理能力、代码补全能力、翻译能力怎么样。测完之后我觉得这些信息挺有价值，就灵机一动，看看让它直接写成[一篇文章](/posts/apple-foundation-model-local-api/)怎么样，没想到效果出奇地好。
 
+![Apple Foundation Model 评测](apple-fm-test.jpg)
+
 https://x.com/zhixianio/status/2012747712488440059
 
 到这还没完，之前让 Clawdbot 在本地搭过一个 Whisper 模型做语音转写（这样就没必要买 Whisper API 了），这时我就想到把两件事结合起来用：Whisper 对中文的 refine（尤其是标点符号）做得不是很好，Apple 模型处理这件事情正好胜任，于是我就让它把这两个服务接起来，另外看看接上 Apple 本地模型做 refine 之后效率会不会打折扣。测试了几轮下来发现影响非常小，转写加上 refine 的速度，一分钟的音频也就是几秒钟左右。而且 Apple 本地模型资源占用很小，因为它原本就在运行，额外开销只有 30 多兆。
