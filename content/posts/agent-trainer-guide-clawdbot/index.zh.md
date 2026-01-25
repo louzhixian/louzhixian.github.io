@@ -3,6 +3,10 @@ title: "Agent 训练师入门指南：Clawdbot 配置与踩坑"
 date: 2026-01-25
 draft: false
 tags: ["AI", "Clawdbot", "Agent", "效率工具"]
+cover:
+  image: 'cover.png'
+  alt: 'Agent Trainer Guide'
+  relative: true
 ---
 
 最近 Clawdbot 突然爆火了，我觉得是意料之外情理之中。从三周前开始用 Clawdbot 到现在，我每天的状态都非常亢奋，因为我感觉到科幻世界真的来了。关注过我的朋友应该能感受到我那两天的状态有点 high，跟我聊过的朋友可能就更是了哈哈。

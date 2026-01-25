@@ -3,6 +3,10 @@ title: "Agent Trainer's Guide: Clawdbot Setup & Lessons Learned"
 date: 2026-01-25
 draft: false
 tags: ["AI", "Clawdbot", "Agent", "Productivity"]
+cover:
+  image: 'cover.png'
+  alt: 'Agent Trainer Guide'
+  relative: true
 ---
 
 Clawdbot suddenly blew up recently, which I find both surprising and inevitable. I've been using Clawdbot for three weeks now, and I've been incredibly excited every single day because it genuinely feels like science fiction has become reality. Friends who follow me probably noticed I was pretty hyped those first few days—and those who chatted with me definitely felt it, haha.
