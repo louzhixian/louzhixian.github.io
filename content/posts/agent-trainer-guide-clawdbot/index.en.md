@@ -29,8 +29,6 @@ Let me walk through a more complex use case.
 
 One day, I had Clawdbot find a framework to wrap Apple's built-in Apple Intelligence 3B model into an OpenAI-compatible API. After that, I had Clawdbot run some tests to find its boundaries—reasoning ability, code completion, translation quality. After testing, I thought the information was valuable, so on a whim, I asked it to write it up as [a blog post](/posts/apple-foundation-model-local-api/). The result was surprisingly good.
 
-![Apple Foundation Model Testing](apple-fm-test.jpg)
-
 https://x.com/zhixianio/status/2012747712488440059
 
 But that's not all. I'd previously had Clawdbot set up a local Whisper model for speech-to-text (saving on Whisper API costs). Then I thought about combining the two: Whisper doesn't handle Chinese refinement well (especially punctuation), but the Apple model is perfect for that task. So I had it connect the two services and test whether adding Apple's local model for refinement would hurt efficiency. After several rounds of testing, the impact was minimal—transcription plus refinement for one minute of audio takes just a few seconds. Plus, the Apple local model has tiny resource overhead since it's already running; the additional cost is just 30-something megabytes.
