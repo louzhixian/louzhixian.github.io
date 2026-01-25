@@ -9,9 +9,13 @@ Clawdbot suddenly blew up recently, which I find both surprising and inevitable.
 
 OK, I'm writing this to give a simple recommendation, share some of my daily use cases, and most importantly, offer some setup tips and lessons from the potholes I've stepped in.
 
-So what is Clawdbot? Think of it as Jarvis from Iron Man—that powerful AI assistant. Whether it's work, life, or even emotional support, it can help. It can observe through cameras, listen to you speak, and respond with TTS voice. Give it permissions and it can control your computer to do all sorts of things. Incredibly powerful.
+## What is Clawdbot
 
-Of course, these sci-fi features might not be daily necessities (though voice input is genuinely useful). As for practical daily applications, let me share my examples:
+Think of it as Jarvis from Iron Man—that powerful AI assistant. Whether it's work, life, or even emotional support, it can help. It can observe through cameras, listen to you speak, and respond with TTS voice. Give it permissions and it can control your computer to do all sorts of things. Incredibly powerful.
+
+Of course, these sci-fi features might not be daily necessities (though voice input is genuinely useful). As for practical daily applications, let me share my examples.
+
+## My Daily Use Cases
 
 The simplest one: whenever I think of something I need to do, I just send a voice message in Telegram, and it organizes everything into my Apple Reminders. I don't need to worry about formatting—I just ramble like I'm on a phone call about what needs to be done, and it sorts everything out. If you mention times, it sets the due dates too. It even does preliminary research on some reminder items and sends you organized materials. Very thoughtful.
 
@@ -39,7 +43,7 @@ Clawdbot's customization range is enormous—it can modify itself, add workflows
 
 ---
 
-That's enough about use cases. Let's talk about what people care more about: Setup.
+## Devices & Configuration
 
 First, the question many ask: do you really need a Mac mini? Short answer: if you can, yes. You can definitely use it without one, but for such a powerful personal assistant, giving it a dedicated "room" that's both powerful and stable produces the best results. You're here to experience the cutting edge—don't let the experience be compromised! (Hey Tim 🧑‍🍳, don't forget my advertising fee.) Of course, I'm also researching deployment on other devices, but that's still in the research phase. So if you want to try now, I recommend getting the latest base-model Mac mini. For older models, more RAM is better. If you like tinkering with local models like me (I currently run Whisper and Kokoro locally), 32GB RAM and 1TB storage should be sufficient.
 
@@ -63,7 +67,7 @@ I'm currently on Claude Code Max, which the author recommends. Whether you need 
 
 ---
 
-Finally, let me explain why I think Clawdbot is so different.
+## The Soul of Clawdbot
 
 One key feature is its persistent memory system—it remembers your conversations over long periods. Look in its Workspace and you'll find various .md files that form the agent's "soul":
 
