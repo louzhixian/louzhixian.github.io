@@ -29,6 +29,10 @@ Let me walk through a more complex use case.
 
 One day, I had Clawdbot find a framework to wrap Apple's built-in Apple Intelligence 3B model into an OpenAI-compatible API. After that, I had Clawdbot run some tests to find its boundaries—reasoning ability, code completion, translation quality. After testing, I thought the information was valuable, so on a whim, I asked it to write it up as [a blog post](/posts/apple-foundation-model-local-api/). The result was surprisingly good.
 
+![Apple Foundation Model Testing](apple-fm-test.jpg)
+
+https://x.com/zhixianio/status/2012747712488440059
+
 But that's not all. I'd previously had Clawdbot set up a local Whisper model for speech-to-text (saving on Whisper API costs). Then I thought about combining the two: Whisper doesn't handle Chinese refinement well (especially punctuation), but the Apple model is perfect for that task. So I had it connect the two services and test whether adding Apple's local model for refinement would hurt efficiency. After several rounds of testing, the impact was minimal—transcription plus refinement for one minute of audio takes just a few seconds. Plus, the Apple local model has tiny resource overhead since it's already running; the additional cost is just 30-something megabytes.
 
 After getting this working, I had it [write another blog post](/posts/whisper-afm-refine/) summarizing everything. It figured out the entire workflow on its own: writing content, translating to English, adding images, and publishing. Even the images—it opened a browser, went to Gemini's web interface, entered prompts, generated images, and saved them. Completing the workflow like a human would. Finally, it packaged this entire process into a Skill, so now when I write blog posts, I just give it a sentence, it writes the content, I confirm it's good, and it auto-publishes. Very satisfying.
@@ -37,9 +41,15 @@ Some other quick use cases:
 
 - **Twitter monitoring.** It comes with Bird, a simple X CLI. I set it up with its own Twitter account and organized my news sources into lists for daily scanning. Breaking news gets pushed immediately; smaller stuff comes as a digest three times a day. The advantage of having an agent push content versus using a subscription app is that when you see something interesting, you can [immediately ask follow-up questions](https://x.com/zhixianio/status/2012517047205560671). It can interactively explain things, even dig deeper.
 
+![Bird Push Digest](bird-digest.jpg)
+
 - **DevOps assistant.** I have a VPS running my "Doomsday Cabin" (a personal Discord workspace) services. I was never sure if the VPS config was overkill—it was set at 4 cores, 8GB RAM. It monitored for a day, reviewed previous logs, and analyzed that daily consumption was actually minimal with low CPU peaks. It recommended downgrading. Now it's basically at minimum specs, and costs dropped from $48+/month to $12. It's quite proud of this—whenever I ask about our interaction history, it brings this up to brag about cutting my costs by 75%.
 
+![Owlia's DevOps Report](owlia-vps.jpg "Note: This section was written by this 🦉 in my voice!")
+
 - **Information filtering.** My "Doomsday Cabin" generates daily information summaries, and I have it scan through first, marking interesting or important items with its 🦉 emoji. Essentially highlighting key points for me.
+
+![Information Filtering Marks](info-filter.jpg)
 
 There's actually much more: when it has problems, I have it fix itself; when I discover feature requests or bugs while using it, I have it write PRs to submit to Clawdbot's repo; I throw news at it for analysis; I even had it deploy a new Clawdbot instance on a newly purchased VPS. In its own words, "using AI to wrangle AI."
 
