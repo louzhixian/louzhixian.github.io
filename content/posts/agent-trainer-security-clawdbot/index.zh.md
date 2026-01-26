@@ -2,6 +2,7 @@
 title: "Agent 训练师安全课：Clawdbot 七步自检指南"
 date: 2026-01-26
 draft: false
+isCJKLanguage: true
 tags: ["AI", "Clawdbot", "Agent", "安全", "效率工具"]
 cover:
   image: 'cover.png'

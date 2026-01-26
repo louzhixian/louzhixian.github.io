@@ -2,6 +2,7 @@
 title: "Agent 训练师入门指南：Clawdbot 配置与踩坑"
 date: 2026-01-25
 draft: false
+isCJKLanguage: true
 tags: ["AI", "Clawdbot", "Agent", "效率工具"]
 cover:
   image: 'cover.png'
