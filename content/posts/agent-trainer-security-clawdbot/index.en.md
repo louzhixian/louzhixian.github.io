@@ -35,6 +35,8 @@ I already covered this in detail in my previous article, so here's a quick summa
 
 The main security point here: What runtime environment is safer? The conclusion is simple: **run it in an isolated environment**. I strongly advise against running Clawdbot directly on your daily driver—the machine with all your sensitive personal data. This affects both Clawdbot's experience and your data security. Always run it on an isolated machine.
 
+![Self-check Step 1: Runtime Environment](step1-env.png)
+
 ---
 
 ## Step 2: Data Isolation
@@ -57,6 +59,8 @@ This is extremely important. We're used to chatting on Discord, WhatsApp, and Te
 
 For example, if you use Discord, can everyone on the server access it and give it commands? If so, you're basically running naked. Same for Telegram—how much access have you granted? Does it only respond to your messages? If it's in a group chat, is it limited to only responding to you? If not, there's risk here.
 
+![Message Channel Check Results](step3-channels.jpg)
+
 ---
 
 ## Step 4: Model Security Check
@@ -64,6 +68,8 @@ For example, if you use Discord, can everyone on the server access it and give i
 In my previous article, I mentioned trying multiple models, mainly from a performance perspective. But there's also a security layer.
 
 Think of it this way: generally, **more expensive models have stronger instruction-following capabilities and better attack resistance**. Because they're smarter, typical tricks can't fool them, while cheaper models are easier to manipulate. This is probably one reason why the author recommends using Opus.
+
+![Model Configuration Check](step4-model.jpg)
 
 ---
 
@@ -77,6 +83,8 @@ How do you defend against this? This isn't just a Clawdbot problem—it's a univ
 
 If you're reading this and have expertise in this area with better solutions, please leave a comment for everyone to see!
 
+![Prompt Injection Demo](step5-injection.jpg)
+
 ---
 
 ## Step 6: Sensitive Information Access Check
@@ -85,11 +93,15 @@ On Mac or Linux, you know there are hidden folders starting with `.` in your hom
 
 Using a fresh machine is partly about regenerating this information from scratch. If you leave it where Clawdbot can see it, understand that this information is exposed to it—essentially exposed to the large model. If that's not acceptable, **your most urgent task right now is to rotate these keys and regenerate them**.
 
+![Sensitive Information Access Check](step6-sensitive.jpg)
+
 ---
 
 ## Step 7: Network Security
 
 There's now a website specifically scanning port 18789 to see how many people have exposed unprotected control ports to the public internet. This is extremely dangerous—like leaving your front door open for the whole world to walk in. **Please don't do this.**
+
+![Port 18789 Scan: 923 Exposed Clawdbot Instances](step7-port-scan.jpg)
 
 Unless you're extremely confident in your technical skills, never expose this machine to the public internet. If you want other devices to access it over your internal network, use Tailscale as I mentioned in my previous article—it's the best choice for both security and convenience.
 
