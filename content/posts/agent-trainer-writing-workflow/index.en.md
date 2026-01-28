@@ -57,6 +57,8 @@ For this very article, I was walking outside, dictating my thoughts into a Disco
 
 When the Discord bot receives voice messages, it triggers a workflow: automatically sending the audio to my locally-hosted Whisper for transcription, then passing it through another small model for error correction and polishing.
 
+![My voice input workflow](voice-input-workflow.jpg)
+
 By the way, most of my workflows are built around Discord. If you're interested, check out [this article](https://x.com/zhixianio/status/2012092307613622525).
 
 ### 2. Whisper + Apple Foundation Model: Local Transcription Cleanup
@@ -83,6 +85,8 @@ Punctuation added, clear sentence breaks, filler words and repetitions removed�
 
 **Performance-wise**, AFM adds about 0.8 seconds (pure Whisper 1.05s → with AFM 1.85s). For voice messages, this latency is perfectly acceptable in exchange for immediately usable text.
 
+![Voice transcription + refine result - note the punctuation](whisper-afm-result.jpg)
+
 Since adding this optimization, **punctuation comes out nearly perfect on the first pass**—no more painful manual editing ✌️.
 
 ### 3. Editing and Polishing
@@ -99,9 +103,15 @@ This interface might be too hardcore for most people, **but for an agent, it's n
 
 Since my blog is bilingual (Chinese/English), it automatically translates to English too. As we know, LLMs are primarily trained on English content, so Chinese-to-English translation quality far exceeds the reverse. After polishing the Chinese version and previewing it, if I'm satisfied, I just say "publish"—it automatically completes the translation, creates an English slug for the directory name, and names the files according to the blog's required format (index.en.md and index.zh.md).
 
+![Auto-publish to blog workflow](auto-publish-flow.jpg)
+
 ### 5. Cover Images: Let Clawdbot Generate Them
 
-Not done yet—since it knows the article so well, it handles cover images too. It generates prompts, and if you have Gemini or OpenAI API configured, it can call image generation directly. But I'm the "cost-efficient" type and don't want to pay for extra APIs, so I have it log into Gemini's web interface in the browser, generate images there, download and organize them, then upload to the blog. **I was genuinely amazed when I first saw it complete this workflow on its own**—I encourage everyone to try giving it complex tasks without assuming it can't do them. Just try it.
+Not done yet—since it knows the article so well, it handles cover images too. It generates prompts, and if you have Gemini or OpenAI API configured, it can call image generation directly. But I'm the "cost-efficient" type and don't want to pay for extra APIs, so I have it log into Gemini's web interface in the browser, generate images there, download and organize them, then upload to the blog.
+
+![Cover image generation workflow](cover-generation-flow.jpg)
+
+**I was genuinely amazed when I first saw it complete this workflow on its own**—I encourage everyone to try giving it complex tasks without assuming it can't do them. Just try it.
 
 ### 6. Syncing with X Articles
 
