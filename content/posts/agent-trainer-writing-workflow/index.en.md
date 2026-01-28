@@ -117,6 +117,8 @@ Not done yet—since it knows the article so well, it handles cover images too. 
 
 After the blog is published, if I plan to also post it as an X Article, I might manually add some images or make small text tweaks. After publishing there, I send the Article link to Clawdbot and tell it this is the final version. It then follows the article's layout, downloads the images, and updates both blog posts based on image positions, including text changes and inserted links—complete synchronization.
 
+![Syncing X Article workflow](sync-article-flow.png)
+
 ## The Difference
 
 My overall feeling about this workflow:
