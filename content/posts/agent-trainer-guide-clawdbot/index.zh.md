@@ -74,7 +74,7 @@ OK，配置上其实不用说太多，因为本身它就带了很多 skills，�
 
 ## Discord 高级配置
 
-如果你用 Discord 作为主要的交互渠道，这里有两个很实用的配置技巧。
+如果你用 Discord 作为主要的交互渠道，这里有两个很实用的配置技巧。（感谢 [@Pfoagi](https://x.com/pfoagi) 提供 autoThread 配置信息！）
 
 ### autoThread — 自动创建 Thread 回复
 

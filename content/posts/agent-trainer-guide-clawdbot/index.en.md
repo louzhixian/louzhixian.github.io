@@ -73,7 +73,7 @@ OK, there's not much more to say about configuration since it comes with many sk
 
 ## Advanced Discord Configuration
 
-If you use Discord as your primary interaction channel, here are two very practical configuration tips.
+If you use Discord as your primary interaction channel, here are two very practical configuration tips. (Thanks to [@Pfoagi](https://x.com/pfoagi) for the autoThread configuration tip!)
 
 ### autoThread — Automatic Thread Replies
 
