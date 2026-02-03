@@ -63,11 +63,15 @@ Discord 还有一个特别好的信息分级能力，我觉得是借鉴于 Slack
 
 如果是 Thread 模式呢？如果你想就吃鱼的话题继续讨论，就在小帅的消息下创建一个 Thread，这时候会新开一个聊天空间，大家就可以顺着「吃什么鱼」的话题聊下去。而在 Thread 之外，依然是大家提议今天中午吃什么的主线聊天，比如吃牛肉的人就在 thread 里已经开始订位子了。不难发现这是一个更好的交流架构，主题明确，细节可控。
 
+![Discord 里一个由主题 + Thread 组成的 Channel](discord-thread-example.jpg)
+
 介绍完 Thread 聊天模式，我们就可以把整个架构讲清楚：Discord Server 里每一个 Channel 都是独立的 Session，这很好理解；除了 Channel 之外，其实每一个 Thread 和 Channel 其实是一样的，都是一个独立的 Session。不过写文章时的最新版（2026.2.1）更新了一个功能：Discord: inherit thread parent bindings for routing. 简单说就是当 Thread 创建时，agent 会自动继承 parent channel 的最近消息作为上下文，让 agent 在 thread 里也能知道「前情提要」。用好 Thread 功能，你的 Discord 里信息组织性会大幅提高，session 爆炸的问题也不太会出现了。
 
 ## 我的 Discord 工作流：末日小屋实战
 
 接下来展示一下我的 Discord 使用方式。我的用法是创建一个专门的 Server，看过我之前文章的小伙伴可能知道，我有一个 AI 工作流的 Server 叫「[末日小屋](https://x.com/zhixianio/status/2012092307613622525)」。现在我在这里专门开了一个 Section，用来承载我和 Owlia 🦉（我的 OpenClaw agent）工作的整个流程。
+
+![我的「末日小屋」升级版——入住了 Owlia！](bunker-owlia.jpg)
 
 大家可以看一下截图，我基本上分了类：
 
@@ -82,6 +86,8 @@ Discord 还有一个特别好的信息分级能力，我觉得是借鉴于 Slack
 这种工作方式的好处是我可以非常快速地在不同事务中切换。OpenClaw 默认能同时在 4 个不同的 Session 里回复消息，而且这个配额是可以改的，但对我来说 4 个足够了，我目前还很少能让 4 个频道同时处于回复状态（还得练）。这时你会发现自己就像"章鱼博士"，挥舞着四条大爪子操作四个线程的工作，感觉特别有成就感。
 
 除了推进任务的 Channel，还可以建立一些日常定时任务的 Channel。这样之前在 main session 里的工作就可以拆分到不同的方向上。比如，我有一个专门的 Channel 叫 digest，它每天会定时跑几遍，把 X 和博客上的内容汇总发进来。再比如 heartbeat，我需要一个观察窗来了解它触发的时间和内容，所以建了一个 heartbeat Channel，让所有的输出都导向这里。大家可以结合日常工作生活的具体需求去配置。
+
+![#heartbeat 里的日常汇报](heartbeat-channel.jpg)
 
 配置好之后，整个"末日小屋"的能力会变得非常强。不仅拥有自动化的流程，屋子里还住进了一个非常强大的智能体，它可以帮你做事、查资料、聊天。这些 session 互相隔离，同时你还可以指定某个 session 去读取另一个 session 的内容，来快速同步上下文。这种体验非常契合推进复杂事务时的需求。
 
@@ -98,6 +104,8 @@ Discord 还有一些进阶的玩法：
 ## Telegram 的类似尝试（以及为什么我放弃了）
 
 最后补充一些 Telegram 的类似用法，一个是开 Group 分 Topic，这个其实算是 Telegram 在 Discord 的压力下做的功能，但是一直体验很差；另外跟 Bot 的 DM 里也是可以开启 Thread（其实跟 Topic 一套机制），而且 1 月 24 日（当时还叫 Clawdbot）的那次更新加了一个支持：当你在 BotFather 那边给 Bot 设置打开 Thread 模式（注意必须在 BotFather 的 Mini App 里才能找到这个开关），你跟它的 DM 就会变成像一个带 Topic 的 Telegram Group，只不过 Topic 在 DM 里叫 Thread。我用下来体验很差，这里就不展开了。
+
+![打开 Thread 模式的 Telegram Bot DM](telegram-thread-dm.jpg)
 
 ## 用自然语言编程的时代
 

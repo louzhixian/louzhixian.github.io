@@ -62,11 +62,15 @@ Discord has another excellent information hierarchy capability, which I believe 
 
 With Thread mode? If you want to continue discussing fish, create a Thread under Xiao Shuai's message. This opens a new chat space where everyone can follow the "what kind of fish" topic. Meanwhile, outside the Thread, the main thread remains for proposing lunch options, like the beef people who might already be booking a restaurant in their thread. It's clearly a better communication architecture—clear topics, controllable details.
 
+![A Discord Channel composed of topics + Threads](discord-thread-example.jpg)
+
 With Thread mode explained, the full architecture becomes clear: each Channel in a Discord Server is an independent Session, which makes sense; beyond Channels, each Thread is actually the same as a Channel—an independent Session. The latest version (2026.2.1) added a feature: "Discord: inherit thread parent bindings for routing." Simply put, when a Thread is created, the agent automatically inherits recent messages from the parent channel as context, giving the agent "previous chapter" knowledge in the thread. Use Threads well and your Discord information organization will improve dramatically, and session explosion won't be an issue.
 
 ## My Discord Workflow: The Bunker in Action
 
 Let me show you my Discord usage. I created a dedicated Server—if you've read my previous articles, you might know I have an AI workflow Server called "[The Bunker](https://x.com/zhixianio/status/2012092307613622525)." I've now created a special Section to host my entire workflow with Owlia 🦉 (my OpenClaw agent).
+
+![My "Bunker" upgraded—Owlia moved in!](bunker-owlia.jpg)
 
 Check out the screenshot—I basically divide things into categories:
 
@@ -81,6 +85,8 @@ When something grows large enough that you feel it could become a long-term proj
 The benefit of this workflow is super-fast switching between different matters. OpenClaw can reply to 4 different Sessions simultaneously by default, and this quota is configurable, but 4 is enough for me—I rarely have 4 channels actively replying at once (still practicing). You'll feel like "Doctor Octopus," wielding four big arms operating four work threads, which feels incredibly satisfying.
 
 Besides task-pushing Channels, you can create daily scheduled task Channels. This splits work that was previously in the main session across different directions. For example, I have a dedicated Channel called digest that runs several times daily, aggregating X and blog content there. Another example is heartbeat—I need an observation window to see trigger times and content, so I created a heartbeat Channel directing all output there. Configure based on your daily work and life needs.
+
+![Daily reports in #heartbeat](heartbeat-channel.jpg)
 
 Once configured, the entire "Bunker" becomes incredibly powerful. Not only does it have automated processes, but a powerful intelligent agent lives inside who can help you work, research, and chat. These sessions are isolated, yet you can specify one session to read another session's content for quick context sync. This experience fits complex work needs perfectly.
 
@@ -97,6 +103,8 @@ Discord has some advanced plays:
 ## Similar Attempts on Telegram (And Why I Gave Up)
 
 Finally, some similar Telegram uses: one is opening Groups with Topics, which is really Telegram's feature under Discord pressure, but the experience has always been poor. Also, you can enable Threads in Bot DMs (same mechanism as Topics). A January 24th update (when it was still called Clawdbot) added support: when you set up Thread mode for your Bot in BotFather (note: this toggle is only in BotFather's Mini App), your DM with it becomes like a Telegram Group with Topics, except Topics in DMs are called Threads. My experience was poor, so I won't elaborate.
+
+![Telegram Bot DM with Thread mode enabled](telegram-thread-dm.jpg)
 
 ## The Era of Natural Language Programming
 
