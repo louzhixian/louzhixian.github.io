@@ -29,13 +29,34 @@ Another benefit is that these Sessions are connected by default. If you say 1, 2
 
 But this creates a potential issue: if you share your Bot with family or friends (say, by opening Telegram access), the Agent can't distinguish whether messages are from you or your family, treating them all as one context—which gets messy.
 
-A configuration solves this: `session.dmScope`. Set it to `per-channel-peer` to isolate different Channels and different users within the same Channel. This way, whether it's your Discord, your Telegram, or your family's Telegram, they all become independent Sessions without interference.
+A configuration solves this: session.dmScope. Set its value to "per-channel-peer" to isolate different Channels and different users within the same Channel. This way, whether it's between your own Discord and Telegram, or between you and your family's Telegram, they all become independent Sessions without interference.
 
-You might wonder: can I separate from family while keeping my own DMs interconnected? Yes, you can. There's another config called `session.identityLinks` where you can link your different DM Sessions into one, achieving "external separation, internal connectivity."
+```json
+...,
+"session": {
+    "dmScope": "per-channel-peer"
+},
+...
+```
+
+You might wonder: can I separate from family while keeping my own DMs interconnected? Yes, you can. There's another config called session.identityLinks where you can link your different DM Sessions into one, achieving "external separation, internal connectivity."
+
+```json
+session: {
+    scope: "per-sender",
+    dmScope: "main",
+    identityLinks: {
+      alice: ["telegram:123456789", "discord:987654321012345678"],
+    },
+   ...
+}
+```
 
 You don't need to manually edit config files for these settings—that risks breaking things. It's better to just instruct your OpenClaw Bot directly to configure them.
 
-## Discord's Information Hierarchy: The Magic of Threads
+For more related configurations, check out [this section](https://docs.openclaw.ai/gateway/security#dm-session-isolation-multi-user-mode) of the official documentation.
+
+## Discord's Information Hierarchy: The Magic of Threads 💬
 
 Discord has another excellent information hierarchy capability, which I believe was borrowed from Slack: Threads. You can create a Thread on any message to continue discussing the topic beneath it. For example, a Channel called "What to eat for lunch" where everyone discusses daily meal choices. If Xiao Shuai says "I want fish," replies pile up below—some continue the fish topic like "grilled or stewed?", while others start new topics like "I want beef." This is basically WeChat group reality (though the Quote feature helped somewhat); communication works but easily becomes chaotic.
 
@@ -45,15 +66,19 @@ With Thread mode explained, the full architecture becomes clear: each Channel in
 
 ## My Discord Workflow: The Bunker in Action
 
-Let me show you my Discord usage. I created a dedicated Server—if you've read my previous articles, you might know I have an AI workflow Server called "The Bunker." I've now created a special Section to host my entire OpenClaw chat workflow.
+Let me show you my Discord usage. I created a dedicated Server—if you've read my previous articles, you might know I have an AI workflow Server called "[The Bunker](https://x.com/zhixianio/status/2012092307613622525)." I've now created a special Section to host my entire workflow with Owlia 🦉 (my OpenClaw agent).
 
-Check out the screenshot—I basically divide things into two categories: "Daily" for brainstorming phase chats, and content that has graduated into independent projects. In daily chat channels, I give the Agent an instruction: whenever I post something there, your reply must first create a Thread, then continue in that Thread. Currently this is a soft constraint, but it works great—it follows it almost every time.
+Check out the screenshot—I basically divide things into categories:
+
+One called "daily" for brainstorming phase chats, where you can see a long list of open Threads below; another type is content that has graduated into independent projects like owliabot and writing; and there's also daily pushes like digest and heartbeat.
+
+In daily chat channels, I give the Agent an instruction: whenever I post something there, your reply must first create a Thread, then continue in that Thread. Currently this is a soft constraint, but it works great—it follows it almost every time.
 
 The benefit is that Daily channel stuff is miscellaneous. When you suddenly remember something to discuss further—like "I want to buy the BTC dip, how should I do it"—after posting, the Agent analyzes the situation, asks about your preferences and current position, and you can keep chatting.
 
-When something grows large enough that you feel it could become a long-term project, even one the Agent could proactively push forward, make it an independent Channel. You can tell the Agent in the new channel that this continues that previous Thread, have it Compress the original Session here, and the conversation picks up. Progress becomes easier because in this channel, you can still use Threads for multi-dimensional discussion and folding.
+When something grows large enough that you feel it could become a long-term project, even one the Agent could proactively push forward, make it an independent Channel. You can tell the Agent in the new channel that this continues a previous Thread, have it Compress the original Session here, and the conversation picks up. Progress becomes easier because in this channel, you can still use Threads for multi-dimensional discussion and folding.
 
-The benefit of this workflow is super-fast switching between different matters. OpenClaw can reply to four different Sessions simultaneously by default—this quota is configurable, but four is enough for me; I rarely have four channels actively replying at once. You'll feel like "Doctor Octopus," wielding four big arms operating four work threads, which feels incredibly satisfying.
+The benefit of this workflow is super-fast switching between different matters. OpenClaw can reply to 4 different Sessions simultaneously by default, and this quota is configurable, but 4 is enough for me—I rarely have 4 channels actively replying at once (still practicing). You'll feel like "Doctor Octopus," wielding four big arms operating four work threads, which feels incredibly satisfying.
 
 Besides task-pushing Channels, you can create daily scheduled task Channels. This splits work that was previously in the main session across different directions. For example, I have a dedicated Channel called digest that runs several times daily, aggregating X and blog content there. Another example is heartbeat—I need an observation window to see trigger times and content, so I created a heartbeat Channel directing all output there. Configure based on your daily work and life needs.
 
@@ -63,9 +88,11 @@ Theoretically Slack could do this too, but I'm now thinking I might not even nee
 
 ## Discord Advanced Plays: Reactions, Multi-Agent & Model Assignment
 
-Discord has some advanced plays, like Reactions. You can define different Reactions as different functions, having your Agent act according to your operations. For example, bookmarking: click a red star and it automatically forwards that message to a certain channel.
+Discord has some advanced plays:
 
-Each Discord Channel or even Thread can be configured as a separate agent with its own settings. So if you need multi-agent coordination, you don't have to create multiple independent agent bots and pull a bunch of robots in—just create a pm bot in #product, an engineer bot in #dev, and you're set. You can even assign different models based on task type: product work might need opus for deep design, while development work often does fine with sonnet (though complex logic might need codex, haha).
+**Reactions**. You can define different Reactions as different functions, having your Agent act according to your operations. For example, bookmarking: click a ♥️ and it automatically forwards that message to a certain channel for collection.
+
+**Separate Agents**. Each Channel or even Thread can be configured as a separate agent with its own settings. So if you need multi-agent coordination, you don't have to create multiple independent agent bots and pull a bunch of robots in—just create a pm bot in #product, an engineer bot in #dev, and you're set. You can even assign different models based on task type: product work might need opus for deep design, while development work often does fine with sonnet (though complex logic might need codex, haha).
 
 ## Similar Attempts on Telegram (And Why I Gave Up)
 
