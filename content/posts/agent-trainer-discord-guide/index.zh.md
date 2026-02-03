@@ -77,7 +77,13 @@ Discord 还有一个特别好的信息分级能力，我觉得是借鉴于 Slack
 
 一类叫"daily"，相当于头脑风暴阶段的聊天，可以看到下方有一大串还处于 open 状态的 Threads，在前面那张截图就是这个 channel 里的内容形式；另一种是已经独立出来、作为项目继续推进的内容，比如下面的 owliabot、writing；还有一类是日常推送，比如 digest 和 heartbeat。
 
-在日常聊天频道里，我会给 Agent 一个指示：只要我在里面说一句话，你的回复一定要先创建一个 Thread（线程），然后在 Thread 里继续。目前这还是一个软约束，但运行得很好，基本都能遵循。
+在日常聊天频道里，可以通过 `autoThread` 配置让 Agent 自动在 Thread 里回复。在 Discord channel config 里设置：
+
+```json
+channels.discord.guilds.<guildId>.channels.<channelId>.autoThread: true
+```
+
+开启后，收到该频道消息时会自动创建 Thread 来回复，而不是直接在频道里回复。（感谢 [@Pfoagi](https://x.com/pfoagi) 提供这个配置信息！）
 
 这样做的好处是，Daily 频道里的事情比较杂，当你突然想起一件事想继续讨论——比如"我最近想抄底 BTC 该怎么操作"——发完这条消息后，Agent 就会分析现状，询问你的偏好和目前仓位，然后你们就可以聊下去了。
 

@@ -76,7 +76,13 @@ Check out the screenshot—I basically divide things into three categories:
 
 One called "daily" for brainstorming phase chats, where you can see a long list of open Threads below; another type is content that has graduated into independent projects like owliabot and writing; and there's also daily pushes like digest and heartbeat.
 
-In daily chat channels, I give the Agent an instruction: whenever I post something there, your reply must first create a Thread, then continue in that Thread. Currently this is a soft constraint, but it works great—it follows it almost every time.
+In daily chat channels, you can use the `autoThread` configuration to make the Agent automatically reply in Threads. Set it in Discord channel config:
+
+```json
+channels.discord.guilds.<guildId>.channels.<channelId>.autoThread: true
+```
+
+When enabled, incoming messages to that channel will automatically create a Thread for replies instead of replying directly in the channel. (Thanks to [@Pfoagi](https://x.com/pfoagi) for this configuration tip!)
 
 The benefit is that Daily channel stuff is miscellaneous. When you suddenly remember something to discuss further—like "I want to buy the BTC dip, how should I do it"—after posting, the Agent analyzes the situation, asks about your preferences and current position, and you can keep chatting.
 
