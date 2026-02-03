@@ -1,5 +1,5 @@
 ---
-title: "Agent Trainer Advanced Guide: Building an Efficient AI Collaboration System with Discord"
+title: "Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord"
 date: 2026-02-03
 draft: false
 tags: ["AI", "OpenClaw", "Agent", "Discord", "Productivity"]

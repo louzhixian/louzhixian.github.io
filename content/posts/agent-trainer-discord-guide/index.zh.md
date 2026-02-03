@@ -1,5 +1,5 @@
 ---
-title: "Agent 训练师进阶指南：用 Discord 打造高效 AI 协作系统"
+title: "Agent 训练师进阶指南：用 Discord 打造高效 OpenClaw 协作系统"
 date: 2026-02-03
 draft: false
 isCJKLanguage: true
