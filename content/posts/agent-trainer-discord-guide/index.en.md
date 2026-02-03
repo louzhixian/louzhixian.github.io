@@ -72,7 +72,7 @@ Let me show you my Discord usage. I created a dedicated Server—if you've read 
 
 ![My "Bunker" upgraded—Owlia moved in!](bunker-owlia.jpg)
 
-Check out the screenshot—I basically divide things into categories:
+Check out the screenshot—I basically divide things into three categories:
 
 One called "daily" for brainstorming phase chats, where you can see a long list of open Threads below; another type is content that has graduated into independent projects like owliabot and writing; and there's also daily pushes like digest and heartbeat.
 
