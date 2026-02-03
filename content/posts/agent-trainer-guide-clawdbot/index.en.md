@@ -71,6 +71,45 @@ Besides Tailscale, I gave it dedicated Twitter, email, and phone accounts. The p
 
 OK, there's not much more to say about configuration since it comes with many skills you can explore gradually. That covers most people's needs. Now let's talk about setup pitfalls.
 
+## Advanced Discord Configuration
+
+If you use Discord as your primary interaction channel, here are two very practical configuration tips.
+
+### autoThread — Automatic Thread Replies
+
+In the Discord channel config, there's an `autoThread` option:
+
+```json
+channels.discord.guilds.<guildId>.channels.<channelId>.autoThread: boolean
+```
+
+It's a per-channel setting. When enabled, incoming messages to that channel will automatically create a thread for replies instead of replying directly in the channel. This keeps the channel clean, with each conversation happening in its own thread.
+
+### Agent Bindings — Different Models for Different Channels
+
+Sometimes you might want certain channels to use cheaper models (like Sonnet for casual chat) while important work uses Opus. This is achievable through the **bindings** mechanism:
+
+```json
+// 1. Define a lightweight agent in agents.list (only change model, inherit everything else from defaults)
+{
+  "id": "casual",
+  "model": { "primary": "anthropic/claude-sonnet-4-5" }
+}
+
+// 2. Route specific channels to this agent in bindings
+{
+  "agentId": "casual",
+  "match": {
+    "channel": "discord",
+    "peer": { "kind": "channel", "id": "<channel-id>" }
+  }
+}
+```
+
+This way, messages sent to that channel will automatically be handled by Sonnet—saves money and gets the job done.
+
+---
+
 ## About Models
 
 Since I started with an earlier version, there are still some bugs. Previously, whether using Codex or Claude, authorization always had issues. Recently it feels more stable—not sure if that's just my perception. For model compatibility, I've tested Codex, Claude CLI, Gemini CLI (which requires opening the app/IDE environment), and a Gemini API I wrapped locally. They all work but with different results. Gemini models especially would often output Tool Use system information, which was a poor experience. With Codex, the whole chatbot becomes cold and hyper-rational—I don't like that either. I prefer the more divergent thinking of Claude for daily use. But I could never get the token setup mode working; I'd paste credentials here and find Claude Code broken there, re-login there and find credentials expired here. So now I just use Claude CLI's unified authorization.

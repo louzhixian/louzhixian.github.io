@@ -72,6 +72,45 @@ Clawdbot 的自定义范围非常大，具备修改自身、增加工作流以�
 
 OK，配置上其实不用说太多，因为本身它就带了很多 skills，大家可以慢慢看慢慢尝试，足够大多数人使用了，接下来讲讲配置上的坑。
 
+## Discord 高级配置
+
+如果你用 Discord 作为主要的交互渠道，这里有两个很实用的配置技巧。
+
+### autoThread — 自动创建 Thread 回复
+
+在 Discord channel config 里有 `autoThread` 选项：
+
+```json
+channels.discord.guilds.<guildId>.channels.<channelId>.autoThread: boolean
+```
+
+是 per-channel 设置。开启后，收到该频道消息时会自动创建 thread 来回复，而不是直接在频道里回复。这样可以保持频道整洁，每个对话都在独立的 thread 里进行。
+
+### Agent Bindings — 不同频道用不同模型
+
+有时候你可能想让某些频道用更便宜的模型（比如日常闲聊用 Sonnet），而重要工作用 Opus。这可以通过 **bindings** 机制实现：
+
+```json
+// 1. 在 agents.list 里定义一个轻量 agent（只改 model，其他继承 defaults）
+{
+  "id": "casual",
+  "model": { "primary": "anthropic/claude-sonnet-4-5" }
+}
+
+// 2. 在 bindings 里把特定频道路由到这个 agent
+{
+  "agentId": "casual",
+  "match": {
+    "channel": "discord",
+    "peer": { "kind": "channel", "id": "<channel-id>" }
+  }
+}
+```
+
+这样，发到这个频道的消息会自动用 Sonnet 处理，省钱又够用。
+
+---
+
 ## 关于模型
 
 因为我用的版本比较早，感觉还是有一些 Bug。之前无论用 Codex 还是 Claude，授权总是出问题。最近感觉稳定了一些，不知道是不是错觉。模型适配上，我测试过的有 Codex、Claude 的 CLI、Gemini 的 CLI（这个是要打开 APP 的，也就是 IDE 环境），以及我自己把 Gemini 从本地封装的一个 API。这几个我都试过可以用，但效果各有不同，尤其是 Gemini 系列的，之前经常会把 Tool Use 的一些系统信息输出来，体验很不好。用 Codex 呢，整个 Chatbot 就会变得冷冰冰的、贼理性，我也不是很喜欢，我还是喜欢思维比较发散的 Claude 作为日常使用主力，不过 Setup token 模式我一直搞不定，这边贴好了发现 cc 那边挂了，那边重新登录后发现这边失效了，所以现在还是统一用 Claude CLI 的授权。
