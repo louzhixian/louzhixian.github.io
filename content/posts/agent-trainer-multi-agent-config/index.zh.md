@@ -38,7 +38,7 @@ cover:
 
 假设 Owlia 在处理日常聊天时可以用便宜的模型，但在写代码时需要更强的推理能力。我们可以通过 bindings 来配置，让同一个 Agent 在不同 Discord 频道使用不同的模型。
 
-```json5
+```json
 {
   agents: {
     list: [
@@ -85,7 +85,7 @@ openclaw agents add coder
 
 或者直接指挥你的 bot 创建，它会在配置文件里给你添加，大概长这样：
 
-```json5
+```json
 {
   agents: {
     list: [
@@ -131,7 +131,7 @@ Coder 负责 #dev 频道，其他所有消息由 Owlia 处理（因为 Owlia 设
 
 这里有个小技巧：两个 Agent 之间其实不是完全隔离的。当一个 Agent 的 session 出问题时（比如工具调用被截断导致一直报错），另一个 Agent 可以帮你修复。只要在配置里启用 agent-to-agent 通讯：
 
-```json5
+```json
 {
   tools: {
     agentToAgent: {
@@ -154,7 +154,7 @@ OpenClaw 默认会忽略来自 bot 的消息来防止这种情况，但如果你
 
 有了多个 Agent 之后，你可能会想限制某些 Agent 的能力。比如让 Coder 专注于写代码，不给他用不到的一些能力（💻：连聊天都不让吗！我需要 cron 设置🍅⏰！）。这不需要启用 Docker 沙箱，直接在 Agent 配置里加 tools 字段就行：
 
-```json5
+```json
 {
   agents: {
     list: [
@@ -175,7 +175,7 @@ deny 的优先级高于 allow。你还可以用 group:* 语法批量配置，比
 
 工具限制是"软性"的——Agent 仍然在主机上运行，理论上可以访问所有文件。如果你需要更严格的隔离，比如 Agent 要对外服务（放在 Telegram 群里让陌生人用），就需要沙箱模式了。
 
-```json5
+```json
 {
   agents: {
     list: [
@@ -201,7 +201,7 @@ sandbox.mode 有三个选项：off（不启用沙箱）、non-main（只有非 m
 
 如果你需要让沙箱里的 Agent 访问特定目录，可以用 docker.binds 来映射：
 
-```json5
+```json
 {
   sandbox: {
     docker: {
@@ -218,7 +218,7 @@ sandbox.mode 有三个选项：off（不启用沙箱）、non-main（只有非 m
 
 有时候你希望"区别对待"：你和 Agent 聊天时可以执行高权限操作，其他人不行。这就是 Elevated Mode。在配置里设置白名单：
 
-```json5
+```json
 {
   tools: {
     elevated: {
@@ -243,7 +243,7 @@ sandbox.mode 有三个选项：off（不启用沙箱）、non-main（只有非 m
 
 如果真的需要差异化设定，就要配置两个独立 Agent，但是它们能共用一个 Telegram Bot 或者 WhatsApp 账号，然后通过 binding 配置成按用户路由：
 
-```json5
+```json
 {
   agents: {
     list: [
