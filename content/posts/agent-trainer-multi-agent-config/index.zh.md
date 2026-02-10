@@ -150,6 +150,12 @@ OpenClaw 默认会忽略来自 bot 的消息来防止这种情况，但如果你
 
 所以如果你想让两个 Agent 协作，我建议这几种方案：用 ``sessions_send`` 直接跨 Session 通信，干净利落，也不会打扰频道里的其他人；或者让一个 Agent 主导，另一个被动响应特定关键词；又或者用不同 Channel 隔离，需要时再手动 @ 就好。
 
+---
+
+*到这里，多 Agent 的基本玩法就讲完了。下面是进阶内容：权限控制和沙箱。如果你只是想让几个 Agent 各管各的频道，上面的内容已经够用了，可以先跳到最后的「我自己的配置」看看实战案例。*
+
+---
+
 ## 权限控制：工具限制和沙箱
 
 有了多个 Agent 之后，你可能会想限制某些 Agent 的能力。比如让 Coder 专注于写代码，不给他用不到的一些能力（💻：连聊天都不让吗！我需要 cron 设置🍅⏰！）。这不需要启用 Docker 沙箱，直接在 Agent 配置里加 tools 字段就行：
@@ -278,6 +284,8 @@ sandbox.mode 有三个选项：off（不启用沙箱）、non-main（只有非 m
 
 答案是可以的，使用 OpenClaw 的 Hook 机制。官方有一个有趣的示例叫 soul-evil，就是利用 Hook 在特定时间把 Agent 的"灵魂"替换成邪恶版本，做一些恶作剧。
 
+**这部分需要写点 TypeScript 代码，不想折腾的可以跳过，直接看下一节「我自己的配置」。**
+
 我写了一个类似的 Hook。在 ~/.openclaw/hooks/writer-channel-intro/ 目录下创建两个文件：
 
 HOOK.md：
@@ -325,22 +333,62 @@ export default handler;
 
 Owlia 调试这个 Hook 花了不少时间，一度以为是 bootstrapFiles 对象被冻结了不能修改，后来发现其实 Hook 一直在工作，只是 Owlia 太专注于 debug 而忽略了遵守新加的规则……这大概是 AI 时代特有的尴尬吧。
 
+## 我自己的配置
+
+讲了这么多理论，不如直接看我现在怎么用的。
+
+我目前跑着 5 个 Agent：
+
+- **main (Owlia)** 🦉 — 日常助理，处理 Telegram 私聊和 Discord 大部分频道。默认用 Opus，因为我跟她聊的事情比较杂，需要强一点的理解能力。
+- **owlia-lite** 🦉 — Owlia 的"省电模式"，用 Sonnet。专门负责 Discord 里几个不太重要的频道，比如 #heartbeat（状态播报）和 #digests（每日摘要）。
+- **dimo** 🐱 — 给朋友用的助理，通过 Telegram 的另一个 Bot 账号服务。有自己独立的人格和记忆，跑在本地部署的 Kimi K2.5 上，省钱。
+- **yui** 🎀 — 实验性质的 Agent，用来测试新功能。
+- **haven** 🏠 — 专门负责一个开发项目的 Agent，只在特定的 Discord 频道出现。
+
+这个配置的核心思路是：**能省则省，该强则强**。日常对话用 Owlia，重要工作用 Opus；不重要的自动化任务用 owlia-lite + Sonnet；给朋友用的跑本地模型，不花我的 API 额度。
+
+路由配置大概长这样（简化版）：
+
+```json
+{
+  agents: {
+    list: [
+      { id: "main", default: true, model: "anthropic/claude-opus-4-5" },
+      { id: "owlia-lite", model: "anthropic/claude-sonnet-4-5" },
+      { id: "dimo", model: "cc-nim/kimi-k2.5" }
+    ]
+  },
+  bindings: [
+    // owlia-lite 负责几个不重要的频道
+    { agentId: "owlia-lite", match: { channel: "discord", peer: { id: "heartbeat-channel-id" } } },
+    { agentId: "owlia-lite", match: { channel: "discord", peer: { id: "digests-channel-id" } } },
+    // dimo 绑定到另一个 Telegram Bot
+    { agentId: "dimo", match: { channel: "telegram", accountId: "dimo" } }
+  ]
+}
+```
+
+这套配置跑了一个多月，Token 费用比之前省了大概 40%，而且不同场景的体验都没打折扣。
+
 ## 总结
 
-回顾一下这篇讲了什么。我用 Agent 和场景的对应关系来梳理配置的升级路径：
+回顾一下这篇讲了什么：
 
-**1 Agent : 1 场景**——最基础的配置，一个 Agent 处理所有事情。大多数人从这里开始，也有很多人停在这里就够用了。
+**从简单到复杂的升级路径：**
 
-**1 Agent : N 场景**——同一个 Agent 在不同场景下切换模型或行为。用 bindings 按频道配置不同模型，用 Hook 按频道注入不同提示词。Agent 的记忆和人格保持连续，只是"努力程度"不同。这是性价比最高的升级。
+- **1 Agent : 1 场景** — 最基础，大多数人从这里开始，很多人停在这里也够用了。
+- **1 Agent : N 场景** — 同一个 Agent 切换模型或行为，用 bindings 配置。性价比最高的升级。
+- **N Agents : 1 用户** — 多个 Agent 各司其职，适合任务差异大的场景。
+- **N Agents : N 用户** — 多人共用系统，各自路由到不同 Agent。
 
-**N Agents : 1 用户**——你一个人用多个 Agent，各司其职。Owlia 管日常，Coder 管研发，互不干扰但可以协作。适合任务差异大、需要独立人格的场景。
+**权限控制两层：**
 
-**N Agents : N 用户**——多人共用一套系统，每个人路由到不同的 Agent。适合家庭、小团队、或者对外提供服务的场景。
+- 工具限制（软性，不需要 Docker）
+- 沙箱隔离（硬性，需要 Docker）
+- Elevated 模式给白名单用户开后门
 
-权限控制有两层：工具限制是软性的，不需要 Docker，适合限制 Agent 能调用哪些工具；沙箱隔离是硬性的，需要 Docker，适合物理隔离文件访问。Elevated 模式则是给白名单用户开后门，让你能穿透沙箱执行高权限操作。
+**路由优先级一句话：越具体越优先。** peer > guildId > accountId > channel > 默认 Agent。
 
-路由优先级记住一句话：越具体越优先。举个 Discord 的例子：假设你配置了三条规则，一条说"Discord 上所有消息给 Amy"，一条说"Office 这个服务器的消息给 Owlia"，还有一条说"#dev 频道的消息给 Coder"。当你在 #dev 频道发消息时，三条规则都能匹配，但系统会选最具体的那条——#dev 频道（peer）比服务器（guildId）具体，服务器比整个 Discord（channel）具体，所以最终走 Coder。优先级排序：peer > guildId > accountId > channel > 默认 Agent。
-
-想进一步研究的朋友，推荐阅读官方文档的 Multi-Agent Routing 和 Sandboxing 章节。
+想深入研究的朋友，推荐看官方文档的 Multi-Agent Routing 和 Sandboxing 章节。
 
 OK，这篇先到这儿。下一篇希望能写自动推进了，或者看看评论区有没有大家想听的话题！
