@@ -24,7 +24,7 @@ cover:
 
 当你第一次创建 OpenClaw 时，系统会给你创建一个默认的 Agent，ID 叫做 main。这里要注意一个容易混淆的点：Agent ID 和 Agent Name 是两回事。ID 是系统内部的唯一标识符，像是身份证号；Name 是你在对话时设置的名字，像是昵称。你可以管它叫 Owlia、叫小助手、叫什么都行，但在系统里它永远是 main。
 
-每个 Agent 拥有自己独立的"家当"：工作目录（存放 SOUL.md、MEMORY.md 这些人格和记忆文件）、状态目录（存放认证信息和会话记录）、以及 API Key 等敏感信息。这些东西都是独立存储的，不会自动共享。如果你想让两个 Agent 用同一个 API Key，需要手动复制 auth-profiles.json 文件给另一个。
+每个 Agent 拥有自己独立的"家当"：工作目录（存放 `SOUL.md`、`MEMORY.md` 这些人格和记忆文件）、状态目录（存放认证信息和会话记录）、以及 API Key 等敏感信息。这些东西都是独立存储的，不会自动共享。如果你想让两个 Agent 用同一个 API Key，需要手动复制 `auth-profiles.json` 文件给另一个。
 
 说到这里可能有朋友会问：我现在直接聊天的 Telegram Bot 和 Agent 是什么关系？Discord Bot 呢？各个 Channel 跟 Agent 是一对一绑定吗？
 
@@ -127,7 +127,7 @@ openclaw agents add coder
 }
 ```
 
-Coder 负责 #dev 频道，其他所有消息由 Owlia 处理（因为 Owlia 设了 default: true）。每个 Agent 有自己的 workspace，里面可以放不同的 SOUL.md 来定义人格。identity 字段会自动用于群聊的 mention patterns，比如在群里 @Owlia 或 @Coder 就会触发对应的 Agent 回复。
+Coder 负责 #dev 频道，其他所有消息由 Owlia 处理（因为 Owlia 设了 default: true）。每个 Agent 有自己的 workspace，里面可以放不同的 `SOUL.md` 来定义人格。identity 字段会自动用于群聊的 mention patterns，比如在群里 @Owlia 或 @Coder 就会触发对应的 Agent 回复。
 
 这里有个小技巧：两个 Agent 之间其实不是完全隔离的。当一个 Agent 的 session 出问题时（比如工具调用被截断导致一直报错），另一个 Agent 可以帮你修复。只要在配置里启用 agent-to-agent 通讯：
 
@@ -142,13 +142,13 @@ Coder 负责 #dev 频道，其他所有消息由 Owlia 处理（因为 Owlia 设
 }
 ```
 
-这个配置启用的是 `sessions_send` 工具，让 Agent 可以直接跨 Session 发消息，不经过 Discord 或 Telegram。你可以指挥 Coder 说"帮我看看 Owlia 的 session 文件是不是格式乱了"，Coder 就能直接访问并修复，不用在 Discord 里发消息绕一圈。
+这个配置启用的是 ``sessions_send`` 工具，让 Agent 可以直接跨 Session 发消息，不经过 Discord 或 Telegram。你可以指挥 Coder 说"帮我看看 Owlia 的 session 文件是不是格式乱了"，Coder 就能直接访问并修复，不用在 Discord 里发消息绕一圈。
 
 说到 Agent 间的协作，群里经常有人问：能不能让两个 Agent 在 Discord 频道里互相 @ 聊天、公开讨论问题？这是另一回事了——用 `message` 工具发真实的 Discord 消息。技术上可以，但有个大坑：无限循环。想象一下：A @ B 说"帮我查个东西"，B 回复并 @ A 说"查到了"，A 看到有人 @ 自己又回复……死循环就这么来了。
 
-OpenClaw 默认会忽略来自 bot 的消息来防止这种情况，但如果你真的想让它们在频道里公开对话，就需要显式配置允许。每个 Agent 在同一个 Channel 里有独立的 Session（比如 agent:main:discord:channel:123456 和 agent:coder:discord:channel:123456），它们各自维护独立的对话历史。A 的 Session 不包含 B 的思考过程，只包含 Channel 里的实际消息。
+OpenClaw 默认会忽略来自 bot 的消息来防止这种情况，但如果你真的想让它们在频道里公开对话，就需要显式配置允许。每个 Agent 在同一个 Channel 里有独立的 Session（比如 `agent:main:discord:channel:123456` 和 `agent:coder:discord:channel:123456`），它们各自维护独立的对话历史。A 的 Session 不包含 B 的思考过程，只包含 Channel 里的实际消息。
 
-所以如果你想让两个 Agent 协作，我建议这几种方案：用 `sessions_send` 直接跨 Session 通信，干净利落，也不会打扰频道里的其他人；或者让一个 Agent 主导，另一个被动响应特定关键词；又或者用不同 Channel 隔离，需要时再手动 @ 就好。
+所以如果你想让两个 Agent 协作，我建议这几种方案：用 ``sessions_send`` 直接跨 Session 通信，干净利落，也不会打扰频道里的其他人；或者让一个 Agent 主导，另一个被动响应特定关键词；又或者用不同 Channel 隔离，需要时再手动 @ 就好。
 
 ## 权限控制：工具限制和沙箱
 
@@ -171,7 +171,7 @@ OpenClaw 默认会忽略来自 bot 的消息来防止这种情况，但如果你
 }
 ```
 
-deny 的优先级高于 allow。你还可以用 group:* 语法批量配置，比如 group:fs 代表 read、write、edit、apply_patch 这一类文件系统工具，group:runtime 代表 exec、bash、process 这一类运行时工具。
+deny 的优先级高于 allow。你还可以用 `group:*` 语法批量配置，比如 `group:fs` 代表 read、write、edit、apply_patch 这一类文件系统工具，`group:runtime` 代表 exec、bash、process 这一类运行时工具。
 
 工具限制是"软性"的——Agent 仍然在主机上运行，理论上可以访问所有文件。如果你需要更严格的隔离，比如 Agent 要对外服务（放在 Telegram 群里让陌生人用），就需要沙箱模式了。
 
@@ -188,7 +188,7 @@ deny 的优先级高于 allow。你还可以用 group:* 语法批量配置，比
           workspaceAccess: "ro"
         },
         tools: {
-          allow: ["read", "group:sessions"],
+          allow: ["read", "`group:sessions`"],
           deny: ["write", "edit", "exec", "browser"]
         }
       }
@@ -199,7 +199,7 @@ deny 的优先级高于 allow。你还可以用 group:* 语法批量配置，比
 
 sandbox.mode 有三个选项：off（不启用沙箱）、non-main（只有非 main session 启用）、all（所有 session 都启用）。scope 控制容器粒度：session（每个会话一个容器）、agent（每个 Agent 一个容器）、shared（所有人共用一个容器）。workspaceAccess 控制工作目录的访问权限：none（完全隔离）、ro（只读）、rw（读写）。
 
-如果你需要让沙箱里的 Agent 访问特定目录，可以用 docker.binds 来映射：
+如果你需要让沙箱里的 Agent 访问特定目录，可以用 `docker.binds` 来映射：
 
 ```json
 {
@@ -233,7 +233,7 @@ sandbox.mode 有三个选项：off（不启用沙箱）、non-main（只有非 m
 }
 ```
 
-白名单里的用户可以发送 /elevated on 来穿透沙箱，在主机上执行命令。发送 /elevated full 还能自动批准所有 exec。用完后发 /elevated off 恢复沙箱模式。
+白名单里的用户可以发送 `/elevated on` 来穿透沙箱，在主机上执行命令。发送 `/elevated full` 还能自动批准所有 exec。用完后发 `/elevated off` 恢复沙箱模式。
 
 ## 多用户场景：同一个 Bot 服务不同人
 
@@ -311,7 +311,7 @@ const handler: HookHandler = async (event) => {
   
   // 检查是否是目标频道的 thread
   const bootstrapFiles = event.context.bootstrapFiles;
-  const soulFile = bootstrapFiles?.find(f => f.name === "SOUL.md");
+  const soulFile = bootstrapFiles?.find(f => f.name === "`SOUL.md`");
   
   if (soulFile?.content) {
     soulFile.content = soulFile.content + INTRO;
