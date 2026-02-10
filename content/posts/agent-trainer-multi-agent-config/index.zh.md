@@ -129,7 +129,15 @@ openclaw agents add coder
 
 Coder 负责 #dev 频道，其他所有消息由 Owlia 处理（因为 Owlia 设了 default: true）。每个 Agent 有自己的 workspace，里面可以放不同的 `SOUL.md` 来定义人格。identity 字段会自动用于群聊的 mention patterns，比如在群里 @Owlia 或 @Coder 就会触发对应的 Agent 回复。
 
-这里有个小技巧：两个 Agent 之间其实不是完全隔离的。当一个 Agent 的 session 出问题时（比如工具调用被截断导致一直报错），另一个 Agent 可以帮你修复。只要在配置里启用 agent-to-agent 通讯：
+这里有个小技巧：虽然每个 Agent 有自己的 workspace 和 session 目录，但它们在文件系统层面并不是完全隔离的（除非开了沙箱）。当一个 Agent 的 session 出问题时（比如工具调用被截断导致一直报错），你可以让另一个 Agent 帮忙修复——直接告诉 Coder "帮我看看 Owlia 的 session 文件是不是格式乱了"，Coder 就能读取 `~/.openclaw/agents/main/sessions/` 下的文件，找到问题并修复。
+
+说到 Agent 间的协作，群里经常有人问：能不能让两个 Agent 在 Discord 频道里互相 @ 聊天、公开讨论问题？这是另一回事了——用 `message` 工具发真实的 Discord 消息。技术上可以，但有个大坑：无限循环。想象一下：A @ B 说"帮我查个东西"，B 回复并 @ A 说"查到了"，A 看到有人 @ 自己又回复……死循环就这么来了。
+
+OpenClaw 默认会忽略来自 bot 的消息来防止这种情况，但如果你真的想让它们在频道里公开对话，就需要显式配置允许。每个 Agent 在同一个 Channel 里有独立的 Session（比如 `agent:main:discord:channel:123456` 和 `agent:coder:discord:channel:123456`），它们各自维护独立的对话历史。A 的 Session 不包含 B 的思考过程，只包含 Channel 里的实际消息。
+
+所以如果你想让两个 Agent 协作，我建议这几种方案：用 `sessions_send` 直接跨 Agent 通信，干净利落，也不会打扰频道里的其他人；或者让一个 Agent 主导，另一个被动响应特定关键词；又或者用不同 Channel 隔离，需要时再手动 @ 就好。
+
+如果要用 `sessions_send` 实现跨 Agent 通信，需要在配置里显式开启：
 
 ```json
 {
@@ -142,13 +150,7 @@ Coder 负责 #dev 频道，其他所有消息由 Owlia 处理（因为 Owlia 设
 }
 ```
 
-这个配置启用的是 ``sessions_send`` 工具，让 Agent 可以直接跨 Session 发消息，不经过 Discord 或 Telegram。你可以指挥 Coder 说"帮我看看 Owlia 的 session 文件是不是格式乱了"，Coder 就能直接访问并修复，不用在 Discord 里发消息绕一圈。
-
-说到 Agent 间的协作，群里经常有人问：能不能让两个 Agent 在 Discord 频道里互相 @ 聊天、公开讨论问题？这是另一回事了——用 `message` 工具发真实的 Discord 消息。技术上可以，但有个大坑：无限循环。想象一下：A @ B 说"帮我查个东西"，B 回复并 @ A 说"查到了"，A 看到有人 @ 自己又回复……死循环就这么来了。
-
-OpenClaw 默认会忽略来自 bot 的消息来防止这种情况，但如果你真的想让它们在频道里公开对话，就需要显式配置允许。每个 Agent 在同一个 Channel 里有独立的 Session（比如 `agent:main:discord:channel:123456` 和 `agent:coder:discord:channel:123456`），它们各自维护独立的对话历史。A 的 Session 不包含 B 的思考过程，只包含 Channel 里的实际消息。
-
-所以如果你想让两个 Agent 协作，我建议这几种方案：用 ``sessions_send`` 直接跨 Session 通信，干净利落，也不会打扰频道里的其他人；或者让一个 Agent 主导，另一个被动响应特定关键词；又或者用不同 Channel 隔离，需要时再手动 @ 就好。
+这个配置允许 main 和 coder 两个 Agent 互相发消息。默认情况下 `sessions_send` 只能在同一个 Agent 内使用（比如从主 session 发消息给 cron session），开启 `agentToAgent` 后才能跨 Agent 通信。
 
 ---
 
