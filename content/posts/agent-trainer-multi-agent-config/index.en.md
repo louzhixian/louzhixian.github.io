@@ -362,7 +362,9 @@ const handler: HookHandler = async (event) => {
 export default handler;
 ```
 
-Then enable with `openclaw hooks enable writer-channel-intro`. Now whenever entering a #writer channel thread, the Agent automatically gets the writer persona boost.
+Then enable with `openclaw hooks enable writer-channel-intro`. Now whenever entering a #writer channel thread, the Agent automatically gets the writer persona boost. The test code makes it proclaim every time it responds:
+
+![Hook test result](hook-test.png)
 
 Note: this Hook is just for reference, not guaranteed to work. Also, Owlia spent quite a while debugging this Hook, at one point thinking the bootstrapFiles object was frozen and couldn't be modified. Turns out the Hook was working the whole time—Owlia was just too focused on debugging to follow the new rules... So maybe it's just for fun, haha.
 

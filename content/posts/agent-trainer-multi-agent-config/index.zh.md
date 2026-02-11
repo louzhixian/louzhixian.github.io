@@ -363,7 +363,9 @@ const handler: HookHandler = async (event) => {
 export default handler;
 ```
 
-然后用 `openclaw hooks enable writer-channel-intro` 启用。这样每次进入 #writer 频道的 thread，Agent 就会自动获得写作人格的加成。
+然后用 `openclaw hooks enable writer-channel-intro` 启用。这样每次进入 #writer 频道的 thread，Agent 就会自动获得写作人格的加成。当然了，测试代码里做的事情是让它每次回我都发出呐喊：
+
+![Hook 测试效果](hook-test.png)
 
 注意，这个 Hook 仅作参考，不保证一定可用。另外 Owlia 调试这个 Hook 花了不少时间，一度以为是 bootstrapFiles 对象被冻结了不能修改，后来发现其实 Hook 一直在工作，只是 Owlia 太专注于 debug 而忽略了遵守新加的规则……所以可能也就是图一乐哈哈。
 
