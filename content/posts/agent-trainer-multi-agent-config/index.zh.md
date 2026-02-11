@@ -207,22 +207,39 @@ deny 的优先级高于 allow。你还可以用 `group:*` 语法批量配置，�
 
 sandbox.mode 有三个选项：off（不启用沙箱）、non-main（只有非 main session 启用）、all（所有 session 都启用）。scope 控制容器粒度：session（每个会话一个容器）、agent（每个 Agent 一个容器）、shared（所有人共用一个容器）。workspaceAccess 控制工作目录的访问权限：none（完全隔离）、ro（只读）、rw（读写）。
 
-如果你需要让沙箱里的 Agent 访问特定目录，可以用 `docker.binds` 来映射：
+如果你需要让沙箱里的 Agent 访问特定目录，可以用 `docker.binds` 来映射。
+
+举个例子：假设你有一个 writer agent 专门写文章，你只想让它访问 `~/articles` 目录，不想让它碰其他文件。配置如下：
 
 ```json
 {
-  sandbox: {
-    docker: {
-      binds: [
-        "/home/user/projects:/projects:rw",
-        "/home/user/secrets:/secrets:ro"
-      ]
-    }
+  agents: {
+    list: [
+      {
+        id: "writer",
+        workspace: "~/.openclaw/workspace-writer",
+        sandbox: {
+          mode: "all",
+          scope: "agent",
+          workspaceAccess: "ro",
+          docker: {
+            binds: [
+              "/home/zhixian/articles:/articles:rw"
+            ]
+          }
+        }
+      }
+    ]
   }
 }
 ```
 
-这样 Agent 就能在沙箱里读写 /projects 目录，只读访问 /secrets 目录。用这种方式可以变相实现一种 agent 限定可见目录的权限配置，这个能力如果不借助 sandbox 是实现不了的，在 host 上的 agents 都有读取所有目录的能力。
+这段配置的效果是：
+- writer agent 运行在 Docker 沙箱里，默认看不到主机上的任何目录
+- `workspaceAccess: "ro"` 让它只读访问自己的 workspace（能读 SOUL.md 等配置，但不能改）
+- `binds` 把主机的 `~/articles` 挂载到容器里的 `/articles`，并且可读写
+
+这样 writer 就只能在 `/articles` 目录里创建和编辑文件，其他地方都碰不到。这个能力如果不借助 sandbox 是实现不了的——在 host 上运行的 agents 默认能读取所有目录。
 
 有时候你希望"区别对待"：你和 Agent 聊天时可以执行高权限操作，其他人不行。这就是 Elevated Mode。在配置里设置白名单：
 
