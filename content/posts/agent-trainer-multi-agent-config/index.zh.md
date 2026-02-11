@@ -196,7 +196,7 @@ deny 的优先级高于 allow。你还可以用 `group:*` 语法批量配置，�
           workspaceAccess: "ro"
         },
         tools: {
-          allow: ["read", "`group:sessions`"],
+          allow: ["read", "group:sessions"],
           deny: ["write", "edit", "exec", "browser"]
         }
       }
@@ -338,7 +338,7 @@ const handler: HookHandler = async (event) => {
   
   // 检查是否是目标频道的 thread
   const bootstrapFiles = event.context.bootstrapFiles;
-  const soulFile = bootstrapFiles?.find(f => f.name === "`SOUL.md`");
+  const soulFile = bootstrapFiles?.find(f => f.name === "SOUL.md");
   
   if (soulFile?.content) {
     soulFile.content = soulFile.content + INTRO;
