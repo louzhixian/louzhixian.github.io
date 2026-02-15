@@ -1,0 +1,20 @@
+languageCode = "en"
+languageName = "English"
+languageDirection = "ltr"
+weight = 2
+
+title = "zhixian's site"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+
+[params.author]
+  name = "zhixian"
+  image = "images/zhixian.png"
+  headline = "Idea Open-Sourcer, Agent Trainer, PM with CS background, Full-time Tinkerer"
+  bio = "Idea Open-Sourcer, Agent Trainer, PM with CS background, Full-time Tinkerer"
+  links = [
+    { x-twitter = "https://x.com/zhixianio" },
+    { github = "https://github.com/louzhixian" },
+  ]

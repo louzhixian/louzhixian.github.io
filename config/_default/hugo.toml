@@ -1,0 +1,28 @@
+theme = "blowfish"
+baseURL = "https://zhixian.io/"
+defaultContentLanguage = "zh"
+
+enableRobotsTXT = true
+summaryLength = 30
+hasCJKLanguage = true
+
+buildDrafts = false
+buildFuture = false
+enableEmoji = true
+
+googleAnalytics = "G-R2MWV81SNQ"
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

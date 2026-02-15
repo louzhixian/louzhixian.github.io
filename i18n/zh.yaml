@@ -1,0 +1,10 @@
+list:
+  show_more: "查看更多"
+  externalurl_title: "访问网站"
+  no_articles: "这里还没有任何文章可以列出。"
+
+recent:
+  show_more: "查看更多"
+
+homepage:
+  more: "查看全部文章"

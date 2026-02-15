@@ -1,0 +1,20 @@
+languageCode = "zh"
+languageName = "中文"
+languageDirection = "ltr"
+weight = 1
+
+title = "知县的衙门"
+
+[params]
+  displayName = "ZH"
+  isoCode = "zh"
+
+[params.author]
+  name = "知县"
+  image = "images/zhixian.png"
+  headline = "想法开源家，Agent 训练师，CS 出身的产品经理，没上过班的折腾达人"
+  bio = "想法开源家，Agent 训练师，CS 出身的产品经理，没上过班的折腾达人"
+  links = [
+    { x-twitter = "https://x.com/zhixianio" },
+    { github = "https://github.com/louzhixian" },
+  ]
