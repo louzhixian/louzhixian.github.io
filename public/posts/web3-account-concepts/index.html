@@ -1,0 +1,1251 @@
+<!doctype html>
+<html
+  lang="zh"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>名词解释：Web3 账户相关概念大梳理 &middot; 知县的衙门</title>
+    <meta name="title" content="名词解释：Web3 账户相关概念大梳理 &middot; 知县的衙门">
+  
+
+  
+  
+  
+    <meta name="keywords" content="account abstraction,wallet,4337,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/web3-account-concepts/">
+  
+
+  
+  
+    <meta name="author" content="知县">
+  
+  
+    
+      
+        
+          <link href="https://x.com/zhixianio" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/zhixianio" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/web3-account-concepts/">
+  <meta property="og:site_name" content="知县的衙门">
+  <meta property="og:title" content="名词解释：Web3 账户相关概念大梳理">
+  <meta property="og:description" content="刚刚结束的 Devcon 上，账户抽象算是是最热的几个话题之一，最近可以经常看到 AA / EOA / SCW / 4337 等缩写和代号在各种 talk、panel 和信息流里出现。再加上叙事开始往「Onboarding next billion users」的方向发展，一些新的形容词也开始出现在产品之前，比如 seedless / gasless / social recovery / non-custodial。相信看完这两句的你已经开始脑壳疼了，那么接下来就让我尽自己所能来帮大家梳理一下这些名词概念到底代表什么。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-10-20T20:09:28+09:00">
+    <meta property="article:modified_time" content="2022-10-20T20:09:28+09:00">
+    <meta property="article:tag" content="Account Abstraction">
+    <meta property="article:tag" content="Wallet">
+    <meta property="article:tag" content="4337">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="名词解释：Web3 账户相关概念大梳理">
+  <meta name="twitter:description" content="刚刚结束的 Devcon 上，账户抽象算是是最热的几个话题之一，最近可以经常看到 AA / EOA / SCW / 4337 等缩写和代号在各种 talk、panel 和信息流里出现。再加上叙事开始往「Onboarding next billion users」的方向发展，一些新的形容词也开始出现在产品之前，比如 seedless / gasless / social recovery / non-custodial。相信看完这两句的你已经开始脑壳疼了，那么接下来就让我尽自己所能来帮大家梳理一下这些名词概念到底代表什么。">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.9065937b297c9b5990fb472cb2cfc4aefcaf1f6063045c2cfc2ef0ec4f327df37f92cb5121064d346343ed084127165a2c318c09b92d598be75eaf5d44a68f38.css"
+    integrity="sha512-kGWTeyl8m1mQ&#43;0csss/ErvyvH2BjBFws/C7w7E8yffN/kstRIQZNNGND7QhBJxZaLDGMCbktWYvnXq9dRKaPOA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy=""
+      data-copied=""></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "名词解释：Web3 账户相关概念大梳理",
+    "headline": "名词解释：Web3 账户相关概念大梳理",
+    
+    "inLanguage": "zh",
+    "url" : "http://localhost:1313/posts/web3-account-concepts/",
+    "author" : {
+      "@type": "Person",
+      "name": "知县"
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-10-20T20:09:28\u002b09:00",
+    "datePublished": "2022-10-20T20:09:28\u002b09:00",
+    
+    "dateModified": "2022-10-20T20:09:28\u002b09:00",
+    
+    "keywords": ["account abstraction","wallet","4337"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "5189"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl bg-neutral/25 dark:bg-neutral-800/25"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      知县的衙门
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="文章"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          文章
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="分类"
+      title="Categories">
+      
+      
+        <span class="text-base font-medium break-normal">
+          分类
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="标签"
+      title="Tags">
+      
+      
+        <span class="text-base font-medium break-normal">
+          标签
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+  <div class="translation nested-menu">
+    <button class="cursor-pointer flex items-center">
+      <span class="me-1">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg></span>
+      </span>
+      <span class="text-sm font-medium bf-icon-color-hover" title="名词解释：Web3 账户相关概念大梳理"></span>
+    </button>
+    <ul class="menuhide">
+      <li class="rounded-xl backdrop-blur shadow-2xl p-2 flex flex-col gap-1">
+        
+          <a href="/posts/web3-account-concepts/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="名词解释：Web3 账户相关概念大梳理">
+              ZH
+            </span>
+          </a>
+        
+          <a href="/en/posts/web3-account-concepts/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Glossary of Web3 Account">
+              EN
+            </span>
+          </a>
+        
+      </li>
+    </ul>
+  </div>
+
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="文章"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          文章
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="分类"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Categories" class="text-2xl font-bold tracking-tight">
+          分类
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="标签"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Tags" class="text-2xl font-bold tracking-tight">
+          标签
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+    <div
+      class="flex flex-wrap items-center [&_span]:text-2xl [&_.translation_button_.icon]:text-4xl! [&_.translation_button_span]:text-base! [&_.translation_.menuhide_span]:text-sm! gap-x-6 ps-2 mt-8 pt-8 border-t bf-border-color">
+      
+  <div class="translation nested-menu">
+    <button class="cursor-pointer flex items-center">
+      <span class="me-1">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg></span>
+      </span>
+      <span class="text-sm font-medium bf-icon-color-hover" title="名词解释：Web3 账户相关概念大梳理"></span>
+    </button>
+    <ul class="menuhide">
+      <li class="rounded-xl backdrop-blur shadow-2xl p-2 flex flex-col gap-1">
+        
+          <a href="/posts/web3-account-concepts/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="名词解释：Web3 账户相关概念大梳理">
+              ZH
+            </span>
+          </a>
+        
+          <a href="/en/posts/web3-account-concepts/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Glossary of Web3 Account">
+              EN
+            </span>
+          </a>
+        
+      </li>
+    </ul>
+  </div>
+
+
+
+      
+    </div>
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >知县的衙门</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/web3-account-concepts/"
+      >名词解释：Web3 账户相关概念大梳理</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        名词解释：Web3 账户相关概念大梳理
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-10-20T20:09:28&#43;09:00"></time><span class="px-2 text-primary-500">&middot;</span><span></span><span class="px-2 text-primary-500">&middot;</span><span title=""></span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="知县"
+        src="/images/zhixian_hu_77000294f9ad8e2c.png"
+        data-zoom-src="/images/zhixian_hu_945731277d483c2f.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        知县
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">想法开源家，Agent 训练师，CS 出身的产品经理，没上过班的折腾达人</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://x.com/zhixianio"
+          target="_blank"
+          aria-label="X-Twitter"
+          title="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/zhixianio"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#eoa---externally-owned-accounts">EOA - Externally Owned Accounts</a></li>
+    <li><a href="#ca---contract-accounts">CA - Contract Accounts</a></li>
+    <li><a href="#scwa---smart-contract-walletaccount">SCW/A - Smart Contract Wallet/Account</a></li>
+    <li><a href="#aa---account-abstraction">AA - Account Abstraction</a></li>
+    <li><a href="#4337---erc-4337">4337 - ERC 4337</a></li>
+    <li><a href="#seedless">Seedless</a></li>
+    <li><a href="#gasless">Gasless</a></li>
+    <li><a href="#social-recovery">Social Recovery</a></li>
+    <li><a href="#non-custodial">Non-custodial</a></li>
+    <li><a href="#mpc---multi-party-computation">MPC - Multi-Party Computation</a>
+      <ul>
+        <li><a href="#tss---threshold-signature-scheme">TSS - Threshold Signature Scheme</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#eoa---externally-owned-accounts">EOA - Externally Owned Accounts</a></li>
+    <li><a href="#ca---contract-accounts">CA - Contract Accounts</a></li>
+    <li><a href="#scwa---smart-contract-walletaccount">SCW/A - Smart Contract Wallet/Account</a></li>
+    <li><a href="#aa---account-abstraction">AA - Account Abstraction</a></li>
+    <li><a href="#4337---erc-4337">4337 - ERC 4337</a></li>
+    <li><a href="#seedless">Seedless</a></li>
+    <li><a href="#gasless">Gasless</a></li>
+    <li><a href="#social-recovery">Social Recovery</a></li>
+    <li><a href="#non-custodial">Non-custodial</a></li>
+    <li><a href="#mpc---multi-party-computation">MPC - Multi-Party Computation</a>
+      <ul>
+        <li><a href="#tss---threshold-signature-scheme">TSS - Threshold Signature Scheme</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>刚刚结束的 Devcon 上，账户抽象算是是最热的几个话题之一，最近可以经常看到 AA / EOA / SCW / 4337 等缩写和代号在各种 talk、panel 和信息流里出现。再加上叙事开始往「Onboarding next billion users」的方向发展，一些新的形容词也开始出现在产品之前，比如 seedless / gasless / social recovery / non-custodial。相信看完这两句的你已经开始脑壳疼了，那么接下来就让我尽自己所能来帮大家梳理一下这些名词概念到底代表什么。</p>
+<blockquote><p>阅前提示：本文不是严肃的技术文档，可能会用不精确但容易理解的语言进行阐述或比喻，欢迎大家以此为起点深入探索这些技术的细节。</p>
+</blockquote>
+<h2 class="relative group">EOA - Externally Owned Accounts
+    <div id="eoa---externally-owned-accounts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#eoa---externally-owned-accounts" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>EOA 中文叫做 <strong>外部账户</strong>，我们最熟悉的 MetaMask 生成的地址就是 EOA。它的特点是原理简单，比如生成规则是：</p>
+<p><code>私钥 → 公钥 → Keccak256 哈希 → 最后 20 Bytes → 十六进制字符串（EOA 地址）</code></p>
+<p>可以看出这个规则非常直接，全是由数学变换计算出来的，生成的地址内部没有任何结构和逻辑。节点验证一笔交易是否被地址 owner 授权的时候也是固定的规则：</p>
+<p><code>交易签名 → ec_recover → 公钥 → （用上面的规则生成）地址 → 对比要操作的地址</code></p>
+<p>对比结果一致那么验签通过，进行后续流程；不通过则直接打回，不会进一步广播交易。</p>
+<p>EOA 的另一个设定是作为交易的发起方并支付 gas，相对应的 CA（合约账户） 只能被其他 CA 或者 EOA 调用。也就是说，EOA 是交易的触发器，一笔交易无论后面有多少合约调用，一开始都必须由一个 EOA 发起并且支付足够的 gas 才可以进行。</p>
+<p>需要指出的是，EOA 是以太坊以及其他 EVM 兼容链（或类 EVM 链）才有的概念，严格来说包括 BTC 在内的主流非 EVM 链都没有这个设定。</p>
+
+<h2 class="relative group">CA - Contract Accounts
+    <div id="ca---contract-accounts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ca---contract-accounts" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>CA 中文叫做 <strong>合约账户</strong>（也曾被称为 <strong>内部账户</strong>），我们常见的 ERC-20 代币合约、DeFi 业务合约等都有一个跟 EOA 长得很像的地址，这就是 CA。</p>
+<p>在设定上，CA 是以太坊世界的原住民，EOA 和 ETH 是为 CA 的业务逻辑准备的触发器和燃料；实际使用下来，以太坊上除 ETH 之外的所有资产都是由 CA 承载，DeFi 等业务逻辑就更是全都由 CA 来实现。然而 CA 无法主动进行操作和支付 gas 的设定也限制了它的能力，早在<a href="https://github.com/ethereum/EIPs/issues/61"  target="_blank" rel="noreferrer">2016 年就有提案</a>希望能让 CA 自己支付 gas。</p>
+<p>简单来说，CA 是具备内部逻辑的以太坊账户，里面既可以是业务逻辑（Token 合约用来记账，质押合约用来放贷和清算），也可以是账户逻辑（比如 gnosis safe 的多签逻辑），而后者就是我们即将提到的「SCW - 智能合约钱包」概念。</p>
+<p>CA 的地址规则是通过计算生成的，有 CREATE 和 CREATE2 两种方式，这里不再展开。大家只需要记住 CA 和公钥没有必然对应关系即可，比如 gnosis safe 创建的 CA 里可以设定任意多把公钥来解锁它的地址对应的资产；当然 CA 也可以不设定任何密钥，而是由其他 CA 的逻辑决定是否可以解锁，比如 DeFi 的借贷合约，只要还了钱就能取回质押的资产。</p>
+
+<h2 class="relative group">SCW/A - Smart Contract Wallet/Account
+    <div id="scwa---smart-contract-walletaccount" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#scwa---smart-contract-walletaccount" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p><strong>智能合约钱包</strong> 应该是字面意思最好理解的了，也就是用 CA 作为地址的钱包方案，而我们常用的 EOA 钱包方案是用前述的公钥变换结果作为地址。由于具备内部逻辑，智能合约钱包可以实现很多 EOA 无法实现的功能，比如 gas 代付，批量交易，权限管理，离线授权，社交恢复等等。</p>
+<p>这里举几个例子来展示一下智能合约钱包的扩展潜力：</p>
+<ol>
+<li>Gnosis safe 利用智能合约钱包架构实现多签逻辑；</li>
+<li>用户可以在一笔上链交易中同时给多个地址发送不同的 token，也可以在用 uniswap 时让 approve 和 swap 在一笔交易里完成，从而做到需要多少授权多少，避免因为过度授权造成安全隐患。</li>
+<li>用户可以给不同资产设定不同的操作权限，比如给 PFP 设定比普通 ERC-20 token 更高的操作门槛（例如需要一把由硬件钱包管理的 admin key 才能转移），这样即便日常使用的环境发生密钥泄露，黑客也无法将高价值资产转走，在安全和便利中间取得平衡。</li>
+<li>用户可以签署一个离线授权「谁能给我 100 ETH，就可以转走我的某个 BAYC」，这样不需要授权给第三方合约，用户就可以跟其他人 P2P 地完成原子交易。</li>
+</ol>
+
+<h2 class="relative group">AA - Account Abstraction
+    <div id="aa---account-abstraction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#aa---account-abstraction" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p><strong>账户抽象</strong> 其实不是一个新概念了，最早可以追溯到 2015 年的一些讨论，当时 Vitalik 认为至少要让以太坊用来验证交易的密码学算法做到可替换，比如换成性能更优的 ed25519（<a href="https://blog.ethereum.org/2015/07/05/on-abstraction/"  target="_blank" rel="noreferrer">详见这里</a>），可以说 7 年来 Vitalik 和 EF 都没有停止对账户抽象方案的讨论和探索，这里有个整理好的 <a href="https://hackmd.io/@matt/r1neQ_B38"  target="_blank" rel="noreferrer">linktree</a> 可以帮大家回顾一下历史。</p>
+<p>那么账户抽象怎么理解呢？这里我引用一下 <a href="https://eips.ethereum.org/EIPS/eip-4337"  target="_blank" rel="noreferrer">ERC-4337</a> 里对其目标的描述：</p>
+<blockquote><p>Achieve the key goal of account abstraction: allow users to use smart contract wallets containing arbitrary verification logic instead of EOAs as their primary account. Completely remove any need at all for users to also have EOAs (as status quo SC wallets and <a href="https://eips.ethereum.org/EIPS/eip-3074"  target="_blank" rel="noreferrer">EIP-3074</a> both require)</p>
+</blockquote><p>可以看出以太坊对于账户抽象的期望是改变目前大多数人都在使用 EOA 的现状，希望用户转向 SCW，并且把生态对 EOA 的依赖完全去除。除了里面提到的 <a href="https://eips.ethereum.org/EIPS/eip-3074"  target="_blank" rel="noreferrer">EIP-3074</a> 之外，还有一个更为激进和远期的 <a href="https://eips.ethereum.org/EIPS/eip-5003"  target="_blank" rel="noreferrer">EIP-5003</a>，这里同样引述几段原文（有省略）：</p>
+<blockquote><p>EOAs … are limited by the protocol in a variety of critical ways. These accounts do not support rotating keys for security, batching to save gas, or sponsored transactions to reduce the need to hold ether yourself. There are countless other benefits that come from having a contract account or account abstraction, like choosing one’s own authentication algorithm, setting spending limits, enabling social recovery, allowing key rotation, arbitrarily and transitively delegating capabilities, and just about anything else we can imagine.</p>
+</blockquote><blockquote><p>…This EIP provides a path not to enshrine EOAs, but to provide a migration path off of them, once and for all.</p>
+</blockquote><p>不难看出，EIP-5003 的目标是一次性将 EOA 转换为 CA，让所有用户用上 SCW，彻底解决向前兼容的问题。（经过上面的名词解释，看这些缩写是不是顺畅了些？）</p>
+<p>到这里大家对 AA 的来龙去脉和未来目标应该有所了解了。但需要指出的是，AA 这个概念不是以太坊和 EVM 专属的，很多链原生已经具备了不同程度的 AA 特性。比如 EOS / Polkadot / Near / Solona / Flow / Aptos … 甚至 BTC（单签 / 多签 / Taproot），这些链在设计时就已经将账户做成了有内部结构甚至具备权限管理能力的状态，还有 StarkNet / CKB 等具备更完善的账户抽象能力。说到这里大家不难发现，以太坊的 AA 是在解决 EOA 意外地流行带来的历史遗留问题，从而在账户层面上变得更加先进和灵活。</p>
+
+<h2 class="relative group">4337 - ERC 4337
+    <div id="4337---erc-4337" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4337---erc-4337" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>从上面对 AA 的讨论里不难看出，ERC-4337 只是这个方向众多提案中的一个，但是为什么大家一提到 AA 或者 SCW 就会说到它呢？我们来看这个文档的副标题：</p>
+<blockquote><p>An account abstraction proposal which completely avoids consensus-layer protocol changes, instead relying on higher-layer infrastructure.</p>
+</blockquote><p>也就是说，ERC-4337 是 AA 的路线第一次从「暴力革命」转向「和平演变」，不再追求利用共识层的改变实现 AA，而是转而使用 SCW 这种用户层的方案。并且为了实现更好的互操作性，ERC-4337 定义了一些 SCW 应该实现的接口，以及元交易打包、gas 代付等基础设施的框架。它的出现让目前差异极大的各种 SCW 方案能够拥有统一的用户交互界面以及共用一些生态层面搭建的开放基础设施，有助于各种场景快速实现自己需要的 SCW 方案。另一方面，ERC-4337 的推动有助于促进生态其他参与方提升对 SCW 的兼容性，比如验签需要的 <a href="https://eips.ethereum.org/EIPS/eip-1271"  target="_blank" rel="noreferrer">EIP-1271</a> 和有些 DeFi 协议里定义的禁止 CA 交互的一些规则。</p>
+
+<h2 class="relative group">Seedless
+    <div id="seedless" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#seedless" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>这里的 seed 指的是 seed phrase，就是我们创建钱包的时候经常被要求备份的助记词。那么 seedless 的意思就是「无助记词的」，或者也可以说成「无私钥的」。注意这个「无」并不是实际意义上的没有密钥，而是指不需要用户备份助记词 / 私钥或者感知到它们的存在。</p>
+<p>一个常见的问题是，如果用户不备份助记词，用户是不是就没有账户的控制权了？一旦用户切换新设备环境，账户不就无法访问了吗？没错，只是把用户备份助记词的功能砍掉的话只能算是产品设计失误，而 seedless 追求的是用户「不需要」知道助记词的存在，同时依然拥有账户的完全控制权。也就是说，用户（且只有用户自己）拥有在新设备自主恢复账户控制的能力，只是不再依赖助记词这种 UX 很差、过于 geek 的方式，比如下面要讲到的社交恢复就是非常好的一种。</p>
+
+<h2 class="relative group">Gasless
+    <div id="gasless" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#gasless" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>这里的 gas 指的是 gas fee，所以 gasless 的意思是「免 gas fee 的」。同样的，gasless 也不是真的不需要支付 gas fee，而是指用户不需要被迫去了解 gas 概念，更不用提前购买各种原生代币来支付 gas。</p>
+<p>那么 gas 谁来付？分两种情况：</p>
+<p>一种是用户账户里已经有 crypto asset 的时候，比如 play to earn 得到 token，或者领到的空投，亦或是别人的转账，只要这些 token 有一定的价值和流动性，就会有 relayer 愿意接受它们并帮用户支付 gas，以此赚取收益。</p>
+<p>另一种是用户账户里没有有价 token，比如刚刚创建的账户。如果此时需要链上交互，应用方可以选择资助用户一些「定向」用途的 gas 来帮他们 bootstrap，从而降低用户流失，这时即便算上 gas 补贴的消耗，整体的用户获取成本反而可能会更低；或者可以通过让用户观看广告等方式来换取一些 gas。这两种策略在 gas 成本较低的 L2 上都非常有效。</p>
+
+<h2 class="relative group">Social Recovery
+    <div id="social-recovery" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#social-recovery" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p><strong>社交恢复</strong> 是指利用社交关系帮助用户在丢失密钥的情况下重新获得账户访问权的机制。如果你用微信登录过新设备，应该有过「让你的两个朋友发送 xxx 给你的账号以登录」的体验——这就是社交恢复想达到的效果，只不过验证方从微信变成了智能合约。</p>
+<p>一种常见的误区是把利用社交账号来创建 / 登录钱包的方案称为社交恢复，这是错把「社交关系」与「社交平台账号」划了等号。老牌智能合约钱包 Argent 就内置了社交恢复能力，它要求你的 guardian 提供一个以太坊地址，从而在你需要登陆新设备时提供签名来进行授权，然而这一方案的潜在设定就是：你的 guardian 一定比你在管理以太坊账户上更专业，否则当你需要他们签名的时候，如果他们自己的账户已经无法访问，你的账户也会连带遭殃。所以一种更加可行的办法是利用 email 的密码学证明（DKIM Signature）或者电子护照等生活中常见的密码学工具来增强社交恢复方案的实用性。</p>
+
+<h2 class="relative group">Non-custodial
+    <div id="non-custodial" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#non-custodial" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p><strong>非托管</strong> 可以说是 crypto 行业最政治正确、也是被滥用最多的概念之一了，因为很多时候各家都会有自己的定义。这里我也分享一下我们对非托管的定义，主要有两方面：</p>
+<ol>
+<li>
+<p>钱包开发商<strong>无法擅自操作</strong>用户的账户</p>
+</li>
+<li>
+<p>钱包开发商<strong>无法阻止用户操作</strong>自己的账户</p>
+</li>
+</ol>
+<p>如果你也认同这两点，那么判断一个钱包是托管、半托管还是非托管就可以直接拿这两个规则去检验了：</p>
+<p><code>不满足 1 → 托管；满足 1 不满足 2 → 半托管；1、2 都满足 → 非托管</code></p>
+<p>那么知道了是哪种托管程度有什么用吗，用户可能并不 care 背后的原理，只要好用就行了呗！没错，其实我也部分认同这种观点，至少在现在的阶段，行业还没有发展到发生用户认知范式转移的程度。其实我认为三种类型的方案分别适用于不同的场景：</p>
+<ol>
+<li>
+<p><strong>托管方案</strong> - 适用于交易所、大机构金服、强合规等场景，比如 coinbase 提供的一些服务。特点是用户量少，不需要应对高频交互，而且客单价高，能支撑服务商花费大成本来维护一系列高防系统。</p>
+</li>
+<li>
+<p><strong>半托管方案</strong> - 适用于相对高端的个人用户群体。他们明白服务方可以审查自己的交易，并且有能力提前准备备份方案（比如导出私钥），在服务方主动或被动拒绝服务时可以不影响自己的资产安全。这样日常使用时可以享受安全和便利，极端情况下可以保全资产。注意这种方案对服务商的运维能力要求也非常高，毕竟个人用户量大，日常跟各种应用的交互需求也更高，再就是对数据可用性要求高，毕竟一旦丢失服务端保存的数据有可能导致所有没备份的用户永远无法访问账户。</p>
+</li>
+<li>
+<p><strong>非托管方案</strong> - 适用于面向 mass adoption 的场景。初听上去可能是反直觉的，但是从成本上讲，非托管方案是唯一能够在低客单价的场景里保证足够的安全性和可用性的方案。如果一个面向大规模用户场景的应用方打算选择上面两种方案，就一定要考虑对方能否为自己的用户群提供足够安全可用的服务，否则一旦内部人员作恶、黑客入侵或不可抗力导致服务停摆，自己的所有用户都会受到牵连，自己的业务也可能因此一蹶不振。历史上的无数次案例都在讲述一个故事，安全无小事，为用户负责就是为自己负责。</p>
+</li>
+</ol>
+
+<h2 class="relative group">MPC - Multi-Party Computation
+    <div id="mpc---multi-party-computation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mpc---multi-party-computation" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p><strong>多方安全计算</strong> 跟零知识证明（ZKP）可以并称当下 Web3 两大「魔法」，一旦跟它们沾边，似乎原来做不到的事情 somehow 就能做了。实际上有些情况是这样的，尤其是 ZKP，可以利用概率换可行性；MPC 则是通过分散控制权来达成风控或者灾备能力。</p>
+<p>MPC 其实是一种范式，包含很多技术方案，在目前 Web3 的语境下大都指的是 tss。</p>
+
+<h3 class="relative group">TSS - Threshold Signature Scheme
+    <div id="tss---threshold-signature-scheme" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tss---threshold-signature-scheme" aria-label="">#</a>
+    </span>
+    
+</h3>
+<p><strong>门限签名</strong> 是一种分布式多方签名协议，包含分布式密钥生成、签名，以及在不改变公钥的情况下更换私钥碎片的 re-sharing 等算法。</p>
+<p>一个 m-n 的 tss 指的是一个公钥对应了 n 个私钥碎片，其中 m 个碎片的联合签名可以被公钥验签成功。不难发现这个逻辑类似于多签（multi-sig），他们的区别主要在公钥的数量上。</p>
+<p>举例来说，2-2 的多签是一个门上挂了 2 把锁，必须用两个钥匙把它们都打开才能开门；2-2 的 tss 是一个门上挂了 1 把锁，但是钥匙有两片，合起来用才能打开门。这里为了好理解，描述并不严谨，两把钥匙合成一把其实更符合 Shamir Secret Sharing 算法的情况；tss 算法下的密钥碎片是不会相遇的，而是它们分别签名之后，通过特定算法可以用对应的公钥验签通过。</p>
+<p>那么 tss 是不是一定是托管或者非托管的？其实没有必然联系，主要看最终的方案如何设计和取舍。非托管方案要求用户拥有独立操作账户的能力，所以用户必须掌握不少于门限数量的密钥碎片，例如 2-3 的话用户需要掌握 2 片，而 2-2 的方案无法达成非托管，最多可以做到半托管（比如 ZenGo）；但是如果用户管理最多的私钥碎片，那么势必会提高对用户能力的要求，很难做到 mass adoption。</p>
+<p>写到这里应该把常见的 Web3 账户相关的名词都覆盖到了，数了一下字数也有差不多 5k 了。这么多的内容难免有错误和疏漏的地方，还请大家不吝拍砖，发现问题或者有不同观点直接来 Twitter 找我提就好（<a href="https://twitter.com/frank_lay2"  target="_blank" rel="noreferrer">@frank_lay2</a>），后面有内容增改或更新我也会在 Twitter 上及时跟大家同步。</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/ai-and-crypto-ux-security/">
+              <span class="leading-6">
+                AI 时代的 Crypto UX 新思路&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-04-02T18:26:40&#43;08:00"></time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label=""
+    title="">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          知县
+      </p>
+    
+
+    
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder=""
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

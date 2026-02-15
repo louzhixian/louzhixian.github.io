@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/tags/security/</link>
+    <description>Recent content in Security on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/en/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agent Trainer Security Class: Clawdbot 7-Step Self-Check Guide</title>
+      <link>http://localhost:1313/en/posts/agent-trainer-security-clawdbot/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/agent-trainer-security-clawdbot/</guid>
+      <description>&lt;p&gt;It feels like AI enthusiasts have been on an emotional roller coaster these past few days:&lt;/p&gt;&#xA;&lt;p&gt;First, they heard about something called Clawdbot—looks like a lobster?—and thought: What is this? Why is everyone sharing it? Why don&amp;rsquo;t I have it yet? So they frantically read articles and ordered a Mac mini. Then came the analysis posts saying this thing is extremely dangerous, has way too many permissions, absolutely terrifying—uninstall it now! So everyone nervously uninstalled, shut down, wiped their systems, and listed their machines on secondhand markets (maybe the 🦞 got sold too, haha).&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-security-clawdbot/cover.png" />
+    </item>
+    
+    <item>
+      <title>Crypto UX Security Is Broken By Design</title>
+      <link>http://localhost:1313/en/posts/crypto-ux-security/</link>
+      <pubDate>Fri, 12 Dec 2025 14:26:40 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/crypto-ux-security/</guid>
+      <description>&lt;p&gt;You wouldn&amp;rsquo;t wire $50,000 through a random website you found via Google ad. Yet that&amp;rsquo;s exactly what crypto wallets ask you to do every day—except when it goes wrong, there&amp;rsquo;s no bank to reverse the transaction, no fraud department to call, no chargeback to file.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

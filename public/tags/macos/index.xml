@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MacOS on 知县的衙门</title>
+    <link>http://localhost:1313/tags/macos/</link>
+    <description>Recent content in MacOS on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Sun, 18 Jan 2026 17:15:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>给 Whisper 加个本地「编辑」：用 Apple Foundation Model 自动清理语音转写</title>
+      <link>http://localhost:1313/posts/whisper-afm-refine/</link>
+      <pubDate>Sun, 18 Jan 2026 17:15:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/whisper-afm-refine/</guid>
+      <description>&lt;p&gt;用过语音转文字的人都知道，转出来的文字往往不能直接用。口语里的「嗯」「那个」「就是说」会原封不动地出现在结果里，标点几乎没有，断句全靠猜。你要么自己改一遍，要么就忍着用。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/whisper-afm-refine/cover.png" />
+    </item>
+    
+    <item>
+      <title>白嫖 Apple Intelligence：把 macOS 内置模型变成 OpenAI API</title>
+      <link>http://localhost:1313/posts/apple-foundation-model-local-api/</link>
+      <pubDate>Sun, 18 Jan 2026 13:20:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/apple-foundation-model-local-api/</guid>
+      <description>&lt;p&gt;macOS 26 Tahoe 内置了一个 3B 参数的语言模型，Apple 叫它 Foundation Model。这玩意儿平时藏在系统里给 Writing Tools、Siri 这些功能用，但其实你可以把它拉出来，包装成一个 OpenAI 兼容的 API，然后接到任何支持 OpenAI 格式的工具里去。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/apple-foundation-model-local-api/cover.png" />
+    </item>
+    
+  </channel>
+</rss>

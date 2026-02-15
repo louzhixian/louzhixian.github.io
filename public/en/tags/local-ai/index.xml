@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Local AI on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/tags/local-ai/</link>
+    <description>Recent content in Local AI on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Sun, 18 Jan 2026 17:15:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/en/tags/local-ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Add a Local “Editor” to Whisper: Cleaning Transcripts with Apple Foundation Model</title>
+      <link>http://localhost:1313/en/posts/whisper-afm-refine/</link>
+      <pubDate>Sun, 18 Jan 2026 17:15:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/whisper-afm-refine/</guid>
+      <description>&lt;p&gt;If you use voice-to-text often, you already know the problem: Whisper transcripts are usually not ready to ship. You get filler words, no punctuation, and sentences that run forever. You can either fix it manually, or you accept something that looks like a raw dump.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/whisper-afm-refine/cover.png" />
+    </item>
+    
+    <item>
+      <title>Free Ride on Apple Intelligence: Turn macOS Built-in Model into an OpenAI API</title>
+      <link>http://localhost:1313/en/posts/apple-foundation-model-local-api/</link>
+      <pubDate>Sun, 18 Jan 2026 13:20:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/apple-foundation-model-local-api/</guid>
+      <description>&lt;p&gt;macOS 26 Tahoe ships with a 3B parameter language model that Apple calls the Foundation Model. It normally hides in the system powering Writing Tools, Siri, and other features, but you can actually pull it out, wrap it as an OpenAI-compatible API, and plug it into any tool that supports the OpenAI format.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/apple-foundation-model-local-api/cover.png" />
+    </item>
+    
+  </channel>
+</rss>

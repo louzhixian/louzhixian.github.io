@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test-Time-Scaling on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/tags/test-time-scaling/</link>
+    <description>Recent content in Test-Time-Scaling on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Wed, 07 Jan 2026 11:20:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/en/tags/test-time-scaling/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>From Looped Models (Ouro) to NVIDIA Rubin: Convergent Paths in the Inference Era</title>
+      <link>http://localhost:1313/en/posts/ouro-rubin-test-time-scaling/</link>
+      <pubDate>Wed, 07 Jan 2026 11:20:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/ouro-rubin-test-time-scaling/</guid>
+      <description>&lt;p&gt;For the past few years, the story of AI getting stronger has been straightforward: throw more training compute at it, feed it more data, make the model bigger. Think of it as reading more books and doing more practice problems—cramming capability into parameters during training. But recently, the winds may be shifting: a model doesn&amp;rsquo;t necessarily need to keep growing; as long as it &amp;ldquo;thinks a bit longer&amp;rdquo; when facing hard problems, results can improve significantly.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

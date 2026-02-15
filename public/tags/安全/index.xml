@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安全 on 知县的衙门</title>
+    <link>http://localhost:1313/tags/%E5%AE%89%E5%85%A8/</link>
+    <description>Recent content in 安全 on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agent 训练师安全课：Clawdbot 七步自检指南</title>
+      <link>http://localhost:1313/posts/agent-trainer-security-clawdbot/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-security-clawdbot/</guid>
+      <description>&lt;p&gt;感觉这两天关注 AI 的小伙伴们，心理状态经历了一个巨大的过山车：&lt;/p&gt;&#xA;&lt;p&gt;首先听说了一个叫 Clawdbot 的、好像是龙虾的东西：这是什么？为什么所有人都在转？我为什么还没有用上？于是疯狂看文章，下单 Mac mini；接下来就看到各种分析帖子，说这东西非常危险、权限太高，简直吓死人，卸了卸了。于是大家又赶紧战战兢兢地卸载、关机，抹除系统、挂海鲜市场（说不定🦞也一起被卖了哈哈）。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-security-clawdbot/cover.png" />
+    </item>
+    
+  </channel>
+</rss>

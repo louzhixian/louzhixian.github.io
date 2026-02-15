@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clawdbot on 知县的衙门</title>
+    <link>http://localhost:1313/tags/clawdbot/</link>
+    <description>Recent content in Clawdbot on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/clawdbot/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流</title>
+      <link>http://localhost:1313/posts/agent-trainer-writing-workflow/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-writing-workflow/</guid>
+      <description>&lt;p&gt;伴随着 Clawdbot 改名成 @moltbot，大家火爆的情绪也开始逐渐退潮。不知道有多少人已经随着潮落回到了日常生活的汪洋中，又有多少人作为潮水退去后留下的「新物种」，开始探索这片全新的大陆了？&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-writing-workflow/cover-generation-flow.jpg" />
+    </item>
+    
+    <item>
+      <title>Agent 训练师安全课：Clawdbot 七步自检指南</title>
+      <link>http://localhost:1313/posts/agent-trainer-security-clawdbot/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-security-clawdbot/</guid>
+      <description>&lt;p&gt;感觉这两天关注 AI 的小伙伴们，心理状态经历了一个巨大的过山车：&lt;/p&gt;&#xA;&lt;p&gt;首先听说了一个叫 Clawdbot 的、好像是龙虾的东西：这是什么？为什么所有人都在转？我为什么还没有用上？于是疯狂看文章，下单 Mac mini；接下来就看到各种分析帖子，说这东西非常危险、权限太高，简直吓死人，卸了卸了。于是大家又赶紧战战兢兢地卸载、关机，抹除系统、挂海鲜市场（说不定🦞也一起被卖了哈哈）。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-security-clawdbot/cover.png" />
+    </item>
+    
+    <item>
+      <title>Agent 训练师入门指南：Clawdbot 配置与踩坑</title>
+      <link>http://localhost:1313/posts/agent-trainer-guide-clawdbot/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-guide-clawdbot/</guid>
+      <description>&lt;p&gt;最近 Clawdbot 突然爆火了，我觉得是意料之外情理之中。从三周前开始用 Clawdbot 到现在，我每天的状态都非常亢奋，因为我感觉到科幻世界真的来了。关注过我的朋友应该能感受到我那两天的状态有点 high，跟我聊过的朋友可能就更是了哈哈。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-guide-clawdbot/cover.png" />
+    </item>
+    
+  </channel>
+</rss>

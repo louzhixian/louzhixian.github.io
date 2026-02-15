@@ -16,5 +16,5 @@ title = "zhixian's site"
   bio = "Idea Open-Sourcer, Agent Trainer, PM with CS background, Full-time Tinkerer"
   links = [
     { x-twitter = "https://x.com/zhixianio" },
-    { github = "https://github.com/louzhixian" },
+    { github = "https://github.com/zhixianio" },
   ]

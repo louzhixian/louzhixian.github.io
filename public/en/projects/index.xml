@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/projects/</link>
+    <description>Recent content in Projects on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/en/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>认知有县 Podcast</title>
+      <link></link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Sharing ideas, exploring new products, occasional conversations with friends.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://apple.co/4ay0hDL&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Apple Podcast&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://open.spotify.com/show/34rYkRrG5UzceVS6Sxet1l&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Spotify&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BotDrop</title>
+      <link></link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Turn your old Android phone into an AI Agent server. Run your private AI assistant at zero cost.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Zero infrastructure cost — use hardware you already have&lt;/li&gt;&#xA;&lt;li&gt;Always with you — your agent lives where you live&lt;/li&gt;&#xA;&lt;li&gt;True ownership — your data stays on your device&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>OwliaBot</title>
+      <link></link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Secure crypto-native AI Agent with built-in wallet solution and key isolation design.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Key &amp;amp; Agent Process Isolation — keys unreachable even under RCE&lt;/li&gt;&#xA;&lt;li&gt;Sign Tier Risk Control — approval thresholds based on amount and frequency&lt;/li&gt;&#xA;&lt;li&gt;Narrowed Execution Environment — command allowlist, no shell exec&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

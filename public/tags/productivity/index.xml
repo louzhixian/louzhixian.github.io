@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Productivity on 知县的衙门</title>
+    <link>http://localhost:1313/tags/productivity/</link>
+    <description>Recent content in Productivity on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Sun, 18 Jan 2026 17:15:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>给 Whisper 加个本地「编辑」：用 Apple Foundation Model 自动清理语音转写</title>
+      <link>http://localhost:1313/posts/whisper-afm-refine/</link>
+      <pubDate>Sun, 18 Jan 2026 17:15:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/whisper-afm-refine/</guid>
+      <description>&lt;p&gt;用过语音转文字的人都知道，转出来的文字往往不能直接用。口语里的「嗯」「那个」「就是说」会原封不动地出现在结果里，标点几乎没有，断句全靠猜。你要么自己改一遍，要么就忍着用。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/whisper-afm-refine/cover.png" />
+    </item>
+    
+    <item>
+      <title>我的「末日小屋」：用 Discord 搭一个 AI 工作台</title>
+      <link>http://localhost:1313/posts/discord-ai-workspace/</link>
+      <pubDate>Fri, 16 Jan 2026 09:19:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/discord-ai-workspace/</guid>
+      <description>&lt;p&gt;如果你是一个积极探索 AI 时代的人，那么你应该有一个自己的 Discord Server&lt;/p&gt;&#xA;&lt;p&gt;我把我的 Discord Server 叫「末日小屋」。这个名字听起来有点中二，但它确实是我现在最依赖的工作环境。&amp;ldquo;末日&amp;rdquo; 是我给自己的一个心理暗示，这个意象可以让我想想自己身处一片荒野的寂静中，拥有一个确定还能运转的地方，里面存着我所有重要的东西。哪怕外面再喧嚣、变化再快，我还有一个安静的地方能继续工作、思考、迭代。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/discord-ai-workspace/cover.jpg" />
+    </item>
+    
+  </channel>
+</rss>

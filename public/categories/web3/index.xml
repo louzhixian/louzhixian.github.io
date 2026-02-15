@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web3 on 知县的衙门</title>
+    <link>http://localhost:1313/categories/web3/</link>
+    <description>Recent content in Web3 on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Thu, 20 Oct 2022 20:09:28 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/web3/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>名词解释：Web3 账户相关概念大梳理</title>
+      <link>http://localhost:1313/posts/web3-account-concepts/</link>
+      <pubDate>Thu, 20 Oct 2022 20:09:28 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/web3-account-concepts/</guid>
+      <description>&lt;p&gt;刚刚结束的 Devcon 上，账户抽象算是是最热的几个话题之一，最近可以经常看到 AA / EOA / SCW / 4337 等缩写和代号在各种 talk、panel 和信息流里出现。再加上叙事开始往「Onboarding next billion users」的方向发展，一些新的形容词也开始出现在产品之前，比如 seedless / gasless / social recovery / non-custodial。相信看完这两句的你已经开始脑壳疼了，那么接下来就让我尽自己所能来帮大家梳理一下这些名词概念到底代表什么。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

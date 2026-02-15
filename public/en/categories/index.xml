@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/categories/</link>
+    <description>Recent content in Categories on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Sun, 18 Jan 2026 17:15:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AI</title>
+      <link>http://localhost:1313/en/categories/ai/</link>
+      <pubDate>Sun, 18 Jan 2026 17:15:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/categories/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Crypto</title>
+      <link>http://localhost:1313/en/categories/crypto/</link>
+      <pubDate>Fri, 12 Dec 2025 14:26:40 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/categories/crypto/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Web3</title>
+      <link>http://localhost:1313/en/categories/web3/</link>
+      <pubDate>Thu, 20 Oct 2022 20:09:28 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/categories/web3/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

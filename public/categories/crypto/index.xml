@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crypto on 知县的衙门</title>
+    <link>http://localhost:1313/categories/crypto/</link>
+    <description>Recent content in Crypto on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Fri, 12 Dec 2025 14:26:40 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/crypto/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>加密世界的 UX 安全难题：基础设施的错配</title>
+      <link>http://localhost:1313/posts/crypto-ux-security/</link>
+      <pubDate>Fri, 12 Dec 2025 14:26:40 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/crypto-ux-security/</guid>
+      <description>&lt;p&gt;你一般不会在 Google 的搜索结果里点个链接，就在这个陌生的页面里操作 5 万美金的转账对吧？&#xA;但我们每天在 Crypto 世界里做的事，本质上就是这个流程：打开网页 → 连接钱包 → 点授权/签名 → 资产不可逆地转出去。出了事，没有“撤回”、没有“冻结”、也没有“客服介入”。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>在 DeFi 里重新寻找安心感：Owlia 的设计理念</title>
+      <link>http://localhost:1313/posts/introduce-owlia/</link>
+      <pubDate>Thu, 27 Nov 2025 22:38:39 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/introduce-owlia/</guid>
+      <description>&lt;blockquote&gt;&lt;p&gt;DeFi 这几年变得更强大，也变得更复杂。&lt;br&gt;&#xA;用户并不缺工具，他们缺的是一个能帮他们承担压力的伙伴。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>AI 时代的 Crypto UX 新思路</title>
+      <link>http://localhost:1313/posts/ai-and-crypto-ux-security/</link>
+      <pubDate>Wed, 02 Apr 2025 18:26:40 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/ai-and-crypto-ux-security/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;15亿美金的教训&#xA;    &lt;div id=&#34;15亿美金的教训&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#15%e4%ba%bf%e7%be%8e%e9%87%91%e7%9a%84%e6%95%99%e8%ae%ad&#34; aria-label=&#34;&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;就在不到一个月前，可能是史上金额最大的黑客盗窃事件发生了：黑客接管了 Bybit 的一个存有 50万枚 ETH 的 Safe 多签钱包，并立即进行了资金的转移和清洗。经过几天的调查，事情的原因浮出水面：黑客掌控了 Safe 团队的某个工程师的前端发布权限，在 Safe Web App 中注入了一段恶意代码。这段代码只针对 Bybit 多签的几个管理人的钱包生效，在他们发起转账交易时替换了实际签署的交易逻辑，于是即便页面上展示的是正常的转账交易，但是他们实际签署的是把 Safe 钱包的逻辑切换成黑客版本的授权交易。因此，即便他们转账的金额并不大，黑客还是能够把整个钱包的资金席卷一空，而不只是拿走他们要转的钱。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>名词解释：Web3 账户相关概念大梳理</title>
+      <link>http://localhost:1313/posts/web3-account-concepts/</link>
+      <pubDate>Thu, 20 Oct 2022 20:09:28 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/web3-account-concepts/</guid>
+      <description>&lt;p&gt;刚刚结束的 Devcon 上，账户抽象算是是最热的几个话题之一，最近可以经常看到 AA / EOA / SCW / 4337 等缩写和代号在各种 talk、panel 和信息流里出现。再加上叙事开始往「Onboarding next billion users」的方向发展，一些新的形容词也开始出现在产品之前，比如 seedless / gasless / social recovery / non-custodial。相信看完这两句的你已经开始脑壳疼了，那么接下来就让我尽自己所能来帮大家梳理一下这些名词概念到底代表什么。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

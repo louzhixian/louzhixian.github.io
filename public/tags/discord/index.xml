@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discord on 知县的衙门</title>
+    <link>http://localhost:1313/tags/discord/</link>
+    <description>Recent content in Discord on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/discord/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agent 训练师进阶指南：用 Discord 打造高效 OpenClaw 协作系统</title>
+      <link>http://localhost:1313/posts/agent-trainer-discord-guide/</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-discord-guide/</guid>
+      <description>&lt;p&gt;说好的第二篇教程来了。没想到短短几天没更新，Moltbot 又改名了，只能说 AI 时代的节奏真是太快了。比改名更快的是 moltbook 掀起的风潮，各种面向 Agent 的产品层出不穷，让人眼花缭乱，我也是脑洞大开，看到了新时代的雏形。不过这一期咱们还是先不谈这些，先把之前的坑填上，分享一下我日常使用通过 Telegram 和 Discord 使用 OpenClaw 的经验和心得。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-discord-guide/cover.png" />
+    </item>
+    
+    <item>
+      <title>我的「末日小屋」：用 Discord 搭一个 AI 工作台</title>
+      <link>http://localhost:1313/posts/discord-ai-workspace/</link>
+      <pubDate>Fri, 16 Jan 2026 09:19:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/discord-ai-workspace/</guid>
+      <description>&lt;p&gt;如果你是一个积极探索 AI 时代的人，那么你应该有一个自己的 Discord Server&lt;/p&gt;&#xA;&lt;p&gt;我把我的 Discord Server 叫「末日小屋」。这个名字听起来有点中二，但它确实是我现在最依赖的工作环境。&amp;ldquo;末日&amp;rdquo; 是我给自己的一个心理暗示，这个意象可以让我想想自己身处一片荒野的寂静中，拥有一个确定还能运转的地方，里面存着我所有重要的东西。哪怕外面再喧嚣、变化再快，我还有一个安静的地方能继续工作、思考、迭代。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/discord-ai-workspace/cover.jpg" />
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multi-Agent on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/tags/multi-agent/</link>
+    <description>Recent content in Multi-Agent on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/en/tags/multi-agent/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Advanced Agent Training: Multi-Agent Configuration in OpenClaw</title>
+      <link>http://localhost:1313/en/posts/agent-trainer-multi-agent-config/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/agent-trainer-multi-agent-config/</guid>
+      <description>&lt;p&gt;After several days of intense work, I finally finished &lt;a href=&#34;https://botdrop.app&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;botdrop.app&lt;/a&gt;—a tool for running OpenClaw on Android—and now I have time to fill in some gaps. Have you been finding new ways to play with your 🦞 lately? I feel like this wave has truly spread everywhere; even friends who normally don&amp;rsquo;t care about tech are asking me about it.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-multi-agent-config/cover.png" />
+    </item>
+    
+  </channel>
+</rss>

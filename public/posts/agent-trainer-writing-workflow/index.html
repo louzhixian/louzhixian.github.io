@@ -1,0 +1,1399 @@
+<!doctype html>
+<html
+  lang="zh"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流 &middot; 知县的衙门</title>
+    <meta name="title" content="Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流 &middot; 知县的衙门">
+  
+
+  
+  
+  
+    <meta name="keywords" content="AI,Clawdbot,Agent,写作,效率工具,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/agent-trainer-writing-workflow/">
+  
+
+  
+  
+    <meta name="author" content="知县">
+  
+  
+    
+      
+        
+          <link href="https://x.com/zhixianio" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/zhixianio" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/agent-trainer-writing-workflow/">
+  <meta property="og:site_name" content="知县的衙门">
+  <meta property="og:title" content="Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流">
+  <meta property="og:description" content="伴随着 Clawdbot 改名成 @moltbot，大家火爆的情绪也开始逐渐退潮。不知道有多少人已经随着潮落回到了日常生活的汪洋中，又有多少人作为潮水退去后留下的「新物种」，开始探索这片全新的大陆了？">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-28T00:00:00+00:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Clawdbot">
+    <meta property="article:tag" content="Agent">
+    <meta property="article:tag" content="写作">
+    <meta property="article:tag" content="效率工具">
+    <meta property="og:image" content="http://localhost:1313/posts/agent-trainer-writing-workflow/cover-generation-flow.jpg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/agent-trainer-writing-workflow/cover-generation-flow.jpg">
+  <meta name="twitter:title" content="Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流">
+  <meta name="twitter:description" content="伴随着 Clawdbot 改名成 @moltbot，大家火爆的情绪也开始逐渐退潮。不知道有多少人已经随着潮落回到了日常生活的汪洋中，又有多少人作为潮水退去后留下的「新物种」，开始探索这片全新的大陆了？">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.9065937b297c9b5990fb472cb2cfc4aefcaf1f6063045c2cfc2ef0ec4f327df37f92cb5121064d346343ed084127165a2c318c09b92d598be75eaf5d44a68f38.css"
+    integrity="sha512-kGWTeyl8m1mQ&#43;0csss/ErvyvH2BjBFws/C7w7E8yffN/kstRIQZNNGND7QhBJxZaLDGMCbktWYvnXq9dRKaPOA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy=""
+      data-copied=""></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流",
+    "headline": "Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流",
+    
+    "inLanguage": "zh",
+    "url" : "http://localhost:1313/posts/agent-trainer-writing-workflow/",
+    "author" : {
+      "@type": "Person",
+      "name": "知县"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-01-28T00:00:00\u002b00:00",
+    "datePublished": "2026-01-28T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-01-28T00:00:00\u002b00:00",
+    
+    "keywords": ["AI","Clawdbot","Agent","写作","效率工具"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3940"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl bg-neutral/25 dark:bg-neutral-800/25"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      知县的衙门
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="文章"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          文章
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="分类"
+      title="Categories">
+      
+      
+        <span class="text-base font-medium break-normal">
+          分类
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="标签"
+      title="Tags">
+      
+      
+        <span class="text-base font-medium break-normal">
+          标签
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+  <div class="translation nested-menu">
+    <button class="cursor-pointer flex items-center">
+      <span class="me-1">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg></span>
+      </span>
+      <span class="text-sm font-medium bf-icon-color-hover" title="Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流"></span>
+    </button>
+    <ul class="menuhide">
+      <li class="rounded-xl backdrop-blur shadow-2xl p-2 flex flex-col gap-1">
+        
+          <a href="/posts/agent-trainer-writing-workflow/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流">
+              ZH
+            </span>
+          </a>
+        
+          <a href="/en/posts/agent-trainer-writing-workflow/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Agent Trainer Case Study: Building Your Own Writing Workflow with Clawdbot">
+              EN
+            </span>
+          </a>
+        
+      </li>
+    </ul>
+  </div>
+
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="文章"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          文章
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="分类"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Categories" class="text-2xl font-bold tracking-tight">
+          分类
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="标签"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Tags" class="text-2xl font-bold tracking-tight">
+          标签
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+    <div
+      class="flex flex-wrap items-center [&_span]:text-2xl [&_.translation_button_.icon]:text-4xl! [&_.translation_button_span]:text-base! [&_.translation_.menuhide_span]:text-sm! gap-x-6 ps-2 mt-8 pt-8 border-t bf-border-color">
+      
+  <div class="translation nested-menu">
+    <button class="cursor-pointer flex items-center">
+      <span class="me-1">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg></span>
+      </span>
+      <span class="text-sm font-medium bf-icon-color-hover" title="Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流"></span>
+    </button>
+    <ul class="menuhide">
+      <li class="rounded-xl backdrop-blur shadow-2xl p-2 flex flex-col gap-1">
+        
+          <a href="/posts/agent-trainer-writing-workflow/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流">
+              ZH
+            </span>
+          </a>
+        
+          <a href="/en/posts/agent-trainer-writing-workflow/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Agent Trainer Case Study: Building Your Own Writing Workflow with Clawdbot">
+              EN
+            </span>
+          </a>
+        
+      </li>
+    </ul>
+  </div>
+
+
+
+      
+    </div>
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/posts/agent-trainer-writing-workflow/cover-generation-flow_hu_847cbda2997900c7.jpg"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/posts/agent-trainer-writing-workflow/cover-generation-flow_hu_847cbda2997900c7.jpg"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >知县的衙门</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/agent-trainer-writing-workflow/"
+      >Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-01-28T00:00:00&#43;00:00"></time><span class="px-2 text-primary-500">&middot;</span><span></span><span class="px-2 text-primary-500">&middot;</span><span title=""></span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="知县"
+        src="/images/zhixian_hu_77000294f9ad8e2c.png"
+        data-zoom-src="/images/zhixian_hu_945731277d483c2f.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        知县
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">想法开源家，Agent 训练师，CS 出身的产品经理，没上过班的折腾达人</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://x.com/zhixianio"
+          target="_blank"
+          aria-label="X-Twitter"
+          title="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/zhixianio"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#我的-clawdbot-初体验从吓跑到入坑">我的 Clawdbot 初体验：从吓跑到入坑</a></li>
+    <li><a href="#今天的案例写博客的完整工作流">今天的案例：写博客的完整工作流</a>
+      <ul>
+        <li><a href="#为什么要有自己的博客">为什么要有自己的博客？</a></li>
+      </ul>
+    </li>
+    <li><a href="#第一步怎么开始写">第一步：怎么开始写？</a></li>
+    <li><a href="#我的工作流语音转写--润色--发布">我的工作流：语音转写 → 润色 → 发布</a>
+      <ul>
+        <li><a href="#1-语音输入边走边说">1. 语音输入：边走边说</a></li>
+        <li><a href="#2-whisper--apple-foundation-model本地转写清理">2. Whisper + Apple Foundation Model：本地转写清理</a></li>
+        <li><a href="#3-整理和润色">3. 整理和润色</a></li>
+        <li><a href="#4-发布hugo--github">4. 发布：Hugo + GitHub</a></li>
+        <li><a href="#5-配图让-clawdbot-自己生成">5. 配图：让 Clawdbot 自己生成</a></li>
+        <li><a href="#6-同步-x-article">6. 同步 X Article</a></li>
+      </ul>
+    </li>
+    <li><a href="#效果对比">效果对比</a></li>
+    <li><a href="#小结">小结</a></li>
+    <li><a href="#关于我">关于我</a></li>
+    <li><a href="#下期预告">下期预告</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#我的-clawdbot-初体验从吓跑到入坑">我的 Clawdbot 初体验：从吓跑到入坑</a></li>
+    <li><a href="#今天的案例写博客的完整工作流">今天的案例：写博客的完整工作流</a>
+      <ul>
+        <li><a href="#为什么要有自己的博客">为什么要有自己的博客？</a></li>
+      </ul>
+    </li>
+    <li><a href="#第一步怎么开始写">第一步：怎么开始写？</a></li>
+    <li><a href="#我的工作流语音转写--润色--发布">我的工作流：语音转写 → 润色 → 发布</a>
+      <ul>
+        <li><a href="#1-语音输入边走边说">1. 语音输入：边走边说</a></li>
+        <li><a href="#2-whisper--apple-foundation-model本地转写清理">2. Whisper + Apple Foundation Model：本地转写清理</a></li>
+        <li><a href="#3-整理和润色">3. 整理和润色</a></li>
+        <li><a href="#4-发布hugo--github">4. 发布：Hugo + GitHub</a></li>
+        <li><a href="#5-配图让-clawdbot-自己生成">5. 配图：让 Clawdbot 自己生成</a></li>
+        <li><a href="#6-同步-x-article">6. 同步 X Article</a></li>
+      </ul>
+    </li>
+    <li><a href="#效果对比">效果对比</a></li>
+    <li><a href="#小结">小结</a></li>
+    <li><a href="#关于我">关于我</a></li>
+    <li><a href="#下期预告">下期预告</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>伴随着 Clawdbot 改名成 @moltbot，大家火爆的情绪也开始逐渐退潮。不知道有多少人已经随着潮落回到了日常生活的汪洋中，又有多少人作为潮水退去后留下的「新物种」，开始探索这片全新的大陆了？</p>
+<p>我相信很多朋友会觉得：这好像也没什么出彩的地方啊，不明白它为什么这么火？</p>
+<p>有这种感觉很正常。这个产品一开始是作者做来自己用的，按照他的需求「长」成现在这只🦞。他在 Demo Day 介绍项目时说过，这个产品最早新建文件夹时的名字叫「WhatsApp Relay」——起初只是拿它来远程控制自己的 coding agent。后来他发现这个 agent 会自己解决一些没有预设流程的问题：比如在没有转写服务的时候给它发了一条语音，结果 agent 骂骂咧咧地自己用 OpenAI API 写了个代码去转写。从那之后他才不断扩展功能，往生活助理的方向打造。</p>
+<p>所以，如果你没有他日常遇到的问题，自然会觉得没用；跟他的点重合得越多，就越会觉得好用、爱用、头皮发麻。<strong>大家的失望主要来源于没找到合适的场景</strong>——要么需求太简单用 chat bot 就够了，要么需求太复杂哪怕给真人都搞不定。</p>
+
+<h2 class="relative group">我的 Clawdbot 初体验：从吓跑到入坑
+    <div id="我的-clawdbot-初体验从吓跑到入坑" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%88%91%e7%9a%84-clawdbot-%e5%88%9d%e4%bd%93%e9%aa%8c%e4%bb%8e%e5%90%93%e8%b7%91%e5%88%b0%e5%85%a5%e5%9d%91" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>最早朋友向我推荐这个产品时，我在本机上装了一下。起初因为配置问题跑不起来，间歇性地跑起来几次后，看到它对权限要求如此之高，又能啪的一下就把我浏览器打开，开始自己输入网址查东西——我立马把它关了并卸载。</p>
+<p>初次见面是一次非常不愉快的经历。</p>
+<p>但是，虽然见面时间很短，它做的事也很吓人，<strong>它的交互体验确实让我眼前一亮</strong>。说时迟那时快，我立马下单了 Mac mini（没错购物车里躺了一年了，终于有理由了），到货后第一时间把 Clawdbot 装进去，还给这台机器起了极其中二的名字「Bunker」（地堡）——如果你玩过《尼尔：机械纪元》，就是月球上的那个 Bunker。</p>
+<p>有了这套 setup 之后，我就开始慢慢探索它的功能，结果越探索越上头。直到现在，我觉得还是没有完全发挥出它的实力。</p>
+<p>所以，我打算接下来按照一篇文章一个案例的节奏，分享我的使用心得。我不会只甩一个教程说「照着做就行」，我会从<strong>为什么有这个需求</strong>开始，讲我怎么想到用 agent 解决问题，以及尝试的过程。当然，有必要的话，也会附上尽可能好上手的复刻方法——但这是我打的「鱼」，你未必爱吃；前面的「渔」可以让你去打自己爱吃的。</p>
+
+<h2 class="relative group">今天的案例：写博客的完整工作流
+    <div id="今天的案例写博客的完整工作流" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%8a%e5%a4%a9%e7%9a%84%e6%a1%88%e4%be%8b%e5%86%99%e5%8d%9a%e5%ae%a2%e7%9a%84%e5%ae%8c%e6%95%b4%e5%b7%a5%e4%bd%9c%e6%b5%81" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>今天要分享的场景是写博客——不仅仅是写本身，而是为什么要写，以及怎么通过 Clawdbot 搭建一整套<strong>符合自己习惯</strong>的工作流。比如我喜欢用说话的方式输出，所以是录音转写；你可能喜欢手写，那就写在纸上拍给它。</p>
+
+<h3 class="relative group">为什么要有自己的博客？
+    <div id="为什么要有自己的博客" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e6%9c%89%e8%87%aa%e5%b7%b1%e7%9a%84%e5%8d%9a%e5%ae%a2" aria-label="">#</a>
+    </span>
+    
+</h3>
+<p>在 AI 时代，人的角色会发生极大变化。越来越多的事情不再需要人的「工具属性」，而更多需要人的创意、审美、思路。思维产出不能只停留在脑海里想或跟朋友吹水，需要凝结下来——写文章、发推文、做视频都可以。</p>
+<p>而现在有了 Clawdbot，搭建博客的门槛大大降低了。作为一个跑在本地、权限很高的 agent，它可以自己完成整个博客的搭建，只需要你一声令下。中间出了任何问题，都可以让它继续解决。</p>
+<p>如果你之前觉得麻烦或搞不定，现在可以作为 Clawdbot 的第一个用例去探索看看。比如现在马上掏出手机，跟你的 Clawdbot 说一声「提醒我尝试搭建自己的博客网站」，后面它就会不断拿这事烦你，甚至给你准备好调研方案。</p>
+
+<h2 class="relative group">第一步：怎么开始写？
+    <div id="第一步怎么开始写" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e6%80%8e%e4%b9%88%e5%bc%80%e5%a7%8b%e5%86%99" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>这是最难的。我虽然在 AI 流行之前也写过一些偏技术和科普类的文章，但自认是个写作困难户。很多文章写了又改、改了又写，或者中途搁置两个月之后再拿出来继续。经常有朋友跟我聊天后说：你这些想法都很有意思，怎么不见你写出来？就是因为我很难动笔开始。</p>
+<p>在我看来，自律当然是好品质。但有时候为了让事情启动，不能非要找那种逼自己到一定程度来彰显决心的方式，这样很容易半途而废。<strong>应该找适合自己习惯、让自己觉得舒适的方式做事情</strong>，哪怕做得磕磕绊绊，也比被堵在前面不往前走强。一旦走起来，正反馈越强，就能克服更大的阻力。</p>
+<p>很庆幸在 AI 时代，用自己舒适的方式完成某件事的门槛大大降低了——即便现成的工具流程不适合你，你也可以自己很简单地创造出一套适合自己的工具流程。</p>
+
+<h2 class="relative group">我的工作流：语音转写 → 润色 → 发布
+    <div id="我的工作流语音转写--润色--发布" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%88%91%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%b5%81%e8%af%ad%e9%9f%b3%e8%bd%ac%e5%86%99--%e6%b6%a6%e8%89%b2--%e5%8f%91%e5%b8%83" aria-label="">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1. 语音输入：边走边说
+    <div id="1-语音输入边走边说" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e8%af%ad%e9%9f%b3%e8%be%93%e5%85%a5%e8%be%b9%e8%b5%b0%e8%be%b9%e8%af%b4" aria-label="">#</a>
+    </span>
+    
+</h3>
+<p>比如现在这篇文章，我正在路上散步，一边走一边通过 AirPods 给一个 Discord channel 发语音消息，口述我的想法。</p>
+<p>收到语音消息后，Discord bot 就会启动工作流：自动把语音拿去给本地搭的 Whisper 转写，然后通过另一个小模型进行纠错润色。</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="我的语音输入工作流"
+    width="1214"
+    height="842"
+    src="/posts/agent-trainer-writing-workflow/voice-input-workflow_hu_44355962d632f1ed.jpg"
+    srcset="/posts/agent-trainer-writing-workflow/voice-input-workflow_hu_44355962d632f1ed.jpg 800w, /posts/agent-trainer-writing-workflow/voice-input-workflow.jpg 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/agent-trainer-writing-workflow/voice-input-workflow.jpg"></figure>
+</p>
+<p>插一句，我的工作流基本都沉淀在 Discord，感兴趣的话可以看<a href="https://x.com/zhixianio/status/2012092307613622525"  target="_blank" rel="noreferrer">这一篇文章</a>。</p>
+
+<h3 class="relative group">2. Whisper + Apple Foundation Model：本地转写清理
+    <div id="2-whisper--apple-foundation-model本地转写清理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-whisper--apple-foundation-model%e6%9c%ac%e5%9c%b0%e8%bd%ac%e5%86%99%e6%b8%85%e7%90%86" aria-label="">#</a>
+    </span>
+    
+</h3>
+<p>这套流程的核心是 <strong>Whisper 负责「听」，AFM 负责「编辑」</strong>。</p>
+<p>用过语音转文字的人都知道，转出来的文字往往不能直接用。口语里的「嗯」「那个」「就是说」会原封不动地出现，标点要么几乎没有，要么夹杂着加错位置的英文标点，断句全靠猜。</p>
+<p>拿一段日常语音举例，Whisper 转出来大概是这样：</p>
+<blockquote><p>今天打算做的事情还有哪些呢一会儿我觉得可以让AI助理帮我每天看一下我的Google Analytics里面我的Blog Site的访问情况毕竟我平时想不起来去看让他帮我追一下还有一件能做的事情就是就是什么来着怎么突然想不起来了那个算了先这样吧</p>
+</blockquote><p>没有标点，没有分段，重复的「就是就是」也保留着，这种文字发出去或存档都不太体面。</p>
+<p>我让 Apple Foundation Model（3B 参数的本地小模型）扮演一个「编辑」角色，把口语整理成书面语：</p>
+<p><strong>System Prompt:</strong> 将语音转写的口语文字整理为书面语。去除口语词（嗯、啊、就是、那个等）、删除重复内容、修复断句、添加标点。保持原意，只输出整理后的文字。</p>
+<p>同样那段语音，经过 AFM 处理后变成：</p>
+<blockquote><p>今天打算做的事情还有哪些呢？一会儿我想让AI助理每天查看我的Google Analytics，看看博客的访问情况。毕竟平时我常常忘记去看，让它帮我跟踪一下。还有一件事情，我突然想不起来了，算了先这样吧。</p>
+</blockquote><p>标点有了，断句清晰了，重复和口语词都删掉了，但意思完全没变。</p>
+<p><strong>性能方面</strong>，AFM 的处理大概增加 0.8 秒（纯 Whisper 1.05s → 加上 AFM 1.85s）。对语音消息来说，这点延迟完全可以接受，换来的是可以直接用的文字。</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="语音转写 &#43; refine 的效果，着重看一下标点"
+    width="1252"
+    height="808"
+    src="/posts/agent-trainer-writing-workflow/whisper-afm-result_hu_8b3d75c121dd9721.jpg"
+    srcset="/posts/agent-trainer-writing-workflow/whisper-afm-result_hu_8b3d75c121dd9721.jpg 800w, /posts/agent-trainer-writing-workflow/whisper-afm-result.jpg 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/agent-trainer-writing-workflow/whisper-afm-result.jpg"></figure>
+</p>
+<p>自从加了这套优化，<strong>转出来的标点基本一遍过，不需要再改了</strong>，之前手改标点改得痛不欲生的日子一去不复返 ✌️。</p>
+
+<h3 class="relative group">3. 整理和润色
+    <div id="3-整理和润色" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%e6%95%b4%e7%90%86%e5%92%8c%e6%b6%a6%e8%89%b2" aria-label="">#</a>
+    </span>
+    
+</h3>
+<p>有了草稿，第二步是整理和优化。<strong>这一步一定要自己完成</strong>，因为我希望保持自己的思路和叙事方式，是真正的「灵魂的回响」（中二病又犯了），也是思维输出的必要步骤。</p>
+<p>完成后交给 Clawdbot，它有一个我们商量出来的 skill 叫「zhixian writer skill」。它学习了我过去很多文章和推特，熟悉了我的行文风格。给它草稿后，它就会按照这个特点帮我润色——主要是查缺补漏：逻辑不全、用词错误、文章结构问题。它还能帮我做标题建议、内容排版和分段标题，这些都是我特别讨厌的必要工序，也是之前写作的一大阻力来源。</p>
+
+<h3 class="relative group">4. 发布：Hugo + GitHub
+    <div id="4-发布hugo--github" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-%e5%8f%91%e5%b8%83hugo--github" aria-label="">#</a>
+    </span>
+    
+</h3>
+<p>关于博客网站，我现在用的是 Hugo，一个非常轻量级的本地静态博客生成器。只要把 Markdown 文件给它，跑一个命令就能生成漂亮的博客网站，推到 GitHub 上就可以直接发出去。</p>
+<p>这种操作接口对普通人来说可能太硬核，<strong>但对 agent 来说是天然最适合的</strong>。而且 agent 还可以按照既定的元数据格式，自己配好标题、标签——这也是之前手写博客时最烦人的活，现在都交给 Clawdbot 做。</p>
+<p>另外，因为我的博客是中英双语，它还会自动帮我翻译一遍英文。大家都知道大模型大多靠英文内容训练，中翻英的效果远比英翻中好。中文润色结束、生成预览后，如果我觉得没问题，说「发吧」，它就会自动完成翻译，起一个英文简称作为目录名，把文件按照博客要求的格式（index.en.md 和 index.zh.md）命名好。</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="自动发布到博客的流程"
+    width="1384"
+    height="844"
+    src="/posts/agent-trainer-writing-workflow/auto-publish-flow_hu_edd2a79b7a7f50cd.jpg"
+    srcset="/posts/agent-trainer-writing-workflow/auto-publish-flow_hu_edd2a79b7a7f50cd.jpg 800w, /posts/agent-trainer-writing-workflow/auto-publish-flow_hu_27c2d49d7d37af6c.jpg 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/agent-trainer-writing-workflow/auto-publish-flow.jpg"></figure>
+</p>
+
+<h3 class="relative group">5. 配图：让 Clawdbot 自己生成
+    <div id="5-配图让-clawdbot-自己生成" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-%e9%85%8d%e5%9b%be%e8%ae%a9-clawdbot-%e8%87%aa%e5%b7%b1%e7%94%9f%e6%88%90" aria-label="">#</a>
+    </span>
+    
+</h3>
+<p>还没完，因为它非常了解这篇文章，配图也由它来做。它会生成提示词，如果你配了 Gemini 或 OpenAI 的 API，可以直接调用生图。但我属于比较追求「性价比」的那一挂，不想额外买 API，就让它直接去登录了 Gemini 的浏览器里，访问网站生成图片，下载后整理好再上传到博客。</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="自动生成题图的流程"
+    width="1374"
+    height="1360"
+    src="/posts/agent-trainer-writing-workflow/cover-generation-flow_hu_71ff9e772ed022ab.jpg"
+    srcset="/posts/agent-trainer-writing-workflow/cover-generation-flow_hu_71ff9e772ed022ab.jpg 800w, /posts/agent-trainer-writing-workflow/cover-generation-flow_hu_56e0967ea005cd9f.jpg 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/agent-trainer-writing-workflow/cover-generation-flow.jpg"></figure>
+</p>
+<p><strong>当时看到它自己完成这个流程的时候我也很震惊</strong>——希望大家多尝试给它一些复杂任务，不要预设做不成，试一下再说。</p>
+
+<h3 class="relative group">6. 同步 X Article
+    <div id="6-同步-x-article" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-%e5%90%8c%e6%ad%a5-x-article" aria-label="">#</a>
+    </span>
+    
+</h3>
+<p>博客发出来后，如果我打算也发到 X 的 Article，很可能会在文章中手动配一些图，或进行文字的小修小补。发布后，我会把 Article 的链接扔给 Clawdbot，告诉它这是最终版本，它就会按照文章里的排版，把图片下载下来，并根据图片位置更新那两篇博客，包括文笔的修改和插入链接，都会完整同步过去。</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="同步 X Article 的流程"
+    width="1448"
+    height="1740"
+    src="/posts/agent-trainer-writing-workflow/sync-article-flow_hu_c80258da28639aeb.png"
+    srcset="/posts/agent-trainer-writing-workflow/sync-article-flow_hu_c80258da28639aeb.png 800w, /posts/agent-trainer-writing-workflow/sync-article-flow_hu_73093985b5b6e85b.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/agent-trainer-writing-workflow/sync-article-flow.png"></figure>
+</p>
+
+<h2 class="relative group">效果对比
+    <div id="效果对比" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%88%e6%9e%9c%e5%af%b9%e6%af%94" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>整个流程给我的感觉是：</p>
+<p>如果原来写一篇文章需要耗的精力是 100，里面可能只有 50 甚至更少是用在内容主旨上，剩下一大半都在处理语句表达、排版、发布、找图这些杂事。</p>
+<p><strong>现在完全反过来了</strong>——大部分精力都放在内容上，输出效率和质量都可以得到提升。</p>
+
+<h2 class="relative group">小结
+    <div id="小结" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b0%8f%e7%bb%93" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>这篇文章先讲这一个用例。如果你觉得这个流程也很适合你，可以把文章链接扔给你的 Clawdbot，看看它能不能开始跟你讨论这个工作流的搭建。如果它做不到，欢迎回来留言告诉我，我之后再出一个 md 文件让它能更好地执行。</p>
+<p>当然我认为更重要的是展示**「搭建符合自己舒适区的工作流」**这件事情本身——希望大家都能找到自己的舒适区，舒适区赛高！😆</p>
+
+<h2 class="relative group">关于我
+    <div id="关于我" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%b3%e4%ba%8e%e6%88%91" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>有朋友问我为什么叫「直线」，是表明自己是钢铁直男吗？😂</p>
+<p>这里简单介绍一下：大家可以叫我「知县」，在移动互联网和 Crypto 行业一共混迹十几年了，目前的兴趣方向是「Agent 训练师」，希望利用 Agent 把我开的脑洞验证一遍，甚至让它们独立推动一些事情的进展。哪怕一时做不到，也要相信大模型的力量持续尝试。</p>
+<p>如果大家对这个方向感兴趣，欢迎关注我，多多讨论交流，也可以加入我正在做的社区项目，一起撸起袖子探索。</p>
+
+<h2 class="relative group">下期预告
+    <div id="下期预告" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%8b%e6%9c%9f%e9%a2%84%e5%91%8a" aria-label="">#</a>
+    </span>
+    
+</h2>
+<p>下一篇我可能会聊聊日常与 Clawdbot 交互的一些小技巧和设定，比如 Telegram 的 DM Thread 模式，以及在 Discord 上给 Clawdbot 搭建更「宽敞」的工作场地。希望我的经验和探索出的使用方法能对大家有所帮助。</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/agent-trainer-security-clawdbot/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Agent 训练师安全课：Clawdbot 七步自检指南
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-01-26T00:00:00&#43;00:00"></time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/agent-trainer-discord-guide/">
+              <span class="leading-6">
+                Agent 训练师进阶指南：用 Discord 打造高效 OpenClaw 协作系统&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-02-03T00:00:00&#43;00:00"></time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label=""
+    title="">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          知县
+      </p>
+    
+
+    
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder=""
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

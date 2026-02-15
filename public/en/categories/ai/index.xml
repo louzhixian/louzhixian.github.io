@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/categories/ai/</link>
+    <description>Recent content in AI on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Sun, 18 Jan 2026 17:15:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/en/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Add a Local “Editor” to Whisper: Cleaning Transcripts with Apple Foundation Model</title>
+      <link>http://localhost:1313/en/posts/whisper-afm-refine/</link>
+      <pubDate>Sun, 18 Jan 2026 17:15:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/whisper-afm-refine/</guid>
+      <description>&lt;p&gt;If you use voice-to-text often, you already know the problem: Whisper transcripts are usually not ready to ship. You get filler words, no punctuation, and sentences that run forever. You can either fix it manually, or you accept something that looks like a raw dump.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/whisper-afm-refine/cover.png" />
+    </item>
+    
+    <item>
+      <title>Free Ride on Apple Intelligence: Turn macOS Built-in Model into an OpenAI API</title>
+      <link>http://localhost:1313/en/posts/apple-foundation-model-local-api/</link>
+      <pubDate>Sun, 18 Jan 2026 13:20:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/apple-foundation-model-local-api/</guid>
+      <description>&lt;p&gt;macOS 26 Tahoe ships with a 3B parameter language model that Apple calls the Foundation Model. It normally hides in the system powering Writing Tools, Siri, and other features, but you can actually pull it out, wrap it as an OpenAI-compatible API, and plug it into any tool that supports the OpenAI format.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/apple-foundation-model-local-api/cover.png" />
+    </item>
+    
+    <item>
+      <title>My &#34;Doomsday Cabin&#34;: Building an AI Workbench with Discord</title>
+      <link>http://localhost:1313/en/posts/discord-ai-workspace/</link>
+      <pubDate>Fri, 16 Jan 2026 09:19:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/discord-ai-workspace/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;re someone actively exploring the AI era, you should have your own Discord Server.&lt;/p&gt;&#xA;&lt;p&gt;I call my Discord Server the &amp;ldquo;Doomsday Cabin.&amp;rdquo; The name might sound a bit dramatic, but it&amp;rsquo;s genuinely my most relied-upon work environment right now. &amp;ldquo;Doomsday&amp;rdquo; is a mental anchor I set for myself—the imagery helps me imagine being in the quiet of a wilderness, having one place I know still works, storing everything important to me. No matter how noisy or fast-changing things get outside, I still have a quiet place to continue working, thinking, and iterating.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/discord-ai-workspace/cover.jpg" />
+    </item>
+    
+    <item>
+      <title>From Looped Models (Ouro) to NVIDIA Rubin: Convergent Paths in the Inference Era</title>
+      <link>http://localhost:1313/en/posts/ouro-rubin-test-time-scaling/</link>
+      <pubDate>Wed, 07 Jan 2026 11:20:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/ouro-rubin-test-time-scaling/</guid>
+      <description>&lt;p&gt;For the past few years, the story of AI getting stronger has been straightforward: throw more training compute at it, feed it more data, make the model bigger. Think of it as reading more books and doing more practice problems—cramming capability into parameters during training. But recently, the winds may be shifting: a model doesn&amp;rsquo;t necessarily need to keep growing; as long as it &amp;ldquo;thinks a bit longer&amp;rdquo; when facing hard problems, results can improve significantly.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Crypto UX Security Is Broken By Design</title>
+      <link>http://localhost:1313/en/posts/crypto-ux-security/</link>
+      <pubDate>Fri, 12 Dec 2025 14:26:40 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/crypto-ux-security/</guid>
+      <description>&lt;p&gt;You wouldn&amp;rsquo;t wire $50,000 through a random website you found via Google ad. Yet that&amp;rsquo;s exactly what crypto wallets ask you to do every day—except when it goes wrong, there&amp;rsquo;s no bank to reverse the transaction, no fraud department to call, no chargeback to file.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Rediscovering Peace of Mind in DeFi: The Design Principles Behind Owlia</title>
+      <link>http://localhost:1313/en/posts/introduce-owlia/</link>
+      <pubDate>Thu, 27 Nov 2025 22:38:39 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/introduce-owlia/</guid>
+      <description>&lt;blockquote&gt;&lt;p&gt;DeFi has become more powerful, but also more complex.&lt;br&gt;&#xA;Users are not lacking tools — they are lacking a partner who can carry some of the burden.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;Over the past months, my team and I have been working on something I believe is deeply important:&#xA;an Agent that can genuinely accompany you in the DeFi world — &lt;strong&gt;Owlia&lt;/strong&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

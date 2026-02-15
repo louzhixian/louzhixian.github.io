@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4337 on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/tags/4337/</link>
+    <description>Recent content in 4337 on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Thu, 20 Oct 2022 20:09:28 +0900</lastBuildDate><atom:link href="http://localhost:1313/en/tags/4337/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Glossary of Web3 Account</title>
+      <link>http://localhost:1313/en/posts/web3-account-concepts/</link>
+      <pubDate>Thu, 20 Oct 2022 20:09:28 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/web3-account-concepts/</guid>
+      <description>&lt;p&gt;One of the most talked-about subjects at DevCon was account abstraction. Recently, you may have noticed acronyms and abbreviations like AA, EOA, SCW, and 4337 in a variety of presentations, panels, and streams. After reading these two sentence&#xA;s, your brain must already be hurting. Next, I&amp;rsquo;ll try to help you figure out what all these terms and ideas really mean.&#xA;This article is not a serious technical document, so it may use words that aren&amp;rsquo;t exact but are easy to understand. You are invited to use it as a starting point to learn more about these technologies.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

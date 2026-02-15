@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/tags/ai/</link>
+    <description>Recent content in AI on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/en/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Advanced Agent Training: Multi-Agent Configuration in OpenClaw</title>
+      <link>http://localhost:1313/en/posts/agent-trainer-multi-agent-config/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/agent-trainer-multi-agent-config/</guid>
+      <description>&lt;p&gt;After several days of intense work, I finally finished &lt;a href=&#34;https://botdrop.app&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;botdrop.app&lt;/a&gt;—a tool for running OpenClaw on Android—and now I have time to fill in some gaps. Have you been finding new ways to play with your 🦞 lately? I feel like this wave has truly spread everywhere; even friends who normally don&amp;rsquo;t care about tech are asking me about it.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-multi-agent-config/cover.png" />
+    </item>
+    
+    <item>
+      <title>Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord</title>
+      <link>http://localhost:1313/en/posts/agent-trainer-discord-guide/</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/agent-trainer-discord-guide/</guid>
+      <description>&lt;p&gt;The promised second tutorial is here. In just a few days since my last update, Moltbot has renamed itself again—the pace of the AI era is truly relentless. Even faster than the name changes is the wave sparked by moltbook, with all kinds of agent-oriented products emerging left and right, opening my mind to the early shape of a new era. But let&amp;rsquo;s not get into that today; let me first fill in the gaps from before and share my experience and insights on using OpenClaw through Telegram and Discord.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-discord-guide/cover.png" />
+    </item>
+    
+    <item>
+      <title>Agent Trainer Case Study: Building Your Own Writing Workflow with Clawdbot</title>
+      <link>http://localhost:1313/en/posts/agent-trainer-writing-workflow/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/agent-trainer-writing-workflow/</guid>
+      <description>&lt;p&gt;With Clawdbot&amp;rsquo;s rebranding to @moltbot, the initial excitement has started to fade. I wonder how many people have drifted back to their daily lives, and how many have stayed behind as &amp;ldquo;new species&amp;rdquo; left by the receding tide, ready to explore this new continent.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-writing-workflow/cover-generation-flow.jpg" />
+    </item>
+    
+    <item>
+      <title>Agent Trainer Security Class: Clawdbot 7-Step Self-Check Guide</title>
+      <link>http://localhost:1313/en/posts/agent-trainer-security-clawdbot/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/agent-trainer-security-clawdbot/</guid>
+      <description>&lt;p&gt;It feels like AI enthusiasts have been on an emotional roller coaster these past few days:&lt;/p&gt;&#xA;&lt;p&gt;First, they heard about something called Clawdbot—looks like a lobster?—and thought: What is this? Why is everyone sharing it? Why don&amp;rsquo;t I have it yet? So they frantically read articles and ordered a Mac mini. Then came the analysis posts saying this thing is extremely dangerous, has way too many permissions, absolutely terrifying—uninstall it now! So everyone nervously uninstalled, shut down, wiped their systems, and listed their machines on secondhand markets (maybe the 🦞 got sold too, haha).&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-security-clawdbot/cover.png" />
+    </item>
+    
+    <item>
+      <title>Agent Trainer&#39;s Guide: Clawdbot Setup &amp; Lessons Learned</title>
+      <link>http://localhost:1313/en/posts/agent-trainer-guide-clawdbot/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/agent-trainer-guide-clawdbot/</guid>
+      <description>&lt;p&gt;Clawdbot suddenly blew up recently, which I find both surprising and inevitable. I&amp;rsquo;ve been using Clawdbot for three weeks now, and I&amp;rsquo;ve been incredibly excited every single day because it genuinely feels like science fiction has become reality. Friends who follow me probably noticed I was pretty hyped those first few days—and those who chatted with me definitely felt it, haha.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-guide-clawdbot/cover.png" />
+    </item>
+    
+    <item>
+      <title>My &#34;Doomsday Cabin&#34;: Building an AI Workbench with Discord</title>
+      <link>http://localhost:1313/en/posts/discord-ai-workspace/</link>
+      <pubDate>Fri, 16 Jan 2026 09:19:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/discord-ai-workspace/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;re someone actively exploring the AI era, you should have your own Discord Server.&lt;/p&gt;&#xA;&lt;p&gt;I call my Discord Server the &amp;ldquo;Doomsday Cabin.&amp;rdquo; The name might sound a bit dramatic, but it&amp;rsquo;s genuinely my most relied-upon work environment right now. &amp;ldquo;Doomsday&amp;rdquo; is a mental anchor I set for myself—the imagery helps me imagine being in the quiet of a wilderness, having one place I know still works, storing everything important to me. No matter how noisy or fast-changing things get outside, I still have a quiet place to continue working, thinking, and iterating.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/discord-ai-workspace/cover.jpg" />
+    </item>
+    
+    <item>
+      <title>Crypto UX Security Is Broken By Design</title>
+      <link>http://localhost:1313/en/posts/crypto-ux-security/</link>
+      <pubDate>Fri, 12 Dec 2025 14:26:40 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/crypto-ux-security/</guid>
+      <description>&lt;p&gt;You wouldn&amp;rsquo;t wire $50,000 through a random website you found via Google ad. Yet that&amp;rsquo;s exactly what crypto wallets ask you to do every day—except when it goes wrong, there&amp;rsquo;s no bank to reverse the transaction, no fraud department to call, no chargeback to file.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Rediscovering Peace of Mind in DeFi: The Design Principles Behind Owlia</title>
+      <link>http://localhost:1313/en/posts/introduce-owlia/</link>
+      <pubDate>Thu, 27 Nov 2025 22:38:39 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/introduce-owlia/</guid>
+      <description>&lt;blockquote&gt;&lt;p&gt;DeFi has become more powerful, but also more complex.&lt;br&gt;&#xA;Users are not lacking tools — they are lacking a partner who can carry some of the burden.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;Over the past months, my team and I have been working on something I believe is deeply important:&#xA;an Agent that can genuinely accompany you in the DeFi world — &lt;strong&gt;Owlia&lt;/strong&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

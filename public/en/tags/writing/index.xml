@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writing on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/tags/writing/</link>
+    <description>Recent content in Writing on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/en/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agent Trainer Case Study: Building Your Own Writing Workflow with Clawdbot</title>
+      <link>http://localhost:1313/en/posts/agent-trainer-writing-workflow/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/agent-trainer-writing-workflow/</guid>
+      <description>&lt;p&gt;With Clawdbot&amp;rsquo;s rebranding to @moltbot, the initial excitement has started to fade. I wonder how many people have drifted back to their daily lives, and how many have stayed behind as &amp;ldquo;new species&amp;rdquo; left by the receding tide, ready to explore this new continent.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-writing-workflow/cover-generation-flow.jpg" />
+    </item>
+    
+  </channel>
+</rss>

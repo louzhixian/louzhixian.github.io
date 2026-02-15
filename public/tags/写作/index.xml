@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>写作 on 知县的衙门</title>
+    <link>http://localhost:1313/tags/%E5%86%99%E4%BD%9C/</link>
+    <description>Recent content in 写作 on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%86%99%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流</title>
+      <link>http://localhost:1313/posts/agent-trainer-writing-workflow/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-writing-workflow/</guid>
+      <description>&lt;p&gt;伴随着 Clawdbot 改名成 @moltbot，大家火爆的情绪也开始逐渐退潮。不知道有多少人已经随着潮落回到了日常生活的汪洋中，又有多少人作为潮水退去后留下的「新物种」，开始探索这片全新的大陆了？&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-writing-workflow/cover-generation-flow.jpg" />
+    </item>
+    
+  </channel>
+</rss>

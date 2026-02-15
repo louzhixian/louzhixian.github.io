@@ -16,5 +16,5 @@ title = "知县的衙门"
   bio = "想法开源家，Agent 训练师，CS 出身的产品经理，没上过班的折腾达人"
   links = [
     { x-twitter = "https://x.com/zhixianio" },
-    { github = "https://github.com/louzhixian" },
+    { github = "https://github.com/zhixianio" },
   ]

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenClaw on 知县的衙门</title>
+    <link>http://localhost:1313/tags/openclaw/</link>
+    <description>Recent content in OpenClaw on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/openclaw/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agent 训练师进阶课：OpenClaw 多 Agent 配置实战</title>
+      <link>http://localhost:1313/posts/agent-trainer-multi-agent-config/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-multi-agent-config/</guid>
+      <description>&lt;p&gt;经过连续几天的奋战，我终于完成了在安卓上运行 OpenClaw 的工具 &lt;a href=&#34;https://botdrop.app&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;botdrop.app&lt;/a&gt;，也总算有时间来&amp;quot;填坑&amp;quot;了。不知道最近小伙伴们有没有跟自己的 🦞 玩出更多新花样？我觉得这股风潮已经真正席卷到了各个角落，连我身边平时对科技不感兴趣的朋友也都来问我了。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-multi-agent-config/cover.png" />
+    </item>
+    
+    <item>
+      <title>Agent 训练师进阶指南：用 Discord 打造高效 OpenClaw 协作系统</title>
+      <link>http://localhost:1313/posts/agent-trainer-discord-guide/</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-discord-guide/</guid>
+      <description>&lt;p&gt;说好的第二篇教程来了。没想到短短几天没更新，Moltbot 又改名了，只能说 AI 时代的节奏真是太快了。比改名更快的是 moltbook 掀起的风潮，各种面向 Agent 的产品层出不穷，让人眼花缭乱，我也是脑洞大开，看到了新时代的雏形。不过这一期咱们还是先不谈这些，先把之前的坑填上，分享一下我日常使用通过 Telegram 和 Discord 使用 OpenClaw 的经验和心得。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-discord-guide/cover.png" />
+    </item>
+    
+  </channel>
+</rss>

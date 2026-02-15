@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inference on 知县的衙门</title>
+    <link>http://localhost:1313/tags/inference/</link>
+    <description>Recent content in Inference on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Wed, 07 Jan 2026 11:20:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/inference/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>从循环模型 Ouro 到 NVIDIA Rubin：推理时代的殊途同归</title>
+      <link>http://localhost:1313/posts/ouro-rubin-test-time-scaling/</link>
+      <pubDate>Wed, 07 Jan 2026 11:20:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/ouro-rubin-test-time-scaling/</guid>
+      <description>&lt;p&gt;过去几年，AI 变强的故事讲得很简单：砸更多训练算力、喂更多数据、把模型做得更大。可以把它理解为多读书、多刷题，靠训练阶段把能力压进参数里。可最近一段时间，风向可能有所变化：同样一个模型，不一定要继续变大，只要在遇到难题时多想一会儿，结果就能明显变好。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

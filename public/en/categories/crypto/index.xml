@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crypto on zhixian&#39;s site</title>
+    <link>http://localhost:1313/en/categories/crypto/</link>
+    <description>Recent content in Crypto on zhixian&#39;s site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 zhixian</copyright>
+    <lastBuildDate>Fri, 12 Dec 2025 14:26:40 +0900</lastBuildDate><atom:link href="http://localhost:1313/en/categories/crypto/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Crypto UX Security Is Broken By Design</title>
+      <link>http://localhost:1313/en/posts/crypto-ux-security/</link>
+      <pubDate>Fri, 12 Dec 2025 14:26:40 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/crypto-ux-security/</guid>
+      <description>&lt;p&gt;You wouldn&amp;rsquo;t wire $50,000 through a random website you found via Google ad. Yet that&amp;rsquo;s exactly what crypto wallets ask you to do every day—except when it goes wrong, there&amp;rsquo;s no bank to reverse the transaction, no fraud department to call, no chargeback to file.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Rediscovering Peace of Mind in DeFi: The Design Principles Behind Owlia</title>
+      <link>http://localhost:1313/en/posts/introduce-owlia/</link>
+      <pubDate>Thu, 27 Nov 2025 22:38:39 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/introduce-owlia/</guid>
+      <description>&lt;blockquote&gt;&lt;p&gt;DeFi has become more powerful, but also more complex.&lt;br&gt;&#xA;Users are not lacking tools — they are lacking a partner who can carry some of the burden.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;Over the past months, my team and I have been working on something I believe is deeply important:&#xA;an Agent that can genuinely accompany you in the DeFi world — &lt;strong&gt;Owlia&lt;/strong&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Glossary of Web3 Account</title>
+      <link>http://localhost:1313/en/posts/web3-account-concepts/</link>
+      <pubDate>Thu, 20 Oct 2022 20:09:28 +0900</pubDate>
+      
+      <guid>http://localhost:1313/en/posts/web3-account-concepts/</guid>
+      <description>&lt;p&gt;One of the most talked-about subjects at DevCon was account abstraction. Recently, you may have noticed acronyms and abbreviations like AA, EOA, SCW, and 4337 in a variety of presentations, panels, and streams. After reading these two sentence&#xA;s, your brain must already be hurting. Next, I&amp;rsquo;ll try to help you figure out what all these terms and ideas really mean.&#xA;This article is not a serious technical document, so it may use words that aren&amp;rsquo;t exact but are easy to understand. You are invited to use it as a starting point to learn more about these technologies.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

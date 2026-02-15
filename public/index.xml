@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>知县的衙门</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 知县的衙门</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>© 2026 知县</copyright>
+    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Agent 训练师进阶课：OpenClaw 多 Agent 配置实战</title>
+      <link>http://localhost:1313/posts/agent-trainer-multi-agent-config/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-multi-agent-config/</guid>
+      <description>&lt;p&gt;经过连续几天的奋战，我终于完成了在安卓上运行 OpenClaw 的工具 &lt;a href=&#34;https://botdrop.app&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;botdrop.app&lt;/a&gt;，也总算有时间来&amp;quot;填坑&amp;quot;了。不知道最近小伙伴们有没有跟自己的 🦞 玩出更多新花样？我觉得这股风潮已经真正席卷到了各个角落，连我身边平时对科技不感兴趣的朋友也都来问我了。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-multi-agent-config/cover.png" />
+    </item>
+    
+    <item>
+      <title>认知有县</title>
+      <link></link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;分享脑洞想法，探索体验新产品，偶尔请朋友对谈。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://apple.co/4ay0hDL&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Apple Podcast&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://open.spotify.com/show/34rYkRrG5UzceVS6Sxet1l&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Spotify&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Agent 训练师进阶指南：用 Discord 打造高效 OpenClaw 协作系统</title>
+      <link>http://localhost:1313/posts/agent-trainer-discord-guide/</link>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-discord-guide/</guid>
+      <description>&lt;p&gt;说好的第二篇教程来了。没想到短短几天没更新，Moltbot 又改名了，只能说 AI 时代的节奏真是太快了。比改名更快的是 moltbook 掀起的风潮，各种面向 Agent 的产品层出不穷，让人眼花缭乱，我也是脑洞大开，看到了新时代的雏形。不过这一期咱们还是先不谈这些，先把之前的坑填上，分享一下我日常使用通过 Telegram 和 Discord 使用 OpenClaw 的经验和心得。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-discord-guide/cover.png" />
+    </item>
+    
+    <item>
+      <title>BotDrop</title>
+      <link></link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;把闲置安卓手机变成 AI Agent 服务器，零成本运行私有 AI 助手。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;零基础设施成本 — 用你已有的硬件&lt;/li&gt;&#xA;&lt;li&gt;随身携带 — AI 住在你口袋里&lt;/li&gt;&#xA;&lt;li&gt;数据自主 — 一切都在你自己设备上&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Agent 训练师案例分享：用 Clawdbot 打造专属写作工作流</title>
+      <link>http://localhost:1313/posts/agent-trainer-writing-workflow/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-writing-workflow/</guid>
+      <description>&lt;p&gt;伴随着 Clawdbot 改名成 @moltbot，大家火爆的情绪也开始逐渐退潮。不知道有多少人已经随着潮落回到了日常生活的汪洋中，又有多少人作为潮水退去后留下的「新物种」，开始探索这片全新的大陆了？&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-writing-workflow/cover-generation-flow.jpg" />
+    </item>
+    
+    <item>
+      <title>Agent 训练师安全课：Clawdbot 七步自检指南</title>
+      <link>http://localhost:1313/posts/agent-trainer-security-clawdbot/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-security-clawdbot/</guid>
+      <description>&lt;p&gt;感觉这两天关注 AI 的小伙伴们，心理状态经历了一个巨大的过山车：&lt;/p&gt;&#xA;&lt;p&gt;首先听说了一个叫 Clawdbot 的、好像是龙虾的东西：这是什么？为什么所有人都在转？我为什么还没有用上？于是疯狂看文章，下单 Mac mini；接下来就看到各种分析帖子，说这东西非常危险、权限太高，简直吓死人，卸了卸了。于是大家又赶紧战战兢兢地卸载、关机，抹除系统、挂海鲜市场（说不定🦞也一起被卖了哈哈）。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-security-clawdbot/cover.png" />
+    </item>
+    
+    <item>
+      <title>Agent 训练师入门指南：Clawdbot 配置与踩坑</title>
+      <link>http://localhost:1313/posts/agent-trainer-guide-clawdbot/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/agent-trainer-guide-clawdbot/</guid>
+      <description>&lt;p&gt;最近 Clawdbot 突然爆火了，我觉得是意料之外情理之中。从三周前开始用 Clawdbot 到现在，我每天的状态都非常亢奋，因为我感觉到科幻世界真的来了。关注过我的朋友应该能感受到我那两天的状态有点 high，跟我聊过的朋友可能就更是了哈哈。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/agent-trainer-guide-clawdbot/cover.png" />
+    </item>
+    
+    <item>
+      <title>给 Whisper 加个本地「编辑」：用 Apple Foundation Model 自动清理语音转写</title>
+      <link>http://localhost:1313/posts/whisper-afm-refine/</link>
+      <pubDate>Sun, 18 Jan 2026 17:15:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/whisper-afm-refine/</guid>
+      <description>&lt;p&gt;用过语音转文字的人都知道，转出来的文字往往不能直接用。口语里的「嗯」「那个」「就是说」会原封不动地出现在结果里，标点几乎没有，断句全靠猜。你要么自己改一遍，要么就忍着用。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/whisper-afm-refine/cover.png" />
+    </item>
+    
+    <item>
+      <title>白嫖 Apple Intelligence：把 macOS 内置模型变成 OpenAI API</title>
+      <link>http://localhost:1313/posts/apple-foundation-model-local-api/</link>
+      <pubDate>Sun, 18 Jan 2026 13:20:00 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/apple-foundation-model-local-api/</guid>
+      <description>&lt;p&gt;macOS 26 Tahoe 内置了一个 3B 参数的语言模型，Apple 叫它 Foundation Model。这玩意儿平时藏在系统里给 Writing Tools、Siri 这些功能用，但其实你可以把它拉出来，包装成一个 OpenAI 兼容的 API，然后接到任何支持 OpenAI 格式的工具里去。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/apple-foundation-model-local-api/cover.png" />
+    </item>
+    
+    <item>
+      <title>我的「末日小屋」：用 Discord 搭一个 AI 工作台</title>
+      <link>http://localhost:1313/posts/discord-ai-workspace/</link>
+      <pubDate>Fri, 16 Jan 2026 09:19:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/discord-ai-workspace/</guid>
+      <description>&lt;p&gt;如果你是一个积极探索 AI 时代的人，那么你应该有一个自己的 Discord Server&lt;/p&gt;&#xA;&lt;p&gt;我把我的 Discord Server 叫「末日小屋」。这个名字听起来有点中二，但它确实是我现在最依赖的工作环境。&amp;ldquo;末日&amp;rdquo; 是我给自己的一个心理暗示，这个意象可以让我想想自己身处一片荒野的寂静中，拥有一个确定还能运转的地方，里面存着我所有重要的东西。哪怕外面再喧嚣、变化再快，我还有一个安静的地方能继续工作、思考、迭代。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/discord-ai-workspace/cover.jpg" />
+    </item>
+    
+    <item>
+      <title>从循环模型 Ouro 到 NVIDIA Rubin：推理时代的殊途同归</title>
+      <link>http://localhost:1313/posts/ouro-rubin-test-time-scaling/</link>
+      <pubDate>Wed, 07 Jan 2026 11:20:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/ouro-rubin-test-time-scaling/</guid>
+      <description>&lt;p&gt;过去几年，AI 变强的故事讲得很简单：砸更多训练算力、喂更多数据、把模型做得更大。可以把它理解为多读书、多刷题，靠训练阶段把能力压进参数里。可最近一段时间，风向可能有所变化：同样一个模型，不一定要继续变大，只要在遇到难题时多想一会儿，结果就能明显变好。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>OwliaBot</title>
+      <link></link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;安全加密原生 AI Agent，内置钱包方案，密钥隔离设计。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;密钥与 Agent 进程隔离 — 即使被 RCE 也无法窃取密钥&lt;/li&gt;&#xA;&lt;li&gt;签名分级风控 — 根据金额和频率设置审批阈值&lt;/li&gt;&#xA;&lt;li&gt;执行环境收窄 — 命令白名单，无 shell 执行&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>加密世界的 UX 安全难题：基础设施的错配</title>
+      <link>http://localhost:1313/posts/crypto-ux-security/</link>
+      <pubDate>Fri, 12 Dec 2025 14:26:40 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/crypto-ux-security/</guid>
+      <description>&lt;p&gt;你一般不会在 Google 的搜索结果里点个链接，就在这个陌生的页面里操作 5 万美金的转账对吧？&#xA;但我们每天在 Crypto 世界里做的事，本质上就是这个流程：打开网页 → 连接钱包 → 点授权/签名 → 资产不可逆地转出去。出了事，没有“撤回”、没有“冻结”、也没有“客服介入”。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>在 DeFi 里重新寻找安心感：Owlia 的设计理念</title>
+      <link>http://localhost:1313/posts/introduce-owlia/</link>
+      <pubDate>Thu, 27 Nov 2025 22:38:39 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/introduce-owlia/</guid>
+      <description>&lt;blockquote&gt;&lt;p&gt;DeFi 这几年变得更强大，也变得更复杂。&lt;br&gt;&#xA;用户并不缺工具，他们缺的是一个能帮他们承担压力的伙伴。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>AI 时代的 Crypto UX 新思路</title>
+      <link>http://localhost:1313/posts/ai-and-crypto-ux-security/</link>
+      <pubDate>Wed, 02 Apr 2025 18:26:40 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/ai-and-crypto-ux-security/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;15亿美金的教训&#xA;    &lt;div id=&#34;15亿美金的教训&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#15%e4%ba%bf%e7%be%8e%e9%87%91%e7%9a%84%e6%95%99%e8%ae%ad&#34; aria-label=&#34;&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;就在不到一个月前，可能是史上金额最大的黑客盗窃事件发生了：黑客接管了 Bybit 的一个存有 50万枚 ETH 的 Safe 多签钱包，并立即进行了资金的转移和清洗。经过几天的调查，事情的原因浮出水面：黑客掌控了 Safe 团队的某个工程师的前端发布权限，在 Safe Web App 中注入了一段恶意代码。这段代码只针对 Bybit 多签的几个管理人的钱包生效，在他们发起转账交易时替换了实际签署的交易逻辑，于是即便页面上展示的是正常的转账交易，但是他们实际签署的是把 Safe 钱包的逻辑切换成黑客版本的授权交易。因此，即便他们转账的金额并不大，黑客还是能够把整个钱包的资金席卷一空，而不只是拿走他们要转的钱。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>名词解释：Web3 账户相关概念大梳理</title>
+      <link>http://localhost:1313/posts/web3-account-concepts/</link>
+      <pubDate>Thu, 20 Oct 2022 20:09:28 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/web3-account-concepts/</guid>
+      <description>&lt;p&gt;刚刚结束的 Devcon 上，账户抽象算是是最热的几个话题之一，最近可以经常看到 AA / EOA / SCW / 4337 等缩写和代号在各种 talk、panel 和信息流里出现。再加上叙事开始往「Onboarding next billion users」的方向发展，一些新的形容词也开始出现在产品之前，比如 seedless / gasless / social recovery / non-custodial。相信看完这两句的你已经开始脑壳疼了，那么接下来就让我尽自己所能来帮大家梳理一下这些名词概念到底代表什么。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

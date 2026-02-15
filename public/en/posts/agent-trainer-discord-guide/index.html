@@ -1,0 +1,1256 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord &middot; zhixian&#39;s site</title>
+    <meta name="title" content="Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord &middot; zhixian&#39;s site">
+  
+
+  
+  
+  
+    <meta name="keywords" content="AI,OpenClaw,Agent,Discord,Productivity,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/en/posts/agent-trainer-discord-guide/">
+  
+
+  
+  
+    <meta name="author" content="zhixian">
+  
+  
+    
+      
+        
+          <link href="https://x.com/zhixianio" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/zhixianio" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/en/posts/agent-trainer-discord-guide/">
+  <meta property="og:site_name" content="zhixian&#39;s site">
+  <meta property="og:title" content="Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord">
+  <meta property="og:description" content="The promised second tutorial is here. In just a few days since my last update, Moltbot has renamed itself again—the pace of the AI era is truly relentless. Even faster than the name changes is the wave sparked by moltbook, with all kinds of agent-oriented products emerging left and right, opening my mind to the early shape of a new era. But let’s not get into that today; let me first fill in the gaps from before and share my experience and insights on using OpenClaw through Telegram and Discord.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-02-03T00:00:00+00:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="OpenClaw">
+    <meta property="article:tag" content="Agent">
+    <meta property="article:tag" content="Discord">
+    <meta property="article:tag" content="Productivity">
+    <meta property="og:image" content="http://localhost:1313/posts/agent-trainer-discord-guide/cover.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/agent-trainer-discord-guide/cover.png">
+  <meta name="twitter:title" content="Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord">
+  <meta name="twitter:description" content="The promised second tutorial is here. In just a few days since my last update, Moltbot has renamed itself again—the pace of the AI era is truly relentless. Even faster than the name changes is the wave sparked by moltbook, with all kinds of agent-oriented products emerging left and right, opening my mind to the early shape of a new era. But let’s not get into that today; let me first fill in the gaps from before and share my experience and insights on using OpenClaw through Telegram and Discord.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.9065937b297c9b5990fb472cb2cfc4aefcaf1f6063045c2cfc2ef0ec4f327df37f92cb5121064d346343ed084127165a2c318c09b92d598be75eaf5d44a68f38.css"
+    integrity="sha512-kGWTeyl8m1mQ&#43;0csss/ErvyvH2BjBFws/C7w7E8yffN/kstRIQZNNGND7QhBJxZaLDGMCbktWYvnXq9dRKaPOA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord",
+    "headline": "Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/en/posts/agent-trainer-discord-guide/",
+    "author" : {
+      "@type": "Person",
+      "name": "zhixian"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-02-03T00:00:00\u002b00:00",
+    "datePublished": "2026-02-03T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-02-03T00:00:00\u002b00:00",
+    
+    "keywords": ["AI","OpenClaw","Agent","Discord","Productivity"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1796"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl bg-neutral/25 dark:bg-neutral-800/25"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/en/" class="text-base font-medium truncate min-w-0 shrink">
+      zhixian&rsquo;s site
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/en/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/en/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="Tags">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+  <div class="translation nested-menu">
+    <button class="cursor-pointer flex items-center">
+      <span class="me-1">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg></span>
+      </span>
+      <span class="text-sm font-medium bf-icon-color-hover" title="Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord">EN</span>
+    </button>
+    <ul class="menuhide">
+      <li class="rounded-xl backdrop-blur shadow-2xl p-2 flex flex-col gap-1">
+        
+          <a href="/posts/agent-trainer-discord-guide/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Agent 训练师进阶指南：用 Discord 打造高效 OpenClaw 协作系统">
+              ZH
+            </span>
+          </a>
+        
+          <a href="/en/posts/agent-trainer-discord-guide/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord">
+              EN
+            </span>
+          </a>
+        
+      </li>
+    </ul>
+  </div>
+
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/en/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/en/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Tags" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+    <div
+      class="flex flex-wrap items-center [&_span]:text-2xl [&_.translation_button_.icon]:text-4xl! [&_.translation_button_span]:text-base! [&_.translation_.menuhide_span]:text-sm! gap-x-6 ps-2 mt-8 pt-8 border-t bf-border-color">
+      
+  <div class="translation nested-menu">
+    <button class="cursor-pointer flex items-center">
+      <span class="me-1">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg></span>
+      </span>
+      <span class="text-sm font-medium bf-icon-color-hover" title="Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord">EN</span>
+    </button>
+    <ul class="menuhide">
+      <li class="rounded-xl backdrop-blur shadow-2xl p-2 flex flex-col gap-1">
+        
+          <a href="/posts/agent-trainer-discord-guide/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Agent 训练师进阶指南：用 Discord 打造高效 OpenClaw 协作系统">
+              ZH
+            </span>
+          </a>
+        
+          <a href="/en/posts/agent-trainer-discord-guide/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord">
+              EN
+            </span>
+          </a>
+        
+      </li>
+    </ul>
+  </div>
+
+
+
+      
+    </div>
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/posts/agent-trainer-discord-guide/cover_hu_8f9eb5f4c6aa90f6.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/posts/agent-trainer-discord-guide/cover_hu_8f9eb5f4c6aa90f6.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/en/"
+      >zhixian&#39;s site</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/en/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/en/posts/agent-trainer-discord-guide/"
+      >Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Agent Trainer Advanced Guide: Building an Efficient OpenClaw Collaboration System with Discord
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-02-03T00:00:00&#43;00:00">3 February 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1796 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="zhixian"
+        src="/images/zhixian_hu_77000294f9ad8e2c.png"
+        data-zoom-src="/images/zhixian_hu_945731277d483c2f.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        zhixian
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">Idea Open-Sourcer, Agent Trainer, PM with CS background, Full-time Tinkerer</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://x.com/zhixianio"
+          target="_blank"
+          aria-label="X-Twitter"
+          title="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/zhixianio"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#channel-selection-whatsapp-telegram-or-discord">Channel Selection: WhatsApp, Telegram, or Discord?</a></li>
+    <li><a href="#understanding-main-session-how-your-ai-assistant-identifies-its-owner">Understanding Main Session: How Your AI Assistant Identifies Its Owner</a></li>
+    <li><a href="#discords-information-hierarchy-the-magic-of-threads-">Discord&rsquo;s Information Hierarchy: The Magic of Threads 💬</a></li>
+    <li><a href="#my-discord-workflow-the-bunker-in-action">My Discord Workflow: The Bunker in Action</a></li>
+    <li><a href="#discord-advanced-plays-reactions-multi-agent--model-assignment">Discord Advanced Plays: Reactions, Multi-Agent &amp; Model Assignment</a></li>
+    <li><a href="#similar-attempts-on-telegram-and-why-i-gave-up">Similar Attempts on Telegram (And Why I Gave Up)</a></li>
+    <li><a href="#the-era-of-natural-language-programming">The Era of Natural Language Programming</a></li>
+    <li><a href="#so-telegram-or-discord">So, Telegram or Discord?</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#channel-selection-whatsapp-telegram-or-discord">Channel Selection: WhatsApp, Telegram, or Discord?</a></li>
+    <li><a href="#understanding-main-session-how-your-ai-assistant-identifies-its-owner">Understanding Main Session: How Your AI Assistant Identifies Its Owner</a></li>
+    <li><a href="#discords-information-hierarchy-the-magic-of-threads-">Discord&rsquo;s Information Hierarchy: The Magic of Threads 💬</a></li>
+    <li><a href="#my-discord-workflow-the-bunker-in-action">My Discord Workflow: The Bunker in Action</a></li>
+    <li><a href="#discord-advanced-plays-reactions-multi-agent--model-assignment">Discord Advanced Plays: Reactions, Multi-Agent &amp; Model Assignment</a></li>
+    <li><a href="#similar-attempts-on-telegram-and-why-i-gave-up">Similar Attempts on Telegram (And Why I Gave Up)</a></li>
+    <li><a href="#the-era-of-natural-language-programming">The Era of Natural Language Programming</a></li>
+    <li><a href="#so-telegram-or-discord">So, Telegram or Discord?</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>The promised second tutorial is here. In just a few days since my last update, Moltbot has renamed itself again—the pace of the AI era is truly relentless. Even faster than the name changes is the wave sparked by moltbook, with all kinds of agent-oriented products emerging left and right, opening my mind to the early shape of a new era. But let&rsquo;s not get into that today; let me first fill in the gaps from before and share my experience and insights on using OpenClaw through Telegram and Discord.</p>
+
+<h2 class="relative group">Channel Selection: WhatsApp, Telegram, or Discord?
+    <div id="channel-selection-whatsapp-telegram-or-discord" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#channel-selection-whatsapp-telegram-or-discord" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>OpenClaw currently supports mainstream channels including WhatsApp, Telegram, Discord, iMessage, Slack, and more. I&rsquo;ve personally used WhatsApp, Telegram, and Discord.</p>
+<p>First, unless absolutely necessary, I&rsquo;d suggest ruling out WhatsApp—it has higher costs and risks. This is because OpenClaw&rsquo;s login method isn&rsquo;t officially sanctioned; it essentially treats OpenClaw as a web client scanning a QR code to log in, which is a bit hacky. This leads to unstable connections with frequent disconnections. Additionally, you&rsquo;d probably need a separate phone number to register, since you can&rsquo;t use your current WhatsApp account—otherwise, what would you use to interact with it? 😂 So unless you&rsquo;re particularly dependent on it, I&rsquo;d recommend skipping this channel.</p>
+<p>That leaves Telegram and Discord. Their vibes are quite different: Telegram leans toward point-to-point DM chat; Discord centers around Servers containing numerous channels with high flexibility, which gives OpenClaw more room to work. In my setup, Telegram mainly handles &ldquo;quick and direct&rdquo; conversations, while Discord is for complex, systematic tasks and work that can be parallelized.</p>
+
+<h2 class="relative group">Understanding Main Session: How Your AI Assistant Identifies Its Owner
+    <div id="understanding-main-session-how-your-ai-assistant-identifies-its-owner" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#understanding-main-session-how-your-ai-assistant-identifies-its-owner" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Before explaining my setup, I need to introduce OpenClaw&rsquo;s Main Session concept.</p>
+<p>Main Session is the session where OpenClaw believes it&rsquo;s directly conversing with its Owner. For example, DMs with a Telegram, WhatsApp, or Discord Bot, as well as iMessage—these one-on-one scenarios with the Bot are considered direct Owner conversations. One benefit is that the main memory file MEMORY.md can be loaded by default, since it contains context with privacy implications. Other sessions won&rsquo;t load it—you wouldn&rsquo;t want someone in a group chat to casually extract your favorite anime genres, right? 😄</p>
+<p>Another benefit is that these Sessions are connected by default. If you say 1, 2, 3 separately in iMessage, Discord, and Telegram, from the Agent&rsquo;s perspective it&rsquo;s all part of one conversation—no difference.</p>
+<p>But this creates a potential issue: if you share your Bot with family or friends (say, by opening Telegram access), the Agent can&rsquo;t distinguish whether messages are from you or your family, treating them all as one context—which gets messy.</p>
+<p>A configuration solves this: session.dmScope. Set its value to &ldquo;per-channel-peer&rdquo; to isolate different Channels and different users within the same Channel. This way, whether it&rsquo;s between your own Discord and Telegram, or between you and your family&rsquo;s Telegram, they all become independent Sessions without interference.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">...,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;session&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;dmScope&#34;</span>: <span style="color:#e6db74">&#34;per-channel-peer&#34;</span>
+</span></span><span style="display:flex;"><span>}<span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">...</span></span></span></code></pre></div></div>
+<p>You might wonder: can I separate from family while keeping my own DMs interconnected? Yes, you can. There&rsquo;s another config called session.identityLinks where you can link your different DM Sessions into one, achieving &ldquo;external separation, internal connectivity.&rdquo;</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">session:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">scope:</span> <span style="color:#f92672">&#34;per-sender&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">dmScope:</span> <span style="color:#f92672">&#34;main&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">identityLinks:</span> <span style="color:#960050;background-color:#1e0010">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#960050;background-color:#1e0010">alice:</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#f92672">&#34;telegram:123456789&#34;</span>, <span style="color:#f92672">&#34;discord:987654321012345678&#34;</span><span style="color:#960050;background-color:#1e0010">]</span>,
+</span></span><span style="display:flex;"><span>    }<span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#960050;background-color:#1e0010">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">}</span></span></span></code></pre></div></div>
+<p>You don&rsquo;t need to manually edit config files for these settings—that risks breaking things. It&rsquo;s better to just instruct your OpenClaw Bot directly to configure them.</p>
+<p>For more related configurations, check out <a href="https://docs.openclaw.ai/gateway/security#dm-session-isolation-multi-user-mode"  target="_blank" rel="noreferrer">this section</a> of the official documentation.</p>
+
+<h2 class="relative group">Discord&rsquo;s Information Hierarchy: The Magic of Threads 💬
+    <div id="discords-information-hierarchy-the-magic-of-threads-" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#discords-information-hierarchy-the-magic-of-threads-" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Discord has another excellent information hierarchy capability, which I believe was borrowed from Slack: Threads. You can create a Thread on any message to continue discussing the topic beneath it. For example, a Channel called &ldquo;What to eat for lunch&rdquo; where everyone discusses daily meal choices. If Xiao Shuai says &ldquo;I want fish,&rdquo; replies pile up below—some continue the fish topic like &ldquo;grilled or stewed?&rdquo;, while others start new topics like &ldquo;I want beef.&rdquo; This is basically WeChat group reality (though the Quote feature helped somewhat); communication works but easily becomes chaotic.</p>
+<p>With Thread mode? If you want to continue discussing fish, create a Thread under Xiao Shuai&rsquo;s message. This opens a new chat space where everyone can follow the &ldquo;what kind of fish&rdquo; topic. Meanwhile, outside the Thread, the main thread remains for proposing lunch options, like the beef people who might already be booking a restaurant in their thread. It&rsquo;s clearly a better communication architecture—clear topics, controllable details.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="A Discord Channel composed of topics &#43; Threads"
+    width="1568"
+    height="614"
+    src="/posts/agent-trainer-discord-guide/discord-thread-example_hu_4c4f7d5a18642efa.jpg"
+    srcset="/posts/agent-trainer-discord-guide/discord-thread-example_hu_4c4f7d5a18642efa.jpg 800w, /posts/agent-trainer-discord-guide/discord-thread-example_hu_5c61ac555da73b27.jpg 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/agent-trainer-discord-guide/discord-thread-example.jpg"></figure>
+</p>
+<p>With Thread mode explained, the full architecture becomes clear: each Channel in a Discord Server is an independent Session, which makes sense; beyond Channels, each Thread is actually the same as a Channel—an independent Session. The latest version (2026.2.1) added a feature: &ldquo;Discord: inherit thread parent bindings for routing.&rdquo; Simply put, when a Thread is created, the agent automatically inherits recent messages from the parent channel as context, giving the agent &ldquo;previous chapter&rdquo; knowledge in the thread. Use Threads well and your Discord information organization will improve dramatically, and session explosion won&rsquo;t be an issue.</p>
+
+<h2 class="relative group">My Discord Workflow: The Bunker in Action
+    <div id="my-discord-workflow-the-bunker-in-action" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#my-discord-workflow-the-bunker-in-action" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Let me show you my Discord usage. I created a dedicated Server—if you&rsquo;ve read my previous articles, you might know I have an AI workflow Server called &ldquo;<a href="https://x.com/zhixianio/status/2012092307613622525"  target="_blank" rel="noreferrer">The Bunker</a>.&rdquo; I&rsquo;ve now created a special Section to host my entire workflow with Owlia 🦉 (my OpenClaw agent).</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="My &ldquo;Bunker&rdquo; upgraded—Owlia moved in!"
+    width="2000"
+    height="1562"
+    src="/posts/agent-trainer-discord-guide/bunker-owlia_hu_e25be89009d6d0a9.jpg"
+    srcset="/posts/agent-trainer-discord-guide/bunker-owlia_hu_e25be89009d6d0a9.jpg 800w, /posts/agent-trainer-discord-guide/bunker-owlia_hu_3adb289565ce5ad.jpg 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/agent-trainer-discord-guide/bunker-owlia.jpg"></figure>
+</p>
+<p>Check out the screenshot—I basically divide things into three categories:</p>
+<p>One called &ldquo;daily&rdquo; for brainstorming phase chats, where you can see a long list of open Threads below; another type is content that has graduated into independent projects like owliabot and writing; and there&rsquo;s also daily pushes like digest and heartbeat.</p>
+<p>In daily chat channels, you can use the <code>autoThread</code> configuration to make the Agent automatically reply in Threads. Set it in Discord channel config:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">channels.discord.guilds.&lt;guildId&gt;.channels.&lt;channelId&gt;.autoThread:</span> <span style="color:#66d9ef">true</span></span></span></code></pre></div></div>
+<p>When enabled, incoming messages to that channel will automatically create a Thread for replies instead of replying directly in the channel. (Thanks to <a href="https://x.com/pfoagi"  target="_blank" rel="noreferrer">@Pfoagi</a> for this configuration tip!)</p>
+<p>The benefit is that Daily channel stuff is miscellaneous. When you suddenly remember something to discuss further—like &ldquo;I want to buy the BTC dip, how should I do it&rdquo;—after posting, the Agent analyzes the situation, asks about your preferences and current position, and you can keep chatting.</p>
+<p>When something grows large enough that you feel it could become a long-term project, even one the Agent could proactively push forward, make it an independent Channel. You can tell the Agent in the new channel that this continues a previous Thread, have it Compress the original Session here, and the conversation picks up. Progress becomes easier because in this channel, you can still use Threads for multi-dimensional discussion and folding.</p>
+<p>The benefit of this workflow is super-fast switching between different matters. OpenClaw can reply to 4 different Sessions simultaneously by default, and this quota is configurable, but 4 is enough for me—I rarely have 4 channels actively replying at once (still practicing). You&rsquo;ll feel like &ldquo;Doctor Octopus,&rdquo; wielding four big arms operating four work threads, which feels incredibly satisfying.</p>
+<p>Besides task-pushing Channels, you can create daily scheduled task Channels. This splits work that was previously in the main session across different directions. For example, I have a dedicated Channel called digest that runs several times daily, aggregating X and blog content there. Another example is heartbeat—I need an observation window to see trigger times and content, so I created a heartbeat Channel directing all output there. Configure based on your daily work and life needs.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Daily reports in #heartbeat"
+    width="1096"
+    height="440"
+    src="/posts/agent-trainer-discord-guide/heartbeat-channel_hu_2b222530c729b2d.jpg"
+    srcset="/posts/agent-trainer-discord-guide/heartbeat-channel_hu_2b222530c729b2d.jpg 800w, /posts/agent-trainer-discord-guide/heartbeat-channel.jpg 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/agent-trainer-discord-guide/heartbeat-channel.jpg"></figure>
+</p>
+<p>Once configured, the entire &ldquo;Bunker&rdquo; becomes incredibly powerful. Not only does it have automated processes, but a powerful intelligent agent lives inside who can help you work, research, and chat. These sessions are isolated, yet you can specify one session to read another session&rsquo;s content for quick context sync. This experience fits complex work needs perfectly.</p>
+<p>Theoretically Slack could do this too, but I&rsquo;m now thinking I might not even need Slack anymore—Discord&rsquo;s experience is just too good.</p>
+
+<h2 class="relative group">Discord Advanced Plays: Reactions, Multi-Agent &amp; Model Assignment
+    <div id="discord-advanced-plays-reactions-multi-agent--model-assignment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#discord-advanced-plays-reactions-multi-agent--model-assignment" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Discord has some advanced plays:</p>
+<p><strong>Reactions</strong>. You can define different Reactions as different functions, having your Agent act according to your operations. For example, bookmarking: click a ♥️ and it automatically forwards that message to a certain channel for collection.</p>
+<p><strong>Separate Agents</strong>. Each Channel or even Thread can be configured as a separate agent with its own settings. So if you need multi-agent coordination, you don&rsquo;t have to create multiple independent agent bots and pull a bunch of robots in—just create a pm bot in #product, an engineer bot in #dev, and you&rsquo;re set. You can even assign different models based on task type: product work might need opus for deep design, while development work often does fine with sonnet (though complex logic might need codex, haha).</p>
+
+<h2 class="relative group">Similar Attempts on Telegram (And Why I Gave Up)
+    <div id="similar-attempts-on-telegram-and-why-i-gave-up" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#similar-attempts-on-telegram-and-why-i-gave-up" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Finally, some similar Telegram uses: one is opening Groups with Topics, which is really Telegram&rsquo;s feature under Discord pressure, but the experience has always been poor. Also, you can enable Threads in Bot DMs (same mechanism as Topics). A January 24th update (when it was still called Clawdbot) added support: when you set up Thread mode for your Bot in BotFather (note: this toggle is only in BotFather&rsquo;s Mini App), your DM with it becomes like a Telegram Group with Topics, except Topics in DMs are called Threads. My experience was poor, so I won&rsquo;t elaborate.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Telegram Bot DM with Thread mode enabled"
+    width="1112"
+    height="1312"
+    src="/posts/agent-trainer-discord-guide/telegram-thread-dm_hu_84c29b4e40c2a51e.jpg"
+    srcset="/posts/agent-trainer-discord-guide/telegram-thread-dm_hu_84c29b4e40c2a51e.jpg 800w, /posts/agent-trainer-discord-guide/telegram-thread-dm.jpg 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/agent-trainer-discord-guide/telegram-thread-dm.jpg"></figure>
+</p>
+
+<h2 class="relative group">The Era of Natural Language Programming
+    <div id="the-era-of-natural-language-programming" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-era-of-natural-language-programming" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>One final thought. The Reaction automation feature I previously implemented in my &ldquo;Bunker&rdquo; through programming (AI-written, of course). With Agent, all this can be &ldquo;compiled&rdquo; into workflows using natural language. This is what I see as the biggest difference in the Agent era: humans have truly achieved natural language programming—just not by translating natural language into code, but through an Agent that both understands human language and masters programming or API calls, serving as a bridge.</p>
+<p>This paradigm shift echoes past AI paradigm changes. After all, who would have thought that Transformer, the core architecture of modern large language models, would emerge from machine translation?</p>
+<hr>
+
+<h2 class="relative group">So, Telegram or Discord?
+    <div id="so-telegram-or-discord" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#so-telegram-or-discord" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Telegram is light and fast, good for quick questions anytime. Discord is heavier but has strong organizational capability, suited for long-term projects. So if you just want an AI assistant for casual chats, Telegram works. But if you want your Agent to actually help you work, push projects, and automate things, Discord&rsquo;s Server + Channel + Thread three-layer structure will make you feel like &ldquo;finally, a proper workstation.&rdquo; My current usage: both running—Telegram as mobile entry point, Discord as main battlefield.</p>
+<p>OK, that&rsquo;s it for this one. Next time might be about scheduled tasks and multi-Agent collaboration, or maybe topics from the comments!</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/en/posts/agent-trainer-writing-workflow/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Agent Trainer Case Study: Building Your Own Writing Workflow with Clawdbot
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-01-28T00:00:00&#43;00:00">28 January 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/en/posts/agent-trainer-multi-agent-config/">
+              <span class="leading-6">
+                Advanced Agent Training: Multi-Agent Configuration in OpenClaw&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-02-10T00:00:00&#43;00:00">10 February 2026</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          zhixian
+      </p>
+    
+
+    
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/en/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
